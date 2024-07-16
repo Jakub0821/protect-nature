@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porady Ekologiczne - Ochrona środowiska</title>
+    <title>Porady Ekologiczne - Ochrona Środowiska</title>
 </head>
 <body>
     <header>
@@ -19,14 +19,24 @@
         <section>
             <h2>Praktyczne porady ekologiczne</h2>
             <p>Jak zmniejszyć zużycie plastiku? Oto kilka praktycznych wskazówek...</p>
-        </section>
-        <section>
-            <h2>Oszczędzanie wody</h2>
-            <p>Proste sposoby na oszczędzanie wody w domu i w ogrodzie...</p>
+            <button onclick="toggleInfo()">Pokaż więcej</button>
+            <div id="moreInfo" style="display:none;">
+                <p>Oto dodatkowe informacje na temat zmniejszenia zużycia plastiku...</p>
+            </div>
         </section>
     </div>
     <footer>
         <p>&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
+    <script>
+        function toggleInfo() {
+            var moreInfo = document.getElementById('moreInfo');
+            if (moreInfo.style.display === 'none') {
+                moreInfo.style.display = 'block';
+            } else {
+                moreInfo.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
