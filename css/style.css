@@ -37,6 +37,12 @@ nav a:hover {
     margin: 20px 0;
     border-radius: 8px;
 }
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 footer {
     text-align: center;
     padding: 1em 0;
