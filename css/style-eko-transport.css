@@ -4,6 +4,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -21,12 +22,14 @@ header, nav, .container, footer {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    padding: 20px 0;
 }
 
 .transport {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .transport-item {
@@ -39,6 +42,18 @@ header, nav, .container, footer {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.transport-item img:hover {
+    transform: scale(1.05);
+}
+
+.transport-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
 }
 
 footer {
@@ -47,4 +62,20 @@ footer {
     text-align: center;
     padding: 10px 0;
     flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .transport-item {
+        flex: 1 0 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .transport-item {
+        flex: 1 0 100%;
+    }
 }
