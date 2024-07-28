@@ -4,7 +4,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
 }
 
 body {
@@ -21,39 +20,33 @@ header, nav, .container, footer {
     flex: 1 0 auto;
     width: 80%;
     margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .transport {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+    gap: 20px; /* Dodatkowa przestrzeń między elementami */
 }
 
 .transport-item {
-    flex: 1 0 21%; /* Adjust width to 21% for 4 items in a row with some space */
-    margin: 10px;
+    flex: 1 0 calc(25% - 20px); /* Cztery elementy w rzędzie z przestrzenią */
+    margin: 10px 0;
+    box-sizing: border-box;
     text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .transport-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
-.transport-item img:hover {
-    transform: scale(1.05);
-}
-
-.transport-item p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
+    object-fit: cover;
 }
 
 footer {
@@ -62,20 +55,18 @@ footer {
     text-align: center;
     padding: 10px 0;
     flex-shrink: 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
-/* Responsive styles */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .transport-item {
-        flex: 1 0 45%;
+        flex: 1 0 calc(50% - 20px); /* Dwa elementy w rzędzie na mniejszych ekranach */
     }
 }
 
 @media (max-width: 480px) {
     .transport-item {
-        flex: 1 0 100%;
+        flex: 1 0 100%; /* Jeden element na pełnej szerokości na najmniejszych ekranach */
     }
 }
