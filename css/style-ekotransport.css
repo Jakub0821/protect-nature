@@ -1,0 +1,50 @@
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, nav, .container, footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    flex: 1 0 auto;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.transport {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.transport-item {
+    flex: 1 0 21%; /* Adjust width to 21% for 4 items in a row with some space */
+    margin: 10px;
+    text-align: center;
+}
+
+.transport-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
