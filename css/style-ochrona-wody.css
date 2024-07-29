@@ -24,6 +24,8 @@ header {
 nav {
     background: #333; /* Ciemny pasek */
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -39,9 +41,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: white; /* Kolor tekstu na biały */
     text-decoration: none;
     font-weight: bold;
+    padding: 0 10px; /* Dodanie odstępów między linkami */
 }
 
 .container {
@@ -55,9 +58,9 @@ nav ul li a {
 h2 {
     text-align: center;
     color: white; /* Biały kolor tekstu */
-    background: #333
+    background: #4CAF50; /* Tło w kolorze zielonym */
     padding: 10px; /* Dodanie paddingu dla lepszego wyglądu */
-    margin-top: 0; /* Usuń margines górny */
+    margin: 0; /* Usuń margines */
 }
 
 .gallery {
