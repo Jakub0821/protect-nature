@@ -8,30 +8,23 @@ body, html {
     padding: 0;
 }
 
-header {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zapewnia pełną wysokość strony */
 }
 
-nav {
-    background: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+header, nav, .container {
+    flex: 0 0 auto;
 }
 
 .container {
+    flex: 1 0 auto; /* Zapewnia elastyczność dla głównej zawartości */
     width: 80%;
     margin: auto;
     overflow: hidden;
-    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .gallery {
@@ -64,7 +57,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto;
+    margin-top: auto; /* Ustawia stopkę na dole */
     width: 100%;
 }
 
