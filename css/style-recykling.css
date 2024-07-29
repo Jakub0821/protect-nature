@@ -51,6 +51,14 @@ h1, h2 {
     color: #4CAF50;
 }
 
+h1 {
+    text-align: center;
+    color: white; /* Biały kolor tekstu */
+    background: #4CAF50; /* Tło w kolorze zielonym */
+    padding: 10px; /* Dodanie paddingu dla lepszego wyglądu */
+    margin: 20px 0; /* Dodanie marginesu aby oddzielić od reszty treści */
+}
+
 img {
     border-radius: 5px;
     margin-top: 10px;
