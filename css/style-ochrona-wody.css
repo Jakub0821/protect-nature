@@ -45,11 +45,12 @@ nav ul li a {
     color: white; /* Kolor tekstu na biały */
     text-decoration: none;
     font-weight: bold;
-    padding: 0 10px; /* Dodanie odstępów wewnętrznych do linków */
+    padding: 5px 10px; /* Dodanie odstępów wewnętrznych do linków */
+    transition: background 0.3s ease; /* Dodanie płynnej zmiany koloru tła przy najechaniu */
 }
 
 nav ul li a:hover {
-    background: #555; /* Opcjonalnie: dodaj efekt hover */
+    background: #555; /* Kolor tła przy najechaniu */
 }
 
 .container {
