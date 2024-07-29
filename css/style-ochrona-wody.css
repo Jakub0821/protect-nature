@@ -45,6 +45,11 @@ nav ul li a {
     color: white; /* Kolor tekstu na biały */
     text-decoration: none;
     font-weight: bold;
+    padding: 0 10px; /* Dodanie odstępów wewnętrznych do linków */
+}
+
+nav ul li a:hover {
+    background: #555; /* Opcjonalnie: dodaj efekt hover */
 }
 
 .container {
