@@ -34,17 +34,17 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    gap: 20px; /* Dodanie odstępów między linkami */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white; /* Kolor tekstu na biały */
     text-decoration: none;
     font-weight: bold;
-    padding: 0 10px; /* Dodanie odstępów między linkami */
 }
 
 .container {
