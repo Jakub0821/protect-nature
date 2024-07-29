@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Tutaj można dodać interaktywne funkcje JavaScript
-    console.log("Strona 'Ochrona Wody' jest gotowa!");
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Strona Ochrona Wody załadowana');
+    // Możesz tutaj dodać dodatkową logikę JavaScript
 });
