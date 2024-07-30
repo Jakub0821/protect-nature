@@ -3,7 +3,9 @@ body, html {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -12,41 +14,84 @@ body {
     min-height: 100vh;
 }
 
-header, nav, .container, footer {
-    flex: 0 0 auto;
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background: #333; /* Ciemny pasek */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Dodanie odstępów między linkami */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white; /* Kolor tekstu na biały */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Dodanie odstępów wewnętrznych do linków */
+    transition: background 0.3s ease; /* Dodanie płynnej zmiany koloru tła przy najechaniu */
+}
+
+nav ul li a:hover {
+    background: #555; /* Kolor tła przy najechaniu */
 }
 
 .container {
-    flex: 1 0 auto;
+    flex: 1; /* Zapewnia elastyczność dla głównej zawartości */
     width: 80%;
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.transport {
+h1 {
+    text-align: center;
+    color: white; /* Biały kolor tekstu */
+    background: #4CAF50; /* Tło w kolorze zielonym */
+    padding: 10px; /* Dodanie paddingu dla lepszego wyglądu */
+    margin: 0; /* Usuń margines */
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Dodatkowa przestrzeń między elementami */
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.transport-item {
-    flex: 1 0 calc(25% - 20px); /* Cztery elementy w rzędzie z przestrzenią */
-    margin: 10px 0;
+.image-item {
+    flex: 1 1 calc(25% - 20px);
     box-sizing: border-box;
     text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.transport-item img {
+.image-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    border-radius: 5px;
+}
+
+.image-item p {
+    margin-top: 10px;
+    color: #4CAF50;
 }
 
 footer {
@@ -54,19 +99,18 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    flex-shrink: 0;
+    margin-top: auto; /* Ustawia stopkę na dole */
     width: 100%;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .transport-item {
-        flex: 1 0 calc(50% - 20px); /* Dwa elementy w rzędzie na mniejszych ekranach */
+    .image-item {
+        flex: 1 1 calc(50% - 10px);
     }
 }
 
 @media (max-width: 480px) {
-    .transport-item {
-        flex: 1 0 100%; /* Jeden element na pełnej szerokości na najmniejszych ekranach */
+    .image-item {
+        flex: 1 1 100%;
     }
 }
