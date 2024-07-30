@@ -59,14 +59,13 @@ nav ul li a:hover {
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
+    text-align: center; /* Wyśrodkowanie zawartości */
 }
 
-h1 {
-    text-align: center;
-    color: white; /* Biały kolor tekstu */
-    background: #4CAF50; /* Tło w kolorze zielonym */
-    padding: 10px; /* Dodanie paddingu dla lepszego wyglądu */
-    margin: 0; /* Usuń margines */
+h2 {
+    color: #4CAF50; /* Kolor nagłówków */
+    margin-bottom: 10px;
+    text-align: center; /* Wyśrodkowanie nagłówków */
 }
 
 ul {
@@ -80,7 +79,7 @@ li {
 
 .team {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
@@ -99,6 +98,27 @@ li {
     margin-bottom: 10px;
 }
 
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.project-item {
+    flex: 1 1 calc(45% - 40px);
+    text-align: center;
+    margin: 20px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 footer {
     background: #333;
     color: white;
@@ -109,13 +129,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .team-member {
+    .team-member, .project-item {
         flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .team-member {
+    .team-member, .project-item {
         flex: 1 1 100%;
     }
 }
