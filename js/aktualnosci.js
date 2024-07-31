@@ -21,8 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    let articlesLoaded = false; // Flaga, aby zapobiec wielokrotnemu ładowaniu artykułów
+
     // Funkcja do dynamicznego ładowania dodatkowych artykułów
     function loadMoreArticles() {
+        if (articlesLoaded) return; // Sprawdzanie czy artykuły zostały już załadowane
+        articlesLoaded = true; // Ustawienie flagi na true po załadowaniu artykułów
+
         const moreArticles = [
             {
                 title: "Kampania na rzecz zalesiania miast",
@@ -67,9 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             container.appendChild(articleElement);
         });
     }
-
-    // Załaduj więcej artykułów po 5 sekundach
-    setTimeout(loadMoreArticles, 5000);
 
     // Funkcja filtrowania artykułów
     function filterArticles(category) {
