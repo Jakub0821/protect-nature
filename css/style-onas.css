@@ -119,6 +119,14 @@ li {
     margin-bottom: 10px;
 }
 
+.team-member img {
+    width: 100px; /* Ustawienie szerokości zdjęcia */
+    height: 100px; /* Ustawienie wysokości zdjęcia */
+    border-radius: 50%; /* Ustawienie zdjęcia jako okrągłe */
+    margin-bottom: 10px;
+    object-fit: cover; /* Dopasowanie zdjęcia do okrągłego kształtu */
+}
+
 footer {
     background: #333;
     color: white;
