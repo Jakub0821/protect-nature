@@ -26,11 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const moreArticles = [
             {
                 title: "Kampania na rzecz zalesiania miast",
-                content: "Dowiedz się więcej o naszych inicjatywach zalesiania miast."
+                content: "Dowiedz się więcej o naszych inicjatywach zalesiania miast.",
+                category: "Inicjatywy"
             },
             {
                 title: "Nowe technologie w recyklingu",
-                content: "Poznaj nowe technologie, które pomagają w recyklingu odpadów."
+                content: "Poznaj nowe technologie, które pomagają w recyklingu odpadów.",
+                category: "Technologie"
             }
         ];
 
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         moreArticles.forEach(article => {
             const articleElement = document.createElement('article');
             articleElement.classList.add('news-item');
+            articleElement.dataset.category = article.category;
 
             const title = document.createElement('h2');
             title.textContent = article.title;
@@ -67,4 +70,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Załaduj więcej artykułów po 5 sekundach
     setTimeout(loadMoreArticles, 5000);
+
+    // Funkcja filtrowania artykułów
+    function filterArticles(category) {
+        const articles = document.querySelectorAll('.news-item');
+        articles.forEach(article => {
+            if (category === 'Wszystkie' || article.dataset.category === category) {
+                article.style.display = 'block';
+            } else {
+                article.style.display = 'none';
+            }
+        });
+    }
+
+    // Dodanie event listenerów do przycisków filtrujących
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+            filterArticles(category);
+        });
+    });
+
+    // Dodanie funkcji "Wczytaj więcej"
+    const loadMoreBtn = document.getElementById('load-more');
+    loadMoreBtn.addEventListener('click', loadMoreArticles);
 });

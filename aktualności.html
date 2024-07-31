@@ -19,8 +19,13 @@
         <a href="kontakt.html">Kontakt</a>
     </nav>
     <div class="container">
+        <div class="filters">
+            <button class="filter-button" data-category="Wszystkie">Wszystkie</button>
+            <button class="filter-button" data-category="Inicjatywy">Inicjatywy</button>
+            <button class="filter-button" data-category="Technologie">Technologie</button>
+        </div>
         <section class="news">
-            <article class="news-item">
+            <article class="news-item" data-category="Inicjatywy">
                 <h2>Nowe inicjatywy na rzecz ochrony środowiska</h2>
                 <p>Wprowadzamy nowe projekty mające na celu redukcję odpadów i oszczędność energii.</p>
                 <button onclick="showMore(this)">Czytaj więcej</button>
@@ -28,7 +33,7 @@
                     <p>Szczegóły dotyczące inicjatyw...</p>
                 </div>
             </article>
-            <article class="news-item">
+            <article class="news-item" data-category="Wydarzenia">
                 <h2>Wydarzenia ekologiczne w najbliższym czasie</h2>
                 <p>Zapraszamy na warsztaty i spotkania poświęcone ochronie środowiska.</p>
                 <button onclick="showMore(this)">Czytaj więcej</button>
@@ -38,6 +43,7 @@
             </article>
             <!-- Dodaj więcej artykułów tutaj -->
         </section>
+        <button id="load-more">Wczytaj więcej</button>
     </div>
     <footer>
         <p>&copy; 2024 Porady Ekologiczne. Wszelkie prawa zastrzeżone.</p>
