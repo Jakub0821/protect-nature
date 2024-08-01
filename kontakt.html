@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Ochrona środowiska</title>
+    <title data-key="title">Kontakt</title>
     <link rel="stylesheet" href="css/style-kontakt.css">
-    <script src="js/script.js"></script>
+    <script src="js/translation.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Kontakt</h1>
+        <h1 data-key="title">Kontakt</h1>
+        <div id="language-select">
+            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
+            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
+            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
+            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="esp">
+        </div>
     </header>
     <nav>
-        <a href="index.html">Strona Główna</a>
-        <a href="onas.html">O Nas</a>
-        <a href="aktualności.html">Aktualności</a>
-        <a href="porady.html">Porady Ekologiczne</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="index.html" data-key="home">Strona Główna</a>
+        <a href="onas.html" data-key="about">O Nas</a>
+        <a href="aktualnosci.html" data-key="news">Aktualności</a>
+        <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
+        <a href="kontakt.html" data-key="contact">Kontakt</a>
     </nav>
-    <div class="container">
+    
+    
+<div class="container">
         <section>
-            <h2>Formularz kontaktowy</h2>
+            <h2 data-key="form_title">Formularz kontaktowy</h2>
             <form action="https://example.com/form-handler" method="post">
-                <label for="name">Imię:</label>
+                <label for="name" data-key="form_name">Imię:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label>
+                <label for="email" data-key="form_email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Wiadomość:</label><br>
+                <label for="message" data-key="form_message">Wiadomość:</label><br>
                 <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                <input type="submit" value="Wyślij">
-            </form>  
+                <input type="submit" value="Wyślij" data-key="form_submit">
+            </form>
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
+        <p data-key="rights">&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {

@@ -61,31 +61,31 @@ const translations = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    const languageIcons = document.querySelectorAll('.language-icon');
-    const defaultLang = localStorage.getItem('selectedLang') || 'pl';
-
-    languageIcons.forEach(icon => {
-        icon.addEventListener('click', (event) => {
-            const lang = event.target.dataset.lang;
-            localStorage.setItem('selectedLang', lang);
-            translatePage(lang);
-        });
-    });
-
-    function translatePage(lang) {
-        const translation = translations[lang];
-        if (translation) {
+// Function to change language
+function changeLanguage(language) {
+    localStorage.setItem('selectedLanguage', language); // Store the selected language
+    fetch(`translations/${language}.json`)
+        .then(response => response.json())
+        .then(data => {
             document.querySelectorAll('[data-key]').forEach(element => {
                 const key = element.getAttribute('data-key');
-                if (translation[key]) {
-                    element.textContent = translation[key];
+                if (data[key]) {
+                    element.textContent = data[key];
                 }
             });
-        } else {
-            console.error('Translation not found for language:', lang);
-        }
-    }
+        });
+}
 
-    translatePage(defaultLang);
+// Event listeners for language icons
+document.querySelectorAll('.language-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+        const language = icon.getAttribute('data-lang');
+        changeLanguage(language);
+    });
+});
+
+// Apply stored language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'pl';
+    changeLanguage(savedLanguage);
 });
