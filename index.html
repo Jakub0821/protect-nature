@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ochrona środowiska</title>
-    <link rel="stylesheet" href="style.css">
+    <title data-key="title">Ochrona środowiska</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/translation.js" defer></script>
-    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1 id="title">Ochrona Środowiska</h1>
-        <select id="language-select">
-            <option value="pl">Polski</option>
-            <option value="en">English</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-        </select>
+        <h1 data-key="title">Ochrona Środowiska</h1>
+        <div id="language-switcher">
+            <img src="images/pl.png" alt="Polski" class="language-icon" data-lang="pl">
+            <img src="images/en.png" alt="English" class="language-icon" data-lang="en">
+            <img src="images/de.png" alt="Deutsch" class="language-icon" data-lang="de">
+            <img src="images/esp.png" alt="Español" class="language-icon" data-lang="esp">
+        </div>
     </header>
     <nav>
         <a href="index.html" data-key="home">Strona Główna</a>
         <a href="onas.html" data-key="about_us">O Nas</a>
-        <a href="aktualności.html" data-key="news">Aktualności</a>
+        <a href="aktualnosci.html" data-key="news">Aktualności</a>
         <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
         <a href="kontakt.html" data-key="contact">Kontakt</a>
     </nav>
-    
     <div class="container">
         <section>
             <h2 data-key="welcome">Witamy na stronie poświęconej ochronie środowiska!</h2>
@@ -44,7 +42,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
+        <p data-key="rights">© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
 </body>
 </html>
