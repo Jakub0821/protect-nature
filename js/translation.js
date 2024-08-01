@@ -63,9 +63,12 @@ const translations = {
 
 document.addEventListener('DOMContentLoaded', () => {
     const languageIcons = document.querySelectorAll('.language-icon');
+    const defaultLang = localStorage.getItem('selectedLang') || 'pl';
+
     languageIcons.forEach(icon => {
         icon.addEventListener('click', (event) => {
             const lang = event.target.dataset.lang;
+            localStorage.setItem('selectedLang', lang);
             translatePage(lang);
         });
     });
@@ -84,6 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Default language
-    translatePage('pl');
+    translatePage(defaultLang);
 });
