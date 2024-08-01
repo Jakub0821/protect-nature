@@ -1,6 +1,3 @@
-
-// Zaktualizuj plik translation.js
-
 const translations = {
     "pl": {
         "title": "Ochrona środowiska",
@@ -65,24 +62,28 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    const languageSwitcher = document.getElementById('language-switcher');
     const languageIcons = document.querySelectorAll('.language-icon');
-
     languageIcons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            const lang = icon.getAttribute('data-lang');
+        icon.addEventListener('click', (event) => {
+            const lang = event.target.dataset.lang;
             translatePage(lang);
         });
     });
 
     function translatePage(lang) {
-        const elements = document.querySelectorAll('[data-key]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-key');
-            element.textContent = translations[lang][key];
-        });
+        const translation = translations[lang];
+        if (translation) {
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translation[key]) {
+                    element.textContent = translation[key];
+                }
+            });
+        } else {
+            console.error('Translation not found for language:', lang);
+        }
     }
 
-    // Domyślnie ustaw polski
+    // Default language
     translatePage('pl');
 });
