@@ -1,0 +1,17 @@
+{
+    "header": {
+        "title": "Environmental Tips",
+        "home": "Home",
+        "about": "About Us",
+        "news": "News",
+        "tips": "Eco Tips",
+        "contact": "Contact"
+    },
+    "home": {
+        "welcome": "Welcome to the Environmental Protection Page!",
+        "description": "Here you will find information and tips on how to take care of our planet."
+    },
+    "footer": {
+        "rights": "© 2024 Environmental Protection. All rights reserved."
+    }
+}

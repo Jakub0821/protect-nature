@@ -1,0 +1,17 @@
+{
+    "header": {
+        "title": "Porady Ekologiczne",
+        "home": "Strona Główna",
+        "about": "O Nas",
+        "news": "Aktualności",
+        "tips": "Porady Ekologiczne",
+        "contact": "Kontakt"
+    },
+    "home": {
+        "welcome": "Witamy na stronie poświęconej ochronie środowiska!",
+        "description": "Tutaj znajdziesz informacje i porady, jak dbać o naszą planetę."
+    },
+    "footer": {
+        "rights": "© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone."
+    }
+}

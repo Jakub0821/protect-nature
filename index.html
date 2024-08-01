@@ -4,34 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ochrona środowiska</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/translation.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Ochrona Środowiska</h1>
+        <h1 id="title">Ochrona Środowiska</h1>
+        <select id="language-select">
+            <option value="pl">Polski</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+        </select>
     </header>
     <nav>
-        <a href="index.html">Strona Główna</a>
-        <a href="onas.html">O Nas</a>
-        <a href="aktualności.html">Aktualności</a>
-        <a href="porady.html">Porady Ekologiczne</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="index.html" data-key="home">Strona Główna</a>
+        <a href="onas.html" data-key="about_us">O Nas</a>
+        <a href="aktualności.html" data-key="news">Aktualności</a>
+        <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
+        <a href="kontakt.html" data-key="contact">Kontakt</a>
     </nav>
     
     <div class="container">
         <section>
-            <h2>Witamy na stronie poświęconej ochronie środowiska!</h2>
-            <p>Tutaj znajdziesz informacje i porady, jak dbać o naszą planetę.</p>
+            <h2 data-key="welcome">Witamy na stronie poświęconej ochronie środowiska!</h2>
+            <p data-key="welcome_text">Tutaj znajdziesz informacje i porady, jak dbać o naszą planetę.</p>
             <img src="images/nature.jpg" alt="Nature" class="responsive-img">
         </section>
         <section>
-            <h2>Aktualności</h2>
-            <p>Śledź najnowsze wiadomości i wydarzenia dotyczące ochrony środowiska.</p>
+            <h2 data-key="news_section">Aktualności</h2>
+            <p data-key="news_text">Śledź najnowsze wiadomości i wydarzenia dotyczące ochrony środowiska.</p>
             <img src="images/news.jpg" alt="Aktualności" class="responsive-img">
         </section>
         <section>
-            <h2>Porady Ekologiczne</h2>
-            <p>Praktyczne porady, które pomogą Ci w codziennym dbaniu o środowisko.</p>
+            <h2 data-key="tips_section">Porady Ekologiczne</h2>
+            <p data-key="tips_text">Praktyczne porady, które pomogą Ci w codziennym dbaniu o środowisko.</p>
             <img src="images/tips.jpg" alt="Porady Ekologiczne" class="responsive-img">
         </section>
     </div>
