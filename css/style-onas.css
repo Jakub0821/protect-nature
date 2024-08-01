@@ -1,80 +1,75 @@
-body, html {
+body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #4CAF50;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
+    padding: 2rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 nav {
-    background: #333; /* Ciemny pasek */
-    padding: 10px 0;
     display: flex;
     justify-content: center;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Dodanie odstępów między linkami */
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    color: white; /* Kolor tekstu na biały */
+nav a {
+    color: white;
+    padding: 1rem 2rem;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px; /* Dodanie odstępów wewnętrznych do linków */
-    transition: background 0.3s ease; /* Dodanie płynnej zmiany koloru tła przy najechaniu */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background: #555; /* Kolor tła przy najechaniu */
+nav a:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .container {
-    flex: 1; /* Zapewnia elastyczność dla głównej zawartości */
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center; /* Wyśrodkowanie zawartości */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-h2 {
-    color: #4CAF50; /* Kolor nagłówków */
-    margin-bottom: 10px;
-    text-align: center; /* Wyśrodkowanie nagłówków */
+section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+section h2 {
+    color: #4CAF50;
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    text-align: center;
 }
 
-li {
-    margin-bottom: 10px;
+section p {
+    line-height: 1.6;
 }
 
 .team {
@@ -92,10 +87,11 @@ li {
 }
 
 .team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+    width: 100px; /* Ustawienie szerokości zdjęcia */
+    height: 100px; /* Ustawienie wysokości zdjęcia */
+    border-radius: 50%; /* Ustawienie zdjęcia jako okrągłe */
     margin-bottom: 10px;
+    object-fit: cover; /* Dopasowanie zdjęcia do okrągłego kształtu */
 }
 
 .projects {
@@ -119,21 +115,19 @@ li {
     margin-bottom: 10px;
 }
 
-.team-member img {
-    width: 100px; /* Ustawienie szerokości zdjęcia */
-    height: 100px; /* Ustawienie wysokości zdjęcia */
-    border-radius: 50%; /* Ustawienie zdjęcia jako okrągłe */
-    margin-bottom: 10px;
-    object-fit: cover; /* Dopasowanie zdjęcia do okrągłego kształtu */
-}
-
 footer {
-    background: #333;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto; /* Ustawia stopkę na dole */
+    padding: 1rem;
+    position: fixed;
     width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -146,4 +140,32 @@ footer {
     .team-member, .project-item {
         flex: 1 1 100%;
     }
+}
+
+/* Dodatkowe style dla nawigacji */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    padding: 1rem 2rem;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
 }
