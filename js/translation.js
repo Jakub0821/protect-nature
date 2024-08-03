@@ -1,3 +1,8 @@
+// Funkcja do pobierania zapisanego języka z lokalnej pamięci
+function getSavedLanguage() {
+    return localStorage.getItem('selectedLanguage') || 'pl';
+}
+
 const translations = {
     "pl": {
         "title_home": "Ochrona Środowiska",
@@ -17,7 +22,6 @@ const translations = {
         "tips_section": "Porady Ekologiczne",
         "tips_text": "Praktyczne porady, które pomogą Ci w codziennym dbaniu o środowisko.",
         "rights": "© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.",
-        // Nowe klucze dla strony "O Nas"
         "who_we_are": "Kim jesteśmy?",
         "our_mission": "Naszą misją jest edukacja i promowanie działań na rzecz ochrony środowiska. Jesteśmy grupą entuzjastów ekologii, którzy wierzą, że każdy z nas może przyczynić się do ratowania naszej planety.",
         "our_history": "Nasza historia",
@@ -35,7 +39,6 @@ const translations = {
         "waste_reduction": "Kampanie na rzecz redukcji odpadów",
         "water_protection": "Inicjatywy na rzecz ochrony wód",
         "renewable_energy": "Projekty związane z odnawialnymi źródłami energii",
-        // Nowe klucze dla strony "Aktualności"
         "latest_initiatives": "Nowe inicjatywy na rzecz ochrony środowiska",
         "upcoming_events": "Wydarzenia ekologiczne w najbliższym czasie",
         "tree_planting": "Kampania na rzecz zalesiania miast",
@@ -61,7 +64,6 @@ const translations = {
         "tips_section": "Eco Tips",
         "tips_text": "Practical tips to help you take care of the environment every day.",
         "rights": "© 2024 Environmental Protection. All rights reserved.",
-        // New keys for the About Us page
         "who_we_are": "Who We Are?",
         "our_mission": "Our mission is to educate and promote actions for environmental protection. We are a group of ecology enthusiasts who believe that each of us can contribute to saving our planet.",
         "our_history": "Our History",
@@ -79,7 +81,6 @@ const translations = {
         "waste_reduction": "Campaigns for waste reduction",
         "water_protection": "Initiatives for water protection",
         "renewable_energy": "Projects related to renewable energy sources",
-        // New keys for the News page
         "latest_initiatives": "New initiatives for environmental protection",
         "upcoming_events": "Upcoming environmental events",
         "tree_planting": "Tree planting campaign",
@@ -105,7 +106,6 @@ const translations = {
         "tips_section": "Umwelt Tipps",
         "tips_text": "Praktische Tipps, die Ihnen helfen, sich jeden Tag um die Umwelt zu kümmern.",
         "rights": "© 2024 Umweltschutz. Alle Rechte vorbehalten.",
-        // Neue Schlüssel für die Über uns Seite
         "who_we_are": "Wer wir sind?",
         "our_mission": "Unsere Mission ist es, Maßnahmen zum Umweltschutz zu fördern und zu fördern. Wir sind eine Gruppe von Ökologie-Enthusiasten, die glauben, dass jeder von uns dazu beitragen kann, unseren Planeten zu retten.",
         "our_history": "Unsere Geschichte",
@@ -123,7 +123,6 @@ const translations = {
         "waste_reduction": "Kampagnen zur Abfallreduzierung",
         "water_protection": "Initiativen zum Schutz von Wasser",
         "renewable_energy": "Projekte im Zusammenhang mit erneuerbaren Energiequellen",
-        // Neue Schlüssel für die Nachrichten Seite
         "latest_initiatives": "Neue Initiativen zum Umweltschutz",
         "upcoming_events": "Kommende Umweltveranstaltungen",
         "tree_planting": "Baumpflanzaktion",
@@ -149,7 +148,6 @@ const translations = {
         "tips_section": "Consejos Ecológicos",
         "tips_text": "Consejos prácticos para ayudarte a cuidar el medio ambiente todos los días.",
         "rights": "© 2024 Protección Ambiental. Todos los derechos reservados.",
-        // Nuevas claves para la página Sobre nosotros
         "who_we_are": "¿Quiénes somos?",
         "our_mission": "Nuestra misión es educar y promover acciones para la protección del medio ambiente. Somos un grupo de entusiastas de la ecología que creen que cada uno de nosotros puede contribuir a salvar nuestro planeta.",
         "our_history": "Nuestra Historia",
@@ -167,7 +165,6 @@ const translations = {
         "waste_reduction": "Campañas para la reducción de residuos",
         "water_protection": "Iniciativas para la protección del agua",
         "renewable_energy": "Proyectos relacionados con fuentes de energía renovable",
-        // Nuevas claves para la página Noticias
         "latest_initiatives": "Nuevas iniciativas para la protección del medio ambiente",
         "upcoming_events": "Próximos eventos ambientales",
         "tree_planting": "Campaña de plantación de árboles",
@@ -177,24 +174,24 @@ const translations = {
     }
 };
 
-// Function to change language
+// Funkcja do zmiany języka
 function changeLanguage(language) {
-    localStorage.setItem('selectedLanguage', language); // Store the selected language
-    const data = translations[language]; // Use the translations object directly
+    localStorage.setItem('selectedLanguage', language); // Przechowuj wybrany język
+    const data = translations[language]; // Użyj obiektu translations bezpośrednio
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         if (data[key]) {
             element.textContent = data[key];
         }
     });
-    // Change the page title
+    // Zmiana tytułu strony
     const page = document.body.getAttribute('data-page');
     if (data[`title_${page}`]) {
         document.title = data[`title_${page}`];
     }
 }
 
-// Event listeners for language icons
+// Nasłuchiwacze zdarzeń dla ikon języków
 document.querySelectorAll('.language-icon').forEach(icon => {
     icon.addEventListener('click', () => {
         const language = icon.getAttribute('data-lang');
@@ -202,8 +199,8 @@ document.querySelectorAll('.language-icon').forEach(icon => {
     });
 });
 
-// Apply stored language on page load
+// Aplikuj zapisany język przy załadowaniu strony
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'pl';
+    const savedLanguage = getSavedLanguage();
     changeLanguage(savedLanguage);
 });
