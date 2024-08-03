@@ -3,10 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-key="title">Ochrona środowiska</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-index.css">
     <script src="js/translation.js" defer></script>
 </head>
-<body>
+<body data-page="home">
     <header>
         <h1 data-key="title">Ochrona Środowiska</h1>
         <div class="language-switcher">
@@ -43,5 +43,10 @@
     <footer>
         <p data-key="rights">© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            changeLanguage(getSavedLanguage());
+        });
+    </script>
 </body>
 </html>

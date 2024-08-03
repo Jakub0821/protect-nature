@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/style-porady.css">
         <script src="js/translation.js" defer></script>
     </head>
-    <body>
+    <body data-page="tips">
         <header>
             <h1 data-key="title">Porady Ekologiczne</h1>
             <div id="language-select">
@@ -64,6 +64,9 @@
                 moreInfo.style.display = 'none';
             }
         }
+        document.addEventListener("DOMContentLoaded", function() {
+                changeLanguage(getSavedLanguage());
+            });
     </script>
 </body>
 </html>

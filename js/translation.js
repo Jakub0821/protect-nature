@@ -5,7 +5,6 @@ const translations = {
         "title_news": "Aktualności",
         "title_tips": "Porady Ekologiczne",
         "title_contact": "Formularz Kontaktowy",
-
         "home": "Strona Główna",
         "about": "O Nas",
         "news": "Aktualności",
@@ -135,7 +134,7 @@ const translations = {
     "esp": {
         "title_home": "Protección Ambiental",
         "title_about": "Sobre Nosotros",
-        "title_news": "Noticiasl",
+        "title_news": "Noticias",
         "title_tips": "Consejos Ecológicos",
         "title_contact": "Formulario de Contacto",
         "home": "Inicio",

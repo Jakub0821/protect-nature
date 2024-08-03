@@ -8,7 +8,7 @@
         <script src="js/aktualnosci.js" defer></script>
         <script src="js/translation.js" defer></script>
     </head>
-    <body>
+    <body data-page="news">
         <header>
             <h1 data-key="title">Aktualności</h1>
             <div id="language-select">
@@ -148,5 +148,10 @@
     <footer>
         <p data-key="rights">&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            changeLanguage(getSavedLanguage());
+        });
+    </script>
 </body>
 </html>
