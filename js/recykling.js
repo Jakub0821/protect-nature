@@ -74,8 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const loadMoreBtn = document.createElement('button');
-    loadMoreBtn.textContent = 'Więcej informacji';
-    loadMoreBtn.addEventListener('click', loadMoreInfo);
-    document.body.appendChild(loadMoreBtn);
+   // Załaduj dodatkowe informacje po 5 sekundach
+   setTimeout(loadMoreInfo, 5000);
 });
