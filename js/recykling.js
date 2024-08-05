@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Strona Recykling załadowana');
 
     function showPopup(image) {
+        console.log('Pokazano popup dla obrazka:', image.src);
         const popup = document.createElement('div');
         popup.classList.add('popup');
         
@@ -31,19 +32,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.image-item img');
     images.forEach(image => {
         image.addEventListener('click', function() {
+            console.log('Kliknięto obrazek:', this.src);
             showPopup(this);
         });
     });
 
     function loadMoreInfo() {
+        console.log('Ładowanie więcej informacji...');
         const moreInfo = [
             {
-                imgSrc: 'images/recycling-paper.jpg',
+                imgSrc: 'images/recykling/recycling-paper.jpg',
                 alt: 'Recykling papieru',
                 text: 'Recykling papieru pomaga zmniejszyć wycinkę lasów.'
             },
             {
-                imgSrc: 'images/recycling-plastic.jpg',
+                imgSrc: 'images/recykling/recycling-plastic.jpg',
                 alt: 'Recykling plastiku',
                 text: 'Recykling plastiku zmniejsza zanieczyszczenie oceanów.'
             }
