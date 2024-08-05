@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="css/style-ochrona-wody.css">
     <script src="js/ochrona-wody.js" defer></script>
 </head>
-<body>
+<body data-page="tips">
     <header>
-        <h1>Ochrona Wody</h1>
+        <h1 data-key="title_tips">Ochrona Wody</h1>
+        <div id="language-select">
+            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
+            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
+            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
+            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="esp">
+        </div>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Strona Główna</a></li>
-            <li><a href="porady.html">Porady</a></li>
-            <li><a href="recykling.html">Recykling</a></li>
-            <li><a href="oszczedzanie-energii.html">Oszczędzanie Energii</a></li>
-            <li><a href="ochrona-wody.html">Ochrona Wody</a></li>
-            <li><a href="eko-transport.html">Eko-Transport</a></li>
-            <li><a href="zielone-zakupy.html">Zielone Zakupy</a></li>
-        </ul>
+        <a href="index.html" data-key="home">Strona Główna</a>
+        <a href="recykling.html" data-key="recycling">Recykling</a>
+        <a href="oszczedzanie-energii.html" data-key="energy-saving">Oszczędzanie Energii</a>
+        <a href="ochrona-wody.html" data-key="water-conservation">Ochrona Wody</a>
+        <a href="eko-transport.html" data-key="eco-transport">Eko-Transport</a>
+        <a href="zielone-zakupy.html" data-key="green-shopping">Zielone Zakupy</a>
     </nav>
     <div class="container">
         <section class="gallery">

@@ -22,35 +22,15 @@ header {
 }
 
 nav {
-    background: #333; /* Ciemny pasek */
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
+    background: #333;
+    padding: 10px;
+    text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Dodanie odstępów między linkami */
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    color: white; /* Kolor tekstu na biały */
+nav a {
+    color: white;
+    margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px; /* Dodanie odstępów wewnętrznych do linków */
-    transition: background 0.3s ease; /* Dodanie płynnej zmiany koloru tła przy najechaniu */
-}
-
-nav ul li a:hover {
-    background: #555; /* Kolor tła przy najechaniu */
 }
 
 .container {
@@ -101,6 +81,32 @@ footer {
     padding: 10px 0;
     margin-top: auto; /* Ustawia stopkę na dole */
     width: 100%;
+}
+
+#language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.language-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.language-icon {
+    width: 30px;
+    margin: 0 5px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
