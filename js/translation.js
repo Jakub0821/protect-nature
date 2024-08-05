@@ -44,7 +44,15 @@ const translations = {
         "tree_planting": "Kampania na rzecz zalesiania miast",
         "new_recycling_technologies": "Nowe technologie w recyklingu",
         "read_more": "Czytaj więcej",
-        "load_more": "Wczytaj więcej"
+        "load_more": "Wczytaj więcej",
+        "all": "Wszystkie",
+        "initiatives": "Inicjatywy",
+        "technologies": "Technologie",
+        "new_initiatives": "Nowe inicjatywy na rzecz ochrony środowiska",
+        "upcoming_events": "Wydarzenia ekologiczne w najbliższym czasie",
+        "tree_planting": "Kampania na rzecz zalesiania miast",
+        "new_recycling_technologies": "Nowe technologie w recyklingu",
+        "read_more": "Czytaj więcej"
     },
     "en": {
         "title_home": "Environmental Protection",
@@ -86,7 +94,15 @@ const translations = {
         "tree_planting": "Tree planting campaign",
         "new_recycling_technologies": "New recycling technologies",
         "read_more": "Read more",
-        "load_more": "Load more"
+        "load_more": "Load more",
+        "all": "All",
+        "initiatives": "Initiatives",
+        "technologies": "Technologies",
+        "new_initiatives": "New initiatives for environmental protection",
+        "upcoming_events": "Upcoming environmental events",
+        "tree_planting": "Tree planting campaign",
+        "new_recycling_technologies": "New recycling technologies",
+        "read_more": "Read more"
     },
     "de": {
         "title_home": "Umweltschutz",
@@ -128,7 +144,15 @@ const translations = {
         "tree_planting": "Baumpflanzaktion",
         "new_recycling_technologies": "Neue Recycling-Technologien",
         "read_more": "Mehr lesen",
-        "load_more": "Mehr laden"
+        "load_more": "Mehr laden",
+        "all": "Alle",
+        "initiatives": "Initiativen",
+        "technologies": "Technologien",
+        "new_initiatives": "Neue Initiativen zum Umweltschutz",
+        "upcoming_events": "Kommende Umweltveranstaltungen",
+        "tree_planting": "Baumpflanzaktion",
+        "new_recycling_technologies": "Neue Recycling-Technologien",
+        "read_more": "Mehr lesen"
     },
     "esp": {
         "title_home": "Protección Ambiental",
@@ -170,7 +194,15 @@ const translations = {
         "tree_planting": "Campaña de plantación de árboles",
         "new_recycling_technologies": "Nuevas tecnologías de reciclaje",
         "read_more": "Leer más",
-        "load_more": "Cargar más"
+        "load_more": "Cargar más",
+        "all": "Todos",
+        "initiatives": "Iniciativas",
+        "technologies": "Tecnologías",
+        "new_initiatives": "Nuevas iniciativas para la protección del medio ambiente",
+        "upcoming_events": "Próximos eventos ambientales",
+        "tree_planting": "Campaña de plantación de árboles",
+        "new_recycling_technologies": "Nuevas tecnologías de reciclaje",
+        "read_more": "Leer más"
     }
 };
 
