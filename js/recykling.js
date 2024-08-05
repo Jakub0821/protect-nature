@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Strona Recykling załadowana');
 
-    // Funkcja do pokazywania wyskakujących okienek z dodatkowymi informacjami
     function showPopup(image) {
         const popup = document.createElement('div');
         popup.classList.add('popup');
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(popup);
     }
 
-    // Przypisanie funkcji showPopup do obrazków
     const images = document.querySelectorAll('.image-item img');
     images.forEach(image => {
         image.addEventListener('click', function() {
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Funkcja do dynamicznego ładowania dodatkowych informacji
     function loadMoreInfo() {
         const moreInfo = [
             {
@@ -74,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Przycisk do ładowania dodatkowych informacji
     const loadMoreBtn = document.createElement('button');
     loadMoreBtn.textContent = 'Więcej informacji';
     loadMoreBtn.addEventListener('click', loadMoreInfo);

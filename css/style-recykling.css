@@ -43,7 +43,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto; /* Ustawienie stopki na dole */
+    margin-top: auto;
     width: 100%;
 }
 
@@ -53,10 +53,10 @@ h1, h2 {
 
 h1 {
     text-align: center;
-    color: white; /* Biały kolor tekstu */
-    background: #4CAF50; /* Tło w kolorze zielonym */
-    padding: 10px; /* Dodanie paddingu dla lepszego wyglądu */
-    margin: 20px 0; /* Dodanie marginesu aby oddzielić od reszty treści */
+    color: white;
+    background: #4CAF50;
+    padding: 10px;
+    margin: 20px 0;
 }
 
 img {
@@ -101,7 +101,6 @@ img {
     }
 }
 
-/* Stylizacja dla wyskakujących okienek (popup) */
 .popup {
     position: fixed;
     top: 0;
