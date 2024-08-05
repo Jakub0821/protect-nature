@@ -74,6 +74,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-   // Załaduj dodatkowe informacje po 5 sekundach
-   setTimeout(loadMoreInfo, 5000);
+    // Załaduj dodatkowe informacje po 5 sekundach
+    setTimeout(loadMoreInfo, 5000);
+
+    // Initialize language
+    const savedLanguage = localStorage.getItem('language') || 'pl';
+    changeLanguage(savedLanguage);
+
+    // Language selection event
+    document.querySelectorAll('.language-icon').forEach(icon => {
+        icon.addEventListener('click', () => {
+            const language = icon.getAttribute('data-lang');
+            changeLanguage(language);
+            localStorage.setItem('language', language);
+        });
+    });
 });
+
+function changeLanguage(language) {
+    fetch(`translations/${language}.json`)
+        .then(response => response.json())
+        .then(translations => {
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[key]) {
+                    element.textContent = translations[key];
+                }
+            });
+        });
+}
