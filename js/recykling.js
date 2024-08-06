@@ -37,37 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    function loadMoreInfo() {
-        console.log('Ładowanie więcej informacji...');
-        const moreInfo = [
-            
-        ];
-
-        const gallery = document.querySelector('.gallery');
-        moreInfo.forEach(info => {
-            const item = document.createElement('div');
-            item.classList.add('image-item');
-
-            const img = document.createElement('img');
-            img.src = info.imgSrc;
-            img.alt = info.alt;
-
-            const text = document.createElement('p');
-            text.textContent = info.text;
-
-            item.appendChild(img);
-            item.appendChild(text);
-            gallery.appendChild(item);
-
-            img.addEventListener('click', function() {
-                showPopup(this);
-            });
-        });
-    }
-
-    // Załaduj dodatkowe informacje po 5 sekundach
-    setTimeout(loadMoreInfo, 5000);
-
     // Initialize language
     const savedLanguage = localStorage.getItem('language') || 'pl';
     changeLanguage(savedLanguage);
