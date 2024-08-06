@@ -82,6 +82,8 @@ const translations = {
         "home_recycling": "Prosty system segregacji odpadów, który można wdrożyć w każdym domu.",
         "materials_for_recycling": "Różne rodzaje materiałów gotowych do recyklingu.",
         "recycling_facility": "Zakład recyklingu przetwarzający odpady na surowce wtórne.",
+        "recycling-paper":"Recykling papieru pomaga zmniejszyć wycinkę lasów.",
+        "recycling-plastic":"Recykling plastiku zmniejsza zanieczyszczenie oceanów.",
         "rights": "© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.",
         "energy_title": "Oszczędzanie Energii",
         "energy_text": "Dowiedz się, jak zmniejszyć zużycie energii w swoim domu i biurze, co pomoże obniżyć rachunki i chronić środowisko.",
