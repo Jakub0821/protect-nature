@@ -40,16 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadMoreInfo() {
         console.log('Ładowanie więcej informacji...');
         const moreInfo = [
-            {
-                imgSrc: 'images/recykling/recycling-paper.jpg',
-                alt: 'Recykling papieru',
-                text: 'Recykling papieru pomaga zmniejszyć wycinkę lasów.'
-            },
-            {
-                imgSrc: 'images/recykling/recycling-plastic.jpg',
-                alt: 'Recykling plastiku',
-                text: 'Recykling plastiku zmniejsza zanieczyszczenie oceanów.'
-            }
+            
         ];
 
         const gallery = document.querySelector('.gallery');
