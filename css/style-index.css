@@ -27,6 +27,7 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
+    align-items: center; /* Ensure nav items are centered */
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -38,7 +39,7 @@ nav a, .dropbtn {
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
-    align-items: center;
+    align-items: center; /* Ensure nav items are centered */
     justify-content: center;
 }
 
