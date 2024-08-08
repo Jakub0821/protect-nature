@@ -27,9 +27,35 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
-    align-items: center; /* Ensure nav items are centered */
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex; /* Użyj flexbox do ułożenia elementów obok siebie */
+    justify-content: center; /* Wyrównanie elementów w poziomie */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Dodaj margines między elementami */
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
 }
 
 nav a, .dropbtn {
@@ -39,7 +65,7 @@ nav a, .dropbtn {
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
-    align-items: center; /* Ensure nav items are centered */
+    align-items: center;
     justify-content: center;
 }
 
