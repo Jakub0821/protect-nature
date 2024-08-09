@@ -315,7 +315,7 @@ const translations = {
     },
     "esp": {
         "title": "Protección del Medio Ambiente",
-        "title_home": "Protección del medio ambiente",
+        "title_home": "Protección del Medio Ambiente",
         "title_about": "Sobre nosotros",
         "title_news": "Noticias",
         "title_tips": "Consejos ecológicos",
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('lang-en').addEventListener('click', function () {
         setLanguage('en');
     });
-    document.getElementById('lamg-de').addEventListener('click', function () {
+    document.getElementById('lang-de').addEventListener('click', function () {
         setLanguage('de');
     });
     document.getElementById('lang-es').addEventListener('click', function () {
