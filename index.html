@@ -3,55 +3,55 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-key="title">Ochrona środowiska</title>
-    <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="css/output.css">
     <script src="js/translation.js" defer></script>
 </head>
-<body data-page="home">
-    <header>
-        <h1 data-key="title_home">Ochrona Środowiska</h1>
-        <div class="language-switcher">
-            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
-            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
-            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
-            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
+<body data-page="home" class="bg-light text-dark">
+    <header class="bg-primary text-accent p-6 flex justify-between items-center">
+        <h1 class="text-4xl font-bold" data-key="title_home">Ochrona Środowiska</h1>
+        <div class="language-switcher flex gap-4">
+            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon w-8 cursor-pointer" data-lang="pl">
+            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon w-8 cursor-pointer" data-lang="en">
+            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon w-8 cursor-pointer" data-lang="de">
+            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon w-8 cursor-pointer" data-lang="es">
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html" data-key="home">Strona Główna</a></li>
-            <li><a href="onas.html" data-key="about">O Nas</a></li>
-            <li><a href="aktualności.html" data-key="news">Aktualności</a></li>
-            <div class="dropdown">
-                <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
-                <div class="dropdown-content">
-                    <a href="recykling.html" data-key="recycling">Recykling</a>
-                    <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-                    <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-                    <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
-                    <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
+    <nav class="bg-secondary text-accent p-4">
+        <ul class="flex justify-center space-x-6">
+            <li><a href="index.html" class="hover:text-primary" data-key="home">Strona Główna</a></li>
+            <li><a href="onas.html" class="hover:text-primary" data-key="about">O Nas</a></li>
+            <li><a href="aktualności.html" class="hover:text-primary" data-key="news">Aktualności</a></li>
+            <div class="dropdown relative">
+                <a href="porady.html" class="hover:text-primary" data-key="tips">Porady Ekologiczne</a>
+                <div class="dropdown-content absolute hidden bg-white text-dark p-2 shadow-lg">
+                    <a href="recykling.html" class="block hover:text-primary" data-key="recycling">Recykling</a>
+                    <a href="oszczedzanie-energii.html" class="block hover:text-primary" data-key="energy_saving">Oszczędzanie Energii</a>
+                    <a href="ochrona-wody.html" class="block hover:text-primary" data-key="water_conservation">Ochrona Wody</a>
+                    <a href="eko-transport.html" class="block hover:text-primary" data-key="eco_transport">Eko-Transport</a>
+                    <a href="zielone-zakupy.html" class="block hover:text-primary" data-key="green_shopping">Zielone Zakupy</a>
                 </div>
             </div>
-            <li><a href="kontakt.html" data-key="contact">Kontakt</a></li>
+            <li><a href="kontakt.html" class="hover:text-primary" data-key="contact">Kontakt</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <section>
-            <h2 data-key="welcome">Witamy na stronie poświęconej ochronie środowiska!</h2>
-            <p data-key="welcome_text">Tutaj znajdziesz informacje i porady, jak dbać o naszą planetę.</p>
-            <img src="images/nature.jpg" alt="Nature" class="responsive-img">
+    <div class="container mx-auto p-4">
+        <section class="mb-8">
+            <h2 class="text-center text-4xl bg-primary text-accent py-4" data-key="welcome">Witamy na stronie poświęconej ochronie środowiska!</h2>
+            <p class="text-center mt-4" data-key="welcome_text">Tutaj znajdziesz informacje i porady, jak dbać o naszą planetę.</p>
+            <img src="images/nature.jpg" alt="Nature" class="responsive-img w-full h-auto rounded-lg shadow-md mt-4">
         </section>
-        <section>
-            <h2 data-key="news_section">Aktualności</h2>
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4" data-key="news_section">Aktualności</h2>
             <p data-key="news_text">Śledź najnowsze wiadomości i wydarzenia dotyczące ochrony środowiska.</p>
-            <img src="images/news.jpg" alt="Aktualności" class="responsive-img">
+            <img src="images/news.jpg" alt="Aktualności" class="responsive-img w-full h-auto rounded-lg shadow-md mt-4">
         </section>
         <section>
-            <h2 data-key="tips_section">Porady Ekologiczne</h2>
+            <h2 class="text-3xl font-semibold mb-4" data-key="tips_section">Porady Ekologiczne</h2>
             <p data-key="tips_text">Praktyczne porady, które pomogą Ci w codziennym dbaniu o środowisko.</p>
-            <img src="images/tips.jpg" alt="Porady Ekologiczne" class="responsive-img">
+            <img src="images/tips.jpg" alt="Porady Ekologiczne" class="responsive-img w-full h-auto rounded-lg shadow-md mt-4">
         </section>
     </div>
-    <footer>
+    <footer class="bg-secondary text-accent text-center p-4 mt-8">
         <p data-key="rights">© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script>
