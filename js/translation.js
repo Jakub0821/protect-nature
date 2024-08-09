@@ -455,19 +455,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedLanguage = getSavedLanguage();
     setLanguage(savedLanguage);
     console.log(`Loaded language: ${savedLanguage}`);
-    // Add event listeners to language buttons
-    document.getElementById('lang-pl').addEventListener('click', function () {
-        setLanguage('pl');
-    });
-    document.getElementById('lang-en').addEventListener('click', function () {
-        setLanguage('en');
-    });
-    document.getElementById('lang-de').addEventListener('click', function () {
-        setLanguage('de');
-    });
-    document.getElementById('lang-es').addEventListener('click', function () {
-        setLanguage('es');
-    });
+
+    // Funkcja pomocnicza do dodawania nasłuchiwaczy, jeśli element istnieje
+    function addLangListener(id, lang) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('click', function () {
+                setLanguage(lang);
+            });
+        }
+    }
+
+    // Dodaj nasłuchiwacze dla wszystkich języków
+    addLangListener('lang-pl', 'pl');
+    addLangListener('lang-en', 'en');
+    addLangListener('lang-de', 'de');
+    addLangListener('lang-es', 'es');
 });
 
 function changeLanguage(lang) {
