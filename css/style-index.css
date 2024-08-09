@@ -203,12 +203,65 @@ button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    nav {
-        display: block;
+/* Stylizacja dla tabletów */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
     }
-    nav a {
-        display: block;
-        margin: 5px 0;
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Stylizacja dla telefonów */
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .responsive-img {
+        margin: 10px 0;
     }
 }

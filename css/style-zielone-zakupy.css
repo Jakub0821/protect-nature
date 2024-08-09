@@ -109,15 +109,45 @@ footer {
     cursor: pointer;
 }
 
+/* Stylizacja dla tabletów */
 @media (max-width: 768px) {
     .image-item {
         flex: 1 1 calc(50% - 10px);
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 1rem;
+    }
 }
 
+/* Stylizacja dla telefonów */
 @media (max-width: 480px) {
     .image-item {
         flex: 1 1 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    .language-icon {
+        width: 25px; /* Zmniejszenie rozmiaru flagi na telefonach */
     }
 }
 

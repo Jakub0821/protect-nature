@@ -174,12 +174,57 @@ button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    nav {
-        display: block;
+/* Stylizacja dla tabletów */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
     }
-    nav a {
-        display: block;
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    .filters button {
+        margin: 0 5px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Stylizacja dla telefonów */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .filters button {
         margin: 5px 0;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .language-icon {
+        width: 25px; /* Dostosowanie rozmiaru flagi na mniejszych ekranach */
     }
 }

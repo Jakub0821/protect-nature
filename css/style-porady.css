@@ -166,3 +166,49 @@ button:hover {
     margin: 0 5px;
     cursor: pointer;
 }
+
+/* Stylizacja dla tabletów */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    .language-icon {
+        width: 25px; /* Dostosowanie rozmiaru flagi na tabletach */
+    }
+}
+
+/* Stylizacja dla telefonów */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .language-icon {
+        width: 20px; /* Dostosowanie rozmiaru flagi na mniejszych ekranach */
+    }
+}
