@@ -480,15 +480,16 @@ function changeLanguage(language) {
     const data = translations[language];
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-        if (data[key]) {
+        if (data && data[key]) {  // Add an additional check for data[key]
             element.textContent = data[key];
         } else {
             console.warn(`Translation for key "${key}" not found in language "${language}"`);
         }
     });
-    // Update the page title
+
+    // Update the page title if it exists in the translation object
     const page = document.body.getAttribute('data-page');
-    if (data[`title_${page}`]) {
+    if (data && data[`title_${page}`]) {
         document.title = data[`title_${page}`];
     }
 }
