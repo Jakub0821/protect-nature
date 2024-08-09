@@ -476,10 +476,19 @@ document.addEventListener('DOMContentLoaded', function () {
     addLangListener('lang-es', 'es');
 });
 
-function changeLanguage(lang) {
+function changeLanguage(language) {
+    const data = translations[language];
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-//        console.log(`Translating key: ${key}, Language: ${lang}`);
-        element.textContent = translations[lang][key] || element.textContent;
+        if (data[key]) {
+            element.textContent = data[key];
+        } else {
+            console.warn(`Translation for key "${key}" not found in language "${language}"`);
+        }
     });
+    // Update the page title
+    const page = document.body.getAttribute('data-page');
+    if (data[`title_${page}`]) {
+        document.title = data[`title_${page}`];
+    }
 }
