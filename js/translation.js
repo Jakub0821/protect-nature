@@ -1,6 +1,26 @@
-// Funkcja do pobierania zapisanego języka z lokalnej pamięci
+// Function to get the saved language from local storage
 function getSavedLanguage() {
     return localStorage.getItem('selectedLanguage') || 'pl';
+}
+
+// Function to set the language and save it to local storage
+function setLanguage(language) {
+    localStorage.setItem('selectedLanguage', language);
+    translatePage(language);
+}
+
+// Function to translate the page content
+function translatePage(language) {
+    console.log(`Translating page to ${language}`);
+    document.querySelectorAll('[data-key]').forEach(function (element) {
+        const key = element.getAttribute('data-key');
+        if (translations[language] && translations[language][key]) {
+            element.innerText = translations[language][key];
+            console.log(`Translated ${key} to ${translations[language][key]}`);
+        } else {
+            console.log(`Translation for ${key} not found in ${language}`);
+        }
+    });
 }
 
 const translations = {
@@ -294,6 +314,7 @@ const translations = {
         "shopping_text": "Wählen Sie Produkte, die umweltfreundlich sind und eine geringere Umweltbelastung haben. Erfahren Sie, worauf Sie beim Einkaufen achten sollten."
     },
     "esp": {
+        "title": "Protección del Medio Ambiente",
         "title_home": "Protección del medio ambiente",
         "title_about": "Sobre nosotros",
         "title_news": "Noticias",
@@ -422,8 +443,36 @@ document.querySelectorAll('.language-icon').forEach(icon => {
     });
 });
 
-// Aplikuj zapisany język przy załadowaniu strony
+// Aplikuj zapisany język przy załadowaniu strony(
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = getSavedLanguage();
     changeLanguage(savedLanguage);
 });
+
+
+// Set the initial language based on saved preference
+document.addEventListener('DOMContentLoaded', function () {
+    const savedLanguage = getSavedLanguage();
+    setLanguage(savedLanguage);
+    console.log(`Loaded language: ${savedLanguage}`);
+    // Add event listeners to language buttons
+    document.getElementById('lang-pl').addEventListener('click', function () {
+        setLanguage('pl');
+    });
+    document.getElementById('lang-en').addEventListener('click', function () {
+        setLanguage('en');
+    });
+    document.getElementById('lamg-de').addEventListener('click', function () {
+        setLanguage('de');
+    });
+    document.getElementById('lang-es').addEventListener('click', function () {
+        setLanguage('es');
+    });
+});
+
+function changeLanguage(lang) {
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        element.textContent = translations[lang][key] || element.textContent;
+    });
+}
