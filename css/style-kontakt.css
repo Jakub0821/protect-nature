@@ -222,12 +222,12 @@ form input[type="submit"]:hover {
 
 /* Stylizacja ikon flag językowych */
 .language-icon {
-    width: 50px; /* Zmniejsz szerokość flag */
+    width: 30px; /* Zmniejsz szerokość flag, aby były mniejsze */
     height: auto; /* Ustal automatyczną wysokość proporcjonalną do szerokości */
     margin: 0 5px; /* Dodaj niewielki margines między flagami */
     cursor: pointer;
-    border-radius: 8px; /* Opcjonalnie, zaokrąglij rogi */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Opcjonalnie, dodaj cień dla lepszego wyglądu */
+    border-radius: 5px; /* Opcjonalnie, zaokrąglij rogi */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Opcjonalnie, dodaj cień dla lepszego wyglądu */
     transition: transform 0.3s ease; /* Dodaj efekt skalowania na hover */
 }
 
