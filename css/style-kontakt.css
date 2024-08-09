@@ -69,11 +69,12 @@ nav a:hover, .dropbtn:hover {
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 40px; /* Dodaj dolny margines */
 }
 
 section {
@@ -92,32 +93,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-#language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.language-select {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.language-icon {
-    width: 30px;
-    margin: 0 5px;
-    cursor: pointer;
 }
 
 /* Stylizacja formularza kontaktowego */
@@ -145,6 +120,7 @@ form textarea {
 }
 
 form input[type="submit"] {
+    margin-bottom: 20px; /* Dodaj dolny margines */
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
@@ -160,8 +136,20 @@ form input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-form textarea {
-    resize: vertical; /* Pozwala użytkownikowi zmieniać rozmiar pionowy */
+/* Ukryj nawigację mobilną na początku */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 /* Stylizacja dla tabletów */
@@ -181,6 +169,18 @@ form textarea {
     form input[type="submit"] {
         padding: 10px 15px;
         font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    .mobile-nav.active {
+        display: flex;
     }
 }
 

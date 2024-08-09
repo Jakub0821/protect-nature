@@ -16,8 +16,9 @@
             <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
             <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div>
+        <button class="menu-toggle">Menu</button>
     </header>
-    <nav>
+    <nav class="mobile-nav">
         <a href="index.html" data-key="home">Strona Główna</a>
         <a href="onas.html" data-key="about">O Nas</a>
         <a href="aktualności.html" data-key="news">Aktualności</a>
@@ -58,6 +59,11 @@
         document.addEventListener("DOMContentLoaded", function() {
                 changeLanguage(getSavedLanguage());
             });
+
+        // Kod JavaScript dla menu mobilnego
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.mobile-nav').classList.toggle('active');
+        });
     </script>
 </body>
 </html>

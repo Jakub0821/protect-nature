@@ -493,3 +493,8 @@ function changeLanguage(language) {
         document.title = data[`title_${page}`];
     }
 }
+
+// Kod JavaScript dla menu mobilnego
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.mobile-nav').classList.toggle('active');
+});
