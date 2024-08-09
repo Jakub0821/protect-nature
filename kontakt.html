@@ -18,6 +18,22 @@
         </div>
         <button class="menu-toggle">Menu</button>
     </header>
+    <nav>
+        <a href="index.html" data-key="home">Strona Główna</a>
+        <a href="onas.html" data-key="about">O Nas</a>
+        <a href="aktualności.html" data-key="news">Aktualności</a>
+        <div class="dropdown">
+            <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
+            <div class="dropdown-content">
+                <a href="recykling.html" data-key="recycling">Recykling</a>
+                <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
+                <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
+                <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
+                <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
+            </div>
+        </div>
+        <a href="kontakt.html" data-key="contact">Kontakt</a>
+    </nav>
     <nav class="mobile-nav">
         <a href="index.html" data-key="home">Strona Główna</a>
         <a href="onas.html" data-key="about">O Nas</a>
@@ -37,7 +53,7 @@
     <div class="container">
         <section>
             <h2 data-key="form_title">Formularz kontaktowy</h2>
-            <form action="https://example.com/form-handler" method="post">
+            <form id="contactForm" action="https://example.com/form-handler" method="post">
                 <label for="name" data-key="form_name">Imię:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
                 <label for="email" data-key="form_email">Email:</label><br>
@@ -52,14 +68,15 @@
         <p data-key="rights">&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
             alert('Formularz został wysłany!');
         });
-        document.addEventListener("DOMContentLoaded", function() {
-                changeLanguage(getSavedLanguage());
-            });
-
+    }
+});
         // Kod JavaScript dla menu mobilnego
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.mobile-nav').classList.toggle('active');
