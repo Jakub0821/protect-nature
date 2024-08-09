@@ -316,7 +316,7 @@ const translations = {
         "shopping_title": "Grünes Einkaufen",
         "shopping_text": "Wählen Sie Produkte, die umweltfreundlich sind und eine geringere Umweltbelastung haben. Erfahren Sie, worauf Sie beim Einkaufen achten sollten."
     },
-    "esp": {
+    "es": {
         "title": "Protección del Medio Ambiente",
         "title_home": "Protección del Medio Ambiente",
         "title_about": "Sobre nosotros",
