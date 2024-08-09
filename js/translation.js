@@ -25,6 +25,7 @@ function translatePage(language) {
 
 const translations = {
     "pl": {
+        "title": "Ochrona Środowiska",
         "title_home": "Ochrona Środowiska",
         "title_about": "O Nas",
         "title_news": "Aktualności",
@@ -120,6 +121,7 @@ const translations = {
         "shopping_text": "Wybieraj produkty, które są ekologiczne i mają mniejszy wpływ na środowisko. Dowiedz się, na co zwracać uwagę przy zakupach."
     },
     "en": {
+        "title": "Environmental Protection",
         "title_home": "Environmental Protection",
         "title_about": "About Us",
         "title_news": "News",
@@ -217,6 +219,7 @@ const translations = {
         "shopping_text": "Choose products that are eco-friendly and have a lower environmental impact. Learn what to look for when shopping."
     },
     "de": {
+        "title": "Umweltschutz",
         "title_home": "Umweltschutz",
         "title_about": "Über uns",
         "title_news": "Nachrichten",
@@ -476,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function changeLanguage(lang) {
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-        console.log(`Translating key: ${key}, Language: ${lang}`);
+//        console.log(`Translating key: ${key}, Language: ${lang}`);
         element.textContent = translations[lang][key] || element.textContent;
     });
 }
