@@ -473,6 +473,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function changeLanguage(lang) {
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-        element.textContent = translations[lang][key] || element.textContent;
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
     });
 }
