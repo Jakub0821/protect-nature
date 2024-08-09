@@ -11,14 +11,14 @@ function setLanguage(language) {
 
 // Function to translate the page content
 function translatePage(language) {
-    console.log(`Translating page to ${language}`);
+//    console.log(`Translating page to ${language}`);
     document.querySelectorAll('[data-key]').forEach(function (element) {
         const key = element.getAttribute('data-key');
         if (translations[language] && translations[language][key]) {
             element.innerText = translations[language][key];
             console.log(`Translated ${key} to ${translations[language][key]}`);
         } else {
-            console.log(`Translation for ${key} not found in ${language}`);
+//            console.log(`Translation for ${key} not found in ${language}`);
         }
     });
 }
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const savedLanguage = getSavedLanguage();
     setLanguage(savedLanguage);
-    console.log(`Loaded language: ${savedLanguage}`);
+//    console.log(`Loaded language: ${savedLanguage}`);
 
     // Funkcja pomocnicza do dodawania nasłuchiwaczy, jeśli element istnieje
     function addLangListener(id, lang) {
