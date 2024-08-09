@@ -222,7 +222,7 @@ form input[type="submit"]:hover {
 
 /* Stylizacja ikon flag językowych */
 .language-icon {
-    width: 30px; /* Zmniejsz szerokość flag, aby były mniejsze */
+    width: 30px; /* Zmniejsz szerokość flag */
     height: auto; /* Ustal automatyczną wysokość proporcjonalną do szerokości */
     margin: 0 5px; /* Dodaj niewielki margines między flagami */
     cursor: pointer;
