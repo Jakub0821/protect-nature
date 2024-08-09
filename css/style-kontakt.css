@@ -74,7 +74,8 @@ nav a:hover, .dropbtn:hover {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin-bottom: 40px; /* Dodaj dolny margines */
+    margin-bottom: 40px;
+    min-height: 400px; /* Dodanie minimalnej wysokości */
 }
 
 section {
@@ -90,9 +91,10 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
+    margin-top: 40px; /* Zwiększenie odstępu między formularzem a stopką */
 }
 
 /* Stylizacja formularza kontaktowego */
@@ -120,7 +122,7 @@ form textarea {
 }
 
 form input[type="submit"] {
-    margin-bottom: 20px; /* Dodaj dolny margines */
+    margin-bottom: 40px; /* Zwiększenie dolnego marginesu */
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
