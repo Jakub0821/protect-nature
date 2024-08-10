@@ -1,159 +1,163 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title data-key="title_news">Aktualności</title>
-        <link rel="stylesheet" href="css/style-aktualnosci.css">
-        <script src="js/aktualnosci.js" defer></script>
-        <script src="js/translation.js" defer></script>
-    </head>
-    <body data-page="news">
-        <header>
-            <h1 data-key="title_news">Aktualności</h1>
-            <div id="language-select">
-                <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
-                <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
-                <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
-                <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
-            </div>
-        </header>
-        <nav>
-            <a href="index.html" data-key="home">Strona Główna</a>
-            <a href="onas.html" data-key="about">O Nas</a>
-            <a href="aktualności.html" data-key="news">Aktualności</a>
-            <div class="dropdown">
-                <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
-                <div class="dropdown-content">
-                    <a href="recykling.html" data-key="recycling">Recykling</a>
-                    <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-                    <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-                    <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
-                    <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="title_news">Aktualności</title>
+    <link rel="stylesheet" href="css/output.css">
+    <script src="js/aktualnosci.js" defer></script>
+    <script src="js/translation.js" defer></script>
+</head>
+<body data-page="news" class="bg-gray-100 text-gray-900">
+    <header class="bg-green-500 text-white p-4 text-center">
+        <h1 class="text-2xl font-bold uppercase" data-key="title_news">Aktualności</h1>
+        <div id="language-select" class="flex justify-center mt-4">
+            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="pl">
+            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="en">
+            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="de">
+            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="es">
+        </div>
+    </header>
+    <nav class="bg-white shadow-md">
+        <ul class="flex justify-center space-x-4 p-4">
+            <li><a href="index.html" class="text-gray-900 hover:text-green-500" data-key="home">Strona Główna</a></li>
+            <li><a href="onas.html" class="text-gray-900 hover:text-green-500" data-key="about">O Nas</a></li>
+            <li><a href="aktualności.html" class="text-gray-900 hover:text-green-500" data-key="news">Aktualności</a></li>
+            <div class="relative group">
+                <a href="porady.html" class="text-gray-900 hover:text-green-500" data-key="tips">Porady Ekologiczne</a>
+                <div class="absolute bg-white shadow-md mt-2 hidden group-hover:block">
+                    <a href="recykling.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="recycling">Recykling</a>
+                    <a href="oszczedzanie-energii.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="energy_saving">Oszczędzanie Energii</a>
+                    <a href="ochrona-wody.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="water_conservation">Ochrona Wody</a>
+                    <a href="eko-transport.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="eco_transport">Eko-Transport</a>
+                    <a href="zielone-zakupy.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="green_shopping">Zielone Zakupy</a>
                 </div>
             </div>
-            <a href="kontakt.html" data-key="contact">Kontakt</a>
-        </nav>
-        <div class="container">
-            <div class="filters">
-                <button class="filter-button" data-key="all">Wszystkie</button>
-                <button class="filter-button" data-key="initiatives">Inicjatywy</button>
-                <button class="filter-button" data-key="technology">Technologie</button>
-            </div>
-            <section class="news">
-                <article class="news-item" data-category="Inicjatywy">
-                    <h2 data-key="new_initiatives">Nowe inicjatywy na rzecz ochrony środowiska</h2>
-                    <p data-key="new_initiatives_description">Wprowadzamy nowe projekty mające na celu redukcję odpadów i oszczędność energii.</p>
-                    <button data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
-                    <div class="more-content">
-                        <h3 data-key="urban_forestation">Zalesianie miast</h3>
-                        <p><strong data-key="goal">Cel:</strong> Zwiększenie powierzchni zieleni miejskiej i poprawa jakości powietrza.</p>
-                        <p><strong data-key="actions">Działania:</strong> Sadzenie drzew w parkach, przy ulicach oraz na terenach rekreacyjnych.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Posadzono 5000 drzew w 2023 roku, co przyczyniło się do zmniejszenia poziomu zanieczyszczeń o 10%.</p>
-                        
-                        <h3 data-key="educational_program">Program edukacyjny dla szkół</h3>
-                        <p><strong data-key="goal">Cel:</strong> Edukacja dzieci i młodzieży na temat ochrony środowiska i zrównoważonego rozwoju.</p>
-                        <p><strong data-key="actions">Działania:</strong> Organizacja warsztatów, prezentacji i konkursów ekologicznych.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Program objął 50 szkół i 10 000 uczniów, zwiększając świadomość ekologiczną wśród młodzieży.</p>
-
-                        <h3 data-key="plastic_reduction_campaign">Kampania redukcji plastiku</h3>
-                        <p><strong data-key="goal">Cel:</strong> Zmniejszenie ilości plastikowych odpadów.</p>
-                        <p><strong data-key="actions">Działania:</strong> Promowanie alternatyw dla plastiku, takie jak torby wielokrotnego użytku i biodegradowalne opakowania.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Kampania doprowadziła do zmniejszenia użycia plastikowych toreb o 30% w ciągu roku.</p>
-
-                        <h3 data-key="water_protection">Ochrona wód</h3>
-                        <p><strong data-key="goal">Cel:</strong> Ochrona zasobów wodnych i poprawa jakości wód.</p>
-                        <p><strong data-key="actions">Działania:</strong> Instalacja filtrów w fabrykach, edukacja mieszkańców na temat oszczędzania wody.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Zmniejszenie ilości zanieczyszczeń w lokalnych rzekach o 20%.</p>
-
-                        <h3 data-key="public_transport_promotion">Promowanie transportu publicznego</h3>
-                        <p><strong data-key="goal">Cel:</strong> Redukcja emisji CO2 poprzez zwiększenie korzystania z transportu publicznego.</p>
-                        <p><strong data-key="actions">Działania:</strong> Wprowadzenie zniżek na bilety, rozwój sieci transportu miejskiego.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Wzrost liczby pasażerów o 15%, co przyczyniło się do zmniejszenia emisji CO2 o 5%.</p>
-                    </div>
-                </article>
-                <article class="news-item" data-category="Wydarzenia">
-                    <h2 data-key="upcoming_events">Wydarzenia ekologiczne w najbliższym czasie</h2>
-                    <p data-key="upcoming_events_description">Zapraszamy na warsztaty i spotkania poświęcone ochronie środowiska.</p>
-                    <button data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
-                    <div class="more-content">
-                        <h3 data-key="zero_waste_workshops">Warsztaty "Zero Waste"</h3>
-                        <p><strong data-key="date">Data:</strong> 15 września 2024</p>
-                        <p><strong data-key="place">Miejsce:</strong> Centrum Kultury, Warszawa</p>
-                        <p data-key="description">Opis:</strong> Nauka jak zmniejszyć ilość odpadów w codziennym życiu poprzez praktyczne porady i warsztaty.</p>
-                        
-                        <h3 data-key="renewable_energy_conference">Konferencja "Przyszłość Energii Odnawialnej"</h3>
-                        <p><strong data-key="date">Data:</strong> 20 października 2024</p>
-                        <p><strong data-key="place">Miejsce:</strong> Hala Expo, Kraków</p>
-                        <p data-key="description">Opis:</strong> Konferencja poświęcona nowoczesnym technologiom w dziedzinie energii odnawialnej i ich wpływie na środowisko.</p>
-
-                        <h3 data-key="world_cleanup_day">Dzień Sprzątania Świata</h3>
-                        <p><strong data-key="date">Data:</strong> 18 września 2024</p>
-                        <p><strong data-key="place">Miejsce:</strong> Park Miejski, Gdańsk</p>
-                        <p data-key="description">Opis:</strong> Wspólne sprzątanie terenów zielonych, połączone z edukacją ekologiczną i atrakcjami dla dzieci.</p>
-
-                        <h3 data-key="green_city_festival">Festiwal "Zielone Miasto"</h3>
-                        <p><strong data-key="date">Data:</strong> 12-14 listopada 2024</p>
-                        <p><strong data-key="place">Miejsce:</strong> Rynek Główny, Wrocław</p>
-                        <p data-key="description">Opis:</strong> Festiwal promujący ekologiczne rozwiązania w miejskim życiu, w tym targi ekologiczne, prelekcje i warsztaty.</p>
-
-                        <h3 data-key="run_for_the_planet_marathon">Maraton "Biegnij dla Planety"</h3>
-                        <p><strong data-key="date">Data:</strong> 22 sierpnia 2024</p>
-                        <p><strong data-key="place">Miejsce:</strong> Bulwary Wiślane, Kraków</p>
-                        <p data-key="description">Opis:</strong> Maraton charytatywny mający na celu zebranie funduszy na projekty związane z ochroną środowiska.</p>
-                    </div>
-                </article>
-                <article class="news-item" data-category="Inicjatywy">
-                    <h2 data-key="city_forestation_campaign">Kampania na rzecz zalesiania miast</h2>
-                    <p data-key="city_forestation_campaign_description">Inicjatywa mająca na celu zwiększenie liczby drzew w miastach i poprawę jakości powietrza.</p>
-                    <button data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
-                    <div class="more-content">
-                        <h3 data-key="green_city_campaign">Kampania "Zielone Miasto"</h3>
-                        <p><strong data-key="goal">Cel:</strong> Zwiększenie powierzchni zieleni miejskiej, poprawa jakości powietrza i stworzenie przyjaznych przestrzeni rekreacyjnych.</p>
-                        <p><strong data-key="actions">Działania:</strong> Sadzenie drzew w parkach, przy ulicach, na terenach szkół i placów zabaw; organizacja warsztatów edukacyjnych na temat korzyści płynących z zalesiania.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Posadzono 10 000 drzew w 2023 roku, co przyczyniło się do zmniejszenia poziomu zanieczyszczeń powietrza o 15%.</p>
-                        <p><strong data-key="partners">Partnerzy:</strong> Miasto, lokalne szkoły, organizacje pozarządowe, wolontariusze.</p>
-                        <p><strong data-key="future_actions">Przyszłe działania:</strong> Kontynuacja sadzenia drzew w nowych lokalizacjach, monitorowanie wzrostu posadzonych drzew, organizacja wydarzeń edukacyjnych.</p>
-
-                        <h3 data-key="trees_for_everyone_campaign">Kampania "Drzewa dla Każdego"</h3>
-                        <p><strong data-key="goal">Cel:</strong> Każdy mieszkaniec miasta ma możliwość posadzenia swojego drzewa i przyczynienia się do zalesiania swojego otoczenia.</p>
-                        <p><strong data-key="actions">Działania:</strong> Organizacja dni sadzenia drzew, rozdawanie sadzonek mieszkańcom, edukacja na temat pielęgnacji drzew.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> W ramach kampanii posadzono 5000 drzew przez mieszkańców w ciągu jednego roku.</p>
-                        <p><strong data-key="partners">Partnerzy:</strong> Władze miejskie, szkoły, przedsiębiorstwa, mieszkańcy.</p>
-                        <p><strong data-key="future_actions">Przyszłe działania:</strong> Rozszerzenie kampanii na kolejne miasta, wprowadzenie programów monitorowania i pielęgnacji posadzonych drzew.</p>
-
-                        <h3 data-key="green_street_campaign">Kampania "Zielona Ulica"</h3>
-                        <p><strong data-key="goal">Cel:</strong> Zwiększenie liczby drzew przy ulicach miejskich, aby poprawić estetykę, jakość powietrza i warunki klimatyczne.</p>
-                        <p><strong data-key="actions">Działania:</strong> Sadzenie drzew przy głównych ulicach i drogach, edukacja mieszkańców na temat korzyści płynących z zieleni miejskiej.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Posadzono 2000 drzew przy ulicach, co zmniejszyło hałas i poprawiło jakość powietrza w centrum miasta.</p>
-                        <p><strong data-key="partners">Partnerzy:</strong> Lokalni przedsiębiorcy, organizacje ekologiczne, mieszkańcy.</p>
-                        <p><strong data-key="future_actions">Przyszłe działania:</strong> Kontynuacja sadzenia drzew w nowych lokalizacjach, kampanie informacyjne na temat korzyści z zieleni przyulicznej.</p>
-                    </div>
-                </article>
-                <article class="news-item" data-category="Technologie">
-                    <h2 data-key="new_recycling_technologies">Nowe technologie w recyklingu</h2>
-                    <p data-key="new_recycling_technologies_description">Odkryj innowacyjne metody, które przekształcają przemysł recyklingu.</p>
-                    <button data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
-                    <div class="more-content">
-                        <h3 data-key="optical_sorting_technology">Technologia sortowania optycznego</h3>
-                        <p><strong data-key="goal">Cel:</strong> Zwiększenie efektywności sortowania odpadów poprzez wykorzystanie technologii optycznych do identyfikacji materiałów.</p>
-                        <p><strong data-key="actions">Działania:</strong> Instalacja zaawansowanych linii sortujących w zakładach recyklingu, które wykorzystują czujniki optyczne do segregacji plastiku, metalu, papieru i innych materiałów.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Zwiększenie dokładności sortowania o 30%, co przyczyniło się do zwiększenia ilości materiałów nadających się do recyklingu.</p>
-
-                        <h3 data-key="chemical_recycling_technology">Technologia recyklingu chemicznego plastiku</h3>
-                        <p><strong data-key="goal">Cel:</strong> Rozkład plastikowych odpadów na poziomie molekularnym, aby umożliwić ponowne wykorzystanie materiałów w produkcji nowych produktów.</p>
-                        <p><strong data-key="actions">Działania:</strong> Wprowadzenie procesów chemicznych, które rozkładają plastik na surowce, takie jak monomery, które mogą być ponownie wykorzystane.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Zmniejszenie ilości plastikowych odpadów trafiających na składowiska o 40%.</p>
-
-                        <h3 data-key="waste_to_energy_technology">Technologia przetwarzania odpadów organicznych na energię</h3>
-                        <p><strong data-key="goal">Cel:</strong> Wykorzystanie odpadów organicznych do produkcji energii elektrycznej i cieplnej.</p>
-                        <p><strong data-key="actions">Działania:</strong> Budowa instalacji do biogazowni, które przetwarzają odpady organiczne, takie jak resztki jedzenia i odpadki rolnicze, na biogaz.</p>
-                        <p><strong data-key="achievements">Osiągnięcia:</strong> Produkcja wystarczającej ilości energii, aby zasilić 5000 domów, oraz zmniejszenie emisji metanu.</p>
-                    </div>
-                </article>
-            </section>
+            <li><a href="kontakt.html" class="text-gray-900 hover:text-green-500" data-key="contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="container mx-auto p-6">
+        <div class="filters flex justify-center space-x-4 mb-6">
+            <button class="bg-green-500 text-white px-4 py-2 rounded-full focus:outline-none hover:bg-green-600" data-key="all">Wszystkie</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-full focus:outline-none hover:bg-green-600" data-key="initiatives">Inicjatywy</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-full focus:outline-none hover:bg-green-600" data-key="technology">Technologie</button>
         </div>
-        <footer>
+        <section class="news grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="news-item bg-white shadow-md rounded-lg p-4" data-category="Inicjatywy">
+                <h2 class="text-xl font-semibold mb-2" data-key="new_initiatives">Nowe inicjatywy na rzecz ochrony środowiska</h2>
+                <p class="text-gray-700 mb-4" data-key="new_initiatives_description">Wprowadzamy nowe projekty mające na celu redukcję odpadów i oszczędność energii.</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded focus:outline-none hover:bg-green-600" data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
+                <div class="more-content hidden mt-4">
+                    <h3 class="text-lg font-semibold" data-key="urban_forestation">Zalesianie miast</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Zwiększenie powierzchni zieleni miejskiej i poprawa jakości powietrza.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Sadzenie drzew w parkach, przy ulicach oraz na terenach rekreacyjnych.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Posadzono 5000 drzew w 2023 roku, co przyczyniło się do zmniejszenia poziomu zanieczyszczeń o 10%.</p>
+
+                    <h3 class="text-lg font-semibold" data-key="educational_program">Program edukacyjny dla szkół</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Edukacja dzieci i młodzieży na temat ochrony środowiska i zrównoważonego rozwoju.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Organizacja warsztatów, prezentacji i konkursów ekologicznych.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Program objął 50 szkół i 10 000 uczniów, zwiększając świadomość ekologiczną wśród młodzieży.</p>
+
+                    <h3 class="text-lg font-semibold" data-key="plastic_reduction_campaign">Kampania redukcji plastiku</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Zmniejszenie ilości plastikowych odpadów.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Promowanie alternatyw dla plastiku, takie jak torby wielokrotnego użytku i biodegradowalne opakowania.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Kampania doprowadziła do zmniejszenia użycia plastikowych toreb o 30% w ciągu roku.</p>
+
+                    <h3 class="text-lg font-semibold" data-key="water_protection">Ochrona wód</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Ochrona zasobów wodnych i poprawa jakości wód.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Instalacja filtrów w fabrykach, edukacja mieszkańców na temat oszczędzania wody.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Zmniejszenie ilości zanieczyszczeń w lokalnych rzekach o 20%.</p>
+
+                    <h3 class="text-lg font-semibold" data-key="public_transport_promotion">Promowanie transportu publicznego</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Redukcja emisji CO2 poprzez zwiększenie korzystania z transportu publicznego.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Wprowadzenie zniżek na bilety, rozwój sieci transportu miejskiego.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Wzrost liczby pasażerów o 15%, co przyczyniło się do zmniejszenia emisji CO2 o 5%.</p>
+                </div>
+            </article>
+            <article class="news-item bg-white shadow-md rounded-lg p-4 mb-6" data-category="Wydarzenia">
+                <h2 class="text-xl font-semibold mb-2" data-key="upcoming_events">Wydarzenia ekologiczne w najbliższym czasie</h2>
+                <p class="text-gray-700 mb-4" data-key="upcoming_events_description">Zapraszamy na warsztaty i spotkania poświęcone ochronie środowiska.</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded focus:outline-none hover:bg-green-600" data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
+                <div class="more-content hidden mt-4">
+                    <h3 class="text-lg font-semibold" data-key="zero_waste_workshops">Warsztaty "Zero Waste"</h3>
+                    <p class="text-gray-700"><strong data-key="date">Data:</strong> 15 września 2024</p>
+                    <p class="text-gray-700"><strong data-key="place">Miejsce:</strong> Centrum Kultury, Warszawa</p>
+                    <p class="text-gray-700" data-key="description">Opis:</strong> Nauka jak zmniejszyć ilość odpadów w codziennym życiu poprzez praktyczne porady i warsztaty.</p>
+                    
+                    <h3 class="text-lg font-semibold" data-key="renewable_energy_conference">Konferencja "Przyszłość Energii Odnawialnej"</h3>
+                    <p class="text-gray-700"><strong data-key="date">Data:</strong> 20 października 2024</p>
+                    <p class="text-gray-700"><strong data-key="place">Miejsce:</strong> Hala Expo, Kraków</p>
+                    <p class="text-gray-700" data-key="description">Opis:</strong> Konferencja poświęcona nowoczesnym technologiom w dziedzinie energii odnawialnej i ich wpływie na środowisko.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="world_cleanup_day">Dzień Sprzątania Świata</h3>
+                    <p class="text-gray-700"><strong data-key="date">Data:</strong> 18 września 2024</p>
+                    <p class="text-gray-700"><strong data-key="place">Miejsce:</strong> Park Miejski, Gdańsk</p>
+                    <p class="text-gray-700" data-key="description">Opis:</strong> Wspólne sprzątanie terenów zielonych, połączone z edukacją ekologiczną i atrakcjami dla dzieci.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="green_city_festival">Festiwal "Zielone Miasto"</h3>
+                    <p class="text-gray-700"><strong data-key="date">Data:</strong> 12-14 listopada 2024</p>
+                    <p class="text-gray-700"><strong data-key="place">Miejsce:</strong> Rynek Główny, Wrocław</p>
+                    <p class="text-gray-700" data-key="description">Opis:</strong> Festiwal promujący ekologiczne rozwiązania w miejskim życiu, w tym targi ekologiczne, prelekcje i warsztaty.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="run_for_the_planet_marathon">Maraton "Biegnij dla Planety"</h3>
+                    <p class="text-gray-700"><strong data-key="date">Data:</strong> 22 sierpnia 2024</p>
+                    <p class="text-gray-700"><strong data-key="place">Miejsce:</strong> Bulwary Wiślane, Kraków</p>
+                    <p class="text-gray-700" data-key="description">Opis:</strong> Maraton charytatywny mający na celu zebranie funduszy na projekty związane z ochroną środowiska.</p>
+                </div>
+            </article>
+            
+            <article class="news-item bg-white shadow-md rounded-lg p-4 mb-6" data-category="Inicjatywy">
+                <h2 class="text-xl font-semibold mb-2" data-key="city_forestation_campaign">Kampania na rzecz zalesiania miast</h2>
+                <p class="text-gray-700 mb-4" data-key="city_forestation_campaign_description">Inicjatywa mająca na celu zwiększenie liczby drzew w miastach i poprawę jakości powietrza.</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded focus:outline-none hover:bg-green-600" data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
+                <div class="more-content hidden mt-4">
+                    <h3 class="text-lg font-semibold" data-key="green_city_campaign">Kampania "Zielone Miasto"</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Zwiększenie powierzchni zieleni miejskiej, poprawa jakości powietrza i stworzenie przyjaznych przestrzeni rekreacyjnych.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Sadzenie drzew w parkach, przy ulicach, na terenach szkół i placów zabaw; organizacja warsztatów edukacyjnych na temat korzyści płynących z zalesiania.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Posadzono 10 000 drzew w 2023 roku, co przyczyniło się do zmniejszenia poziomu zanieczyszczeń powietrza o 15%.</p>
+                    <p class="text-gray-700"><strong data-key="partners">Partnerzy:</strong> Miasto, lokalne szkoły, organizacje pozarządowe, wolontariusze.</p>
+                    <p class="text-gray-700"><strong data-key="future_actions">Przyszłe działania:</strong> Kontynuacja sadzenia drzew w nowych lokalizacjach, monitorowanie wzrostu posadzonych drzew, organizacja wydarzeń edukacyjnych.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="trees_for_everyone_campaign">Kampania "Drzewa dla Każdego"</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Każdy mieszkaniec miasta ma możliwość posadzenia swojego drzewa i przyczynienia się do zalesiania swojego otoczenia.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Organizacja dni sadzenia drzew, rozdawanie sadzonek mieszkańcom, edukacja na temat pielęgnacji drzew.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> W ramach kampanii posadzono 5000 drzew przez mieszkańców w ciągu jednego roku.</p>
+                    <p class="text-gray-700"><strong data-key="partners">Partnerzy:</strong> Władze miejskie, szkoły, przedsiębiorstwa, mieszkańcy.</p>
+                    <p class="text-gray-700"><strong data-key="future_actions">Przyszłe działania:</strong> Rozszerzenie kampanii na kolejne miasta, wprowadzenie programów monitorowania i pielęgnacji posadzonych drzew.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="green_street_campaign">Kampania "Zielona Ulica"</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Zwiększenie liczby drzew przy ulicach miejskich, aby poprawić estetykę, jakość powietrza i warunki klimatyczne.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Sadzenie drzew przy głównych ulicach i drogach, edukacja mieszkańców na temat korzyści płynących z zieleni miejskiej.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Posadzono 2000 drzew przy ulicach, co zmniejszyło hałas i poprawiło jakość powietrza w centrum miasta.</p>
+                    <p class="text-gray-700"><strong data-key="partners">Partnerzy:</strong> Lokalni przedsiębiorcy, organizacje ekologiczne, mieszkańcy.</p>
+                    <p class="text-gray-700"><strong data-key="future_actions">Przyszłe działania:</strong> Kontynuacja sadzenia drzew w nowych lokalizacjach, kampanie informacyjne na temat korzyści z zieleni przyulicznej.</p>
+                </div>
+            </article>
+            
+            <article class="news-item bg-white shadow-md rounded-lg p-4 mb-6" data-category="Technologie">
+                <h2 class="text-xl font-semibold mb-2" data-key="new_recycling_technologies">Nowe technologie w recyklingu</h2>
+                <p class="text-gray-700 mb-4" data-key="new_recycling_technologies_description">Odkryj innowacyjne metody, które przekształcają przemysł recyklingu.</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded focus:outline-none hover:bg-green-600" data-key="read_more" onclick="showMore(this)">Czytaj więcej</button>
+                <div class="more-content hidden mt-4">
+                    <h3 class="text-lg font-semibold" data-key="optical_sorting_technology">Technologia sortowania optycznego</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Zwiększenie efektywności sortowania odpadów poprzez wykorzystanie technologii optycznych do identyfikacji materiałów.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Instalacja zaawansowanych linii sortujących w zakładach recyklingu, które wykorzystują czujniki optyczne do segregacji plastiku, metalu, papieru i innych materiałów.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Zwiększenie dokładności sortowania o 30%, co przyczyniło się do zwiększenia ilości materiałów nadających się do recyklingu.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="chemical_recycling_technology">Technologia recyklingu chemicznego plastiku</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Rozkład plastikowych odpadów na poziomie molekularnym, aby umożliwić ponowne wykorzystanie materiałów w produkcji nowych produktów.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Wprowadzenie procesów chemicznych, które rozkładają plastik na surowce, takie jak monomery, które mogą być ponownie wykorzystane.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Zmniejszenie ilości plastikowych odpadów trafiających na składowiska o 40%.</p>
+            
+                    <h3 class="text-lg font-semibold" data-key="waste_to_energy_technology">Technologia przetwarzania odpadów organicznych na energię</h3>
+                    <p class="text-gray-700"><strong data-key="goal">Cel:</strong> Wykorzystanie odpadów organicznych do produkcji energii elektrycznej i cieplnej.</p>
+                    <p class="text-gray-700"><strong data-key="actions">Działania:</strong> Budowa instalacji do biogazowni, które przetwarzają odpady organiczne, takie jak resztki jedzenia i odpadki rolnicze, na biogaz.</p>
+                    <p class="text-gray-700"><strong data-key="achievements">Osiągnięcia:</strong> Produkcja wystarczającej ilości energii, aby zasilić 5000 domów, oraz zmniejszenie emisji metanu.</p>
+                </div>
+            </article>
+                        </section>
+        </div>
+        <footer class="bg-gray-800 text-white text-center p-4 mt-8">
             <p data-key="rights">&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
         </footer>
         <script>
@@ -162,4 +166,4 @@
             });
         </script>
     </body>
-</html>
+    </html>
