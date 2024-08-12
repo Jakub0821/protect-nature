@@ -193,6 +193,16 @@ button:hover {
     background-color: #4CAF50;
 }
 
+/* Ukrywanie i pokazywanie menu dropdown */
+#desktop-dropdown {
+    display: none;
+}
+
+#desktop-dropdown.visible {
+    display: block;
+}
+
+
 /* Ukryj mobilne menu na większych ekranach */
 @media (min-width: 769px) {
     .menu-toggle {
@@ -268,13 +278,4 @@ button:hover {
     .responsive-img {
         margin: 10px 0;
     }
-}
-
-/* Ukrywanie i pokazywanie menu dropdown */
-#desktop-dropdown {
-    display: none;
-}
-
-#desktop-dropdown.visible {
-    display: block;
 }
