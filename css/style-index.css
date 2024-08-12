@@ -193,7 +193,7 @@ button:hover {
     background-color: #4CAF50;
 }
 
-/* Ukrywanie i pokazywanie menu dropdown */
+/* Mobile menu toggle and submenu */
 #desktop-dropdown {
     display: none;
 }
@@ -202,7 +202,7 @@ button:hover {
     display: block;
 }
 
-/* Ukryj mobilne menu na większych ekranach */
+/* Hide mobile menu on larger screens */
 @media (min-width: 769px) {
     #mobile-nav {
         display: none;
@@ -216,31 +216,30 @@ button:hover {
         display: block;
     }
 
-    /* Ukryj podstrony w sekcji "Porady Ekologiczne" */
+    /* Hide subpages in "Porady Ekologiczne" section */
     #ecology-submenu {
         display: none;
     }
 
-    /* Pokaż podstrony po kliknięciu */
+    /* Show subpages after click */
     #show-submenu:checked + #ecology-submenu {
         display: block;
     }
 
-    /* Wyrównanie tekstu w submenu */
+    /* Text alignment in submenu */
     #ecology-submenu li {
         text-align: left;
         padding-left: 20px;
     }
 
-    /* Zmieniamy styl przycisku, gdy submenu jest widoczne */
+    /* Change button style when submenu is visible */
     #show-submenu:checked + #ecology-submenu + label {
         background-color: #007BFF;
         color: white;
     }
 }
 
-
-/* Wyświetl mobilne menu na mniejszych ekranach */
+/* Show mobile menu on smaller screens */
 @media (max-width: 768px) {
     #mobile-nav {
         display: block;
