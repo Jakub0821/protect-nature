@@ -203,6 +203,40 @@ button:hover {
     cursor: pointer;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+}
+
+.mobile-nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mobile-nav a:hover {
+    background-color: #4CAF50;
+}
+
+.menu-toggle.active + .mobile-nav {
+    display: flex;
+}
+
+
+
 /* Stylizacja dla tabletów */
 @media (max-width: 768px) {
     header h1 {
@@ -228,6 +262,18 @@ button:hover {
     section h2 {
         font-size: 1.75rem;
     }
+}
+
+nav ul {
+    display: none; /* Ukryj menu nawigacyjne na mniejszych ekranach */
+}
+
+.mobile-nav {
+    display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
+}
+
+.menu-toggle {
+    display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
 }
 
 /* Stylizacja dla telefonów */
@@ -263,5 +309,13 @@ button:hover {
 
     .responsive-img {
         margin: 10px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex;
     }
 }

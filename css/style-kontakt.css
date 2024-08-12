@@ -8,10 +8,13 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
 nav {
     display: flex;
     justify-content: center;
