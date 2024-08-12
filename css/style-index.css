@@ -193,42 +193,37 @@ button:hover {
     background-color: #4CAF50;
 }
 
+/* Ukryj mobilne menu na większych ekranach */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Ukryj przycisk do rozwijania mobilnego menu */
+    }
+
+    .mobile-nav {
+        display: none; /* Ukryj mobilne menu na większych ekranach */
+    }
+
+    nav ul {
+        display: flex; /* Pokaż standardowe menu na większych ekranach */
+    }
+}
+
 /* Stylizacja dla tabletów */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
 
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-
-    section h2 {
-        font-size: 1.75rem;
+    .menu-toggle {
+        display: block; /* Pokaż przycisk do rozwijania mobilnego menu na mniejszych ekranach */
     }
 
     nav ul {
-        display: none; /* Ukryj menu nawigacyjne na mniejszych ekranach */
+        display: none; /* Ukryj standardowe menu na mniejszych ekranach */
     }
 
     .mobile-nav {
         display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
-    }
-
-    .menu-toggle {
-        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
     }
 }
 
@@ -243,7 +238,7 @@ button:hover {
     }
 
     nav ul {
-        display: none; /* Ukryj menu nawigacyjne na mniejszych ekranach */
+        display: none; /* Ukryj standardowe menu na mniejszych ekranach */
     }
 
     .mobile-nav {
@@ -272,16 +267,5 @@ button:hover {
 
     .responsive-img {
         margin: 10px 0;
-    }
-}
-
-/* Ukryj mobilne menu na większych ekranach */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none; /* Ukryj przycisk do rozwijania mobilnego menu */
-    }
-
-    .mobile-nav {
-        display: none; /* Ukryj mobilne menu na większych ekranach */
     }
 }
