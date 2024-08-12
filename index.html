@@ -69,7 +69,12 @@
         <p data-key="rights">© 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Kod JavaScript dla menu mobilnego
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.mobile-nav').classList.toggle('hidden');
+            });
+
             changeLanguage(getSavedLanguage());
         });
     </script>
