@@ -495,6 +495,9 @@ function changeLanguage(language) {
 }
 
 // Kod JavaScript dla menu mobilnego
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.mobile-nav').classList.toggle('active');
-});
+const menuToggle = document.querySelector('.menu-toggle');
+if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+        document.querySelector('.mobile-nav').classList.toggle('active');
+    });
+}
