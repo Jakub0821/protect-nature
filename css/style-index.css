@@ -269,3 +269,12 @@ button:hover {
         margin: 10px 0;
     }
 }
+
+/* Ukrywanie i pokazywanie menu dropdown */
+#desktop-dropdown {
+    display: none;
+}
+
+#desktop-dropdown.visible {
+    display: block;
+}
