@@ -4,82 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-key="title_contact">Kontakt</title>
-    <link rel="stylesheet" href="css/style-kontakt.css">
+    <link rel="stylesheet" href="css/output.css">
     <script src="js/translation.js" defer></script>
 </head>
-<body data-page="contact">
-    <header>
-        <h1 data-key="title_contact">Kontakt</h1>
-        <div id="language-select">
-            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
-            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
-            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
-            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
+<body data-page="contact" class="bg-gray-100 text-gray-900">
+    <header class="bg-green-500 text-white p-4 text-center">
+        <h1 class="text-2xl font-bold uppercase" data-key="title_contact">Kontakt</h1>
+        <div id="language-select" class="flex justify-center mt-4">
+            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="pl">
+            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="en">
+            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="de">
+            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="es">
         </div>
-        <button class="menu-toggle">Menu</button>
+        <button class="menu-toggle bg-white text-gray-800 px-4 py-2 rounded-lg mt-4 focus:outline-none hover:bg-gray-200">Menu</button>
     </header>
-    <nav>
-        <a href="index.html" data-key="home">Strona Główna</a>
-        <a href="onas.html" data-key="about">O Nas</a>
-        <a href="aktualności.html" data-key="news">Aktualności</a>
+    <nav class="bg-white shadow-md">
+        <ul class="flex justify-center space-x-4 p-4">
+            <li><a href="index.html" class="text-gray-900 hover:text-green-500" data-key="home">Strona Główna</a></li>
+            <li><a href="onas.html" class="text-gray-900 hover:text-green-500" data-key="about">O Nas</a></li>
+            <li><a href="aktualności.html" class="text-gray-900 hover:text-green-500" data-key="news">Aktualności</a></li>
+            <div class="relative group">
+                <a href="porady.html" class="text-gray-900 hover:text-green-500" data-key="tips">Porady Ekologiczne</a>
+                <div class="absolute bg-white shadow-md mt-2 hidden group-hover:block">
+                    <a href="recykling.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="recycling">Recykling</a>
+                    <a href="oszczedzanie-energii.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="energy_saving">Oszczędzanie Energii</a>
+                    <a href="ochrona-wody.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="water_conservation">Ochrona Wody</a>
+                    <a href="eko-transport.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="eco_transport">Eko-Transport</a>
+                    <a href="zielone-zakupy.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="green_shopping">Zielone Zakupy</a>
+                </div>
+            </div>
+            <li><a href="kontakt.html" class="text-gray-900 hover:text-green-500" data-key="contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <nav class="mobile-nav bg-gray-100 shadow-md hidden">
+        <a href="index.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="home">Strona Główna</a>
+        <a href="onas.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="about">O Nas</a>
+        <a href="aktualności.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="news">Aktualności</a>
         <div class="dropdown">
-            <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
-            <div class="dropdown-content">
-                <a href="recykling.html" data-key="recycling">Recykling</a>
-                <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-                <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-                <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
-                <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
+            <a href="porady.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="tips">Porady Ekologiczne</a>
+            <div class="dropdown-content hidden">
+                <a href="recykling.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="recycling">Recykling</a>
+                <a href="oszczedzanie-energii.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="energy_saving">Oszczędzanie Energii</a>
+                <a href="ochrona-wody.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="water_conservation">Ochrona Wody</a>
+                <a href="eko-transport.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="eco_transport">Eko-Transport</a>
+                <a href="zielone-zakupy.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="green_shopping">Zielone Zakupy</a>
             </div>
         </div>
-        <a href="kontakt.html" data-key="contact">Kontakt</a>
+        <a href="kontakt.html" class="block px-4 py-2 text-gray-900 hover:bg-green-500 hover:text-white" data-key="contact">Kontakt</a>
     </nav>
-    <nav class="mobile-nav">
-        <a href="index.html" data-key="home">Strona Główna</a>
-        <a href="onas.html" data-key="about">O Nas</a>
-        <a href="aktualności.html" data-key="news">Aktualności</a>
-        <div class="dropdown">
-            <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
-            <div class="dropdown-content">
-                <a href="recykling.html" data-key="recycling">Recykling</a>
-                <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-                <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-                <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
-                <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
-            </div>
-        </div>
-        <a href="kontakt.html" data-key="contact">Kontakt</a>
-    </nav>
-    <div class="container">
-        <section>
-            <h2 data-key="form_title">Formularz kontaktowy</h2>
-            <form id="contactForm" action="https://example.com/form-handler" method="post">
-                <label for="name" data-key="form_name">Imię:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email" data-key="form_email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message" data-key="form_message">Wiadomość:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                <input type="submit" value="Wyślij" data-key="form_submit">
+    <div class="container mx-auto p-6">
+        <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4" data-key="form_title">Formularz kontaktowy</h2>
+            <form id="contactForm" action="https://example.com/form-handler" method="post" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium mb-2" data-key="form_name">Imię:</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium mb-2" data-key="form_email">Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 font-medium mb-2" data-key="form_message">Wiadomość:</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Wyślij" class="bg-green-500 text-white px-4 py-2 rounded-lg focus:outline-none hover:bg-green-600" data-key="form_submit">
+                </div>
             </form>
         </section>
     </div>
-    <footer>
+    <footer class="bg-gray-800 text-white text-center p-4">
         <p data-key="rights">&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Formularz został wysłany!');
-        });
-    }
-});
-        // Kod JavaScript dla menu mobilnego
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.mobile-nav').classList.toggle('active');
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    alert('Formularz został wysłany!');
+                });
+            }
+
+            // Kod JavaScript dla menu mobilnego
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.mobile-nav').classList.toggle('hidden');
+            });
         });
     </script>
 </body>
