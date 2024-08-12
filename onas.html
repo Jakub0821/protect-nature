@@ -16,24 +16,41 @@
             <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
             <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div>
+        <button id="menu-toggle" class="menu-toggle">Menu</button>
     </header>
-    <nav class="navigation">
+    <nav id="desktop-nav">
         <ul>
-            <li><a href="index.html" class="nav-link" data-key="home">Strona Główna</a></li>
-            <li><a href="aktualności.html" class="nav-link" data-key="news">Aktualności</a></li>
-            <li class="dropdown">
-                <a href="porady.html" class="nav-link" data-key="tips">Porady Ekologiczne</a>
-                <div class="dropdown-content">
-                    <a href="recykling.html" data-key="recycling">Recykling</a>
-                    <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-                    <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-                    <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
-                    <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
-                </div>
+            <li><a href="index.html" data-key="home">Strona Główna</a></li>
+            <li><a href="aktualności.html" data-key="news">Aktualności</a></li>
+            <li id="ecology-dropdown">
+                <a href="#" class="nav-link" id="tips">Porady Ekologiczne</a>
+                <ul id="ecology-submenu">
+                    <li><a href="recykling.html">Recykling</a></li>
+                    <li><a href="oszczedzanie-energii.html">Oszczędzanie Energii</a></li>
+                    <li><a href="ochrona-wody.html">Ochrona Wody</a></li>
+                    <li><a href="eko-transport.html">Eko-Transport</a></li>
+                    <li><a href="zielone-zakupy.html">Zielone Zakupy</a></li>
+                </ul>
             </li>
-            <li><a href="kontakt.html" class="nav-link" data-key="contact">Kontakt</a></li>
+            <li><a href="kontakt.html" data-key="contact">Kontakt</a></li>
         </ul>
     </nav>
+    <nav id="mobile-nav" class="mobile-nav hidden">
+        <a href="onas.html" data-key="about">O Nas</a>
+        <a href="aktualności.html" data-key="news">Aktualności</a>
+        <div id="mobile-dropdown" class="dropdown">
+            <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
+            <div class="dropdown-content hidden">
+                <a href="recykling.html" data-key="recycling">Recykling</a>
+                <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
+                <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
+                <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
+                <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
+            </div>
+        </div>
+        <a href="kontakt.html" data-key="contact">Kontakt</a>
+    </nav>
+    <div class="container">
     <div class="container">
         <section>
             <h2 class="section-title" data-key="who_we_are">Kim jesteśmy?</h2>
