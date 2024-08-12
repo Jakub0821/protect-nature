@@ -218,18 +218,18 @@ button:hover {
     section h2 {
         font-size: 1.75rem;
     }
-}
 
-nav ul {
-    display: none; /* Ukryj menu nawigacyjne na mniejszych ekranach */
-}
+    nav ul {
+        display: none; /* Ukryj menu nawigacyjne na mniejszych ekranach */
+    }
 
-.mobile-nav {
-    display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
-}
+    .mobile-nav {
+        display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
+    }
 
-.menu-toggle {
-    display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
+    .menu-toggle {
+        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
+    }
 }
 
 /* Stylizacja dla telefonów */
@@ -243,8 +243,15 @@ nav ul {
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: none; /* Ukryj menu nawigacyjne na mniejszych ekranach */
+    }
+
+    .mobile-nav {
+        display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
+    }
+
+    .menu-toggle {
+        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
     }
 
     nav ul li {
@@ -266,12 +273,15 @@ nav ul {
     .responsive-img {
         margin: 10px 0;
     }
-    
+}
+
+/* Ukryj mobilne menu na większych ekranach */
+@media (min-width: 769px) {
     .menu-toggle {
-        display: block;
+        display: none; /* Ukryj przycisk do rozwijania mobilnego menu */
     }
 
     .mobile-nav {
-        display: flex;
+        display: none; /* Ukryj mobilne menu na większych ekranach */
     }
 }
