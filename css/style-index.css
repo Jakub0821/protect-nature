@@ -216,7 +216,6 @@ button:hover {
     padding: 10px 15px;
     text-decoration: none;
     color: white;
-    background-color: #4CAF50;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
