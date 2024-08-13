@@ -271,7 +271,7 @@ button:hover {
 }
 
 .dropdown-content {
-    display: none; /* Domyślnie ukryj submenu */
+    display: inline-block;
 }
 
 .dropdown-content.hidden {

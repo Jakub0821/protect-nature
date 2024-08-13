@@ -132,7 +132,7 @@ const translations = {
         "transport_text": "Rozważ alternatywne środki transportu, które są przyjazne dla środowiska, takie jak jazda na rowerze, carpooling czy komunikacja publiczna.",
         "shopping_title": "Zielone Zakupy",
         "shopping_text": "Wybieraj produkty, które są ekologiczne i mają mniejszy wpływ na środowisko. Dowiedz się, na co zwracać uwagę przy zakupach.",
-        "rights": "&copy; 2024 Porady Ekologiczne. Wszelkie prawa zastrzeżone."
+        "rights": "@ 2024 Porady Ekologiczne. Wszelkie prawa zastrzeżone."
     },
     "en": {
         "title": "Environmental Protection",
@@ -245,7 +245,7 @@ const translations = {
         "transport_text": "Consider alternative means of transport that are environmentally friendly, such as cycling, carpooling, or public transport.",
         "shopping_title": "Green Shopping",
         "shopping_text": "Choose products that are eco-friendly and have a lower environmental impact. Learn what to look for when shopping.",
-        "rights": "&copy; 2024 Eco Tips. All rights reserved."
+        "rights": "@ 2024 Eco Tips. All rights reserved."
     },
     "de": {
         "title": "Umweltschutz",
@@ -358,7 +358,7 @@ const translations = {
         "transport_text": "Überlegen Sie alternative Transportmittel, die umweltfreundlich sind, wie Fahrradfahren, Fahrgemeinschaften oder öffentliche Verkehrsmittel.",
         "shopping_title": "Grünes Einkaufen",
         "shopping_text": "Wählen Sie Produkte, die umweltfreundlich sind und eine geringere Umweltbelastung haben. Erfahren Sie, worauf Sie beim Einkaufen achten sollten.",
-        "rights": "&copy; 2024 Umwelttipps. Alle Rechte vorbehalten."
+        "rights": "@ 2024 Umwelttipps. Alle Rechte vorbehalten."
     },
     "es": {
         "title": "Protección del Medio Ambiente",
@@ -476,7 +476,7 @@ const translations = {
         "transport_text": "Considera medios de transporte alternativos que sean ecológicos, como el ciclismo, el carpooling o el transporte público.",
         "shopping_title": "Compras Verdes",
         "shopping_text": "Elige productos que sean ecológicos y tengan un menor impacto ambiental. Aprende qué buscar al hacer tus compras.",
-        "rights": "&copy; 2024 Consejos Ecológicos. Todos los derechos reservados."
+        "rights": "@ 2024 Consejos Ecológicos. Todos los derechos reservados."
     }
 };
 
