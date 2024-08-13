@@ -40,6 +40,7 @@ header h1 {
 
 /* Stylizacja kontenera i kolumn */
 .container {
+    min-height: 80vh; /* Spowoduje, że kontener będzie miał co najmniej 80% wysokości okna przeglądarki */
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -88,14 +89,14 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    position: relative; /* Upewnij się, że stopka jest w normalnym przepływie dokumentu */
+    width: 100%; /* Upewnij się, że wypełnia całą szerokość strony */
+    margin: 0; /* Usuń wszelkie marginesy */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
-    margin: 0;
+    margin: 0; /* Upewnij się, że tekst wewnątrz stopki nie ma dodatkowych marginesów */
 }
 
 .more-content {
