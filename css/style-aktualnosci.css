@@ -227,4 +227,32 @@ button:hover {
     .language-icon {
         width: 25px; /* Dostosowanie rozmiaru flagi na mniejszych ekranach */
     }
+
+    nav ul {
+        display: none; /* Ukryj standardowe menu na mniejszych ekranach */
+    }
+
+    .mobile-nav {
+        display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
+    }
+
+    .menu-toggle {
+        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
 }
