@@ -560,3 +560,38 @@ if (menuToggle) {
         document.querySelector('.mobile-nav').classList.toggle('active');
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const savedLanguage = getSavedLanguage();
+    setLanguage(savedLanguage);
+});
+
+function setLanguage(language) {
+    localStorage.setItem('selectedLanguage', language);
+    translatePage(language);
+}
+
+function translatePage(language) {
+    const data = translations[language];
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (data && data[key]) {
+            element.textContent = data[key];
+        } else {
+            console.warn(`Translation for key "${key}" not found in language "${language}"`);
+        }
+    });
+
+    // Update the page title
+    const page = document.body.getAttribute('data-page');
+    if (data && data[`title_${page}`]) {
+        document.title = data[`title_${page}`];
+    }
+}
+
+document.querySelectorAll('.language-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+        const language = icon.getAttribute('data-lang');
+        setLanguage(language);
+    });
+});
