@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oszczędzanie Energii</title>
+    <title data-key="energy_title">Oszczędzanie Energii</title>
     <link rel="stylesheet" href="css/style-oszczedzanie.css">
     <script src="js/oszczedzanie-energii.js" defer></script>
 </head>
 <body data-page="tips">
     <header>
-        <h1 data-key="title_tips">Oszczędzanie Energii</h1>
+        <h1 data-key="energy_title">Oszczędzanie Energii</h1>
         <div id="language-select">
             <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
             <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
@@ -28,27 +28,27 @@
         <section class="gallery">
             <div class="image-item">
                 <img src="images/oszczędzanie-energii/zarowki-led.jpg" alt="Żarówki LED">
-                <p>Żarówki LED zużywają mniej energii niż tradycyjne żarówki.</p>
+                <p data-key="led_bulbs">Żarówki LED zużywają mniej energii niż tradycyjne żarówki.</p>
             </div>
             <div class="image-item">
                 <img src="images/oszczędzanie-energii/termostat-na-scianie.jpg" alt="Termostat na ścianie">
-                <p>Programowalny termostat pomaga w oszczędzaniu energii.</p>
+                <p data-key="thermostat">Programowalny termostat pomaga w oszczędzaniu energii.</p>
             </div>
             <div class="image-item">
                 <img src="images/oszczędzanie-energii/energia-sloneczna.jpg" alt="Energia słoneczna">
-                <p>Panele słoneczne jako odnawialne źródło energii.</p>
+                <p data-key="solar_energy">Panele słoneczne jako odnawialne źródło energii.</p>
             </div>
             <div class="image-item">
                 <img src="images/oszczędzanie-energii/izolacja-budynku.jpg" alt="Izolacja budynku">
-                <p>Dobra izolacja może znacząco zmniejszyć straty ciepła.</p>
+                <p data-key="building_insulation">Dobra izolacja może znacząco zmniejszyć straty ciepła.</p>
             </div>
-            <div class="image-item"></div>
-              <img src="images/oszczędzanie-energii/energooszczedne-urzadzenia.jpg" alt="Energooszczędne urządzenia">
-               <p>Urządzeędne urządzenia pomagają zmniejszyć zużycie energii.</p>
+            <div class="image-item">
+                <img src="images/oszczędzanie-energii/energooszczedne-urzadzenia.jpg" alt="Energooszczędne urządzenia">
+                <p data-key="energy_efficient_devices">Energooszczędne urządzenia pomagają zmniejszyć zużycie energii.</p>
             </div>
-            <div class="image-item"></div>
-              <img src="images/oszczędzanie-energii/ocieplenie-domu.jpg" alt="Ocieplenie domu">
-              <p>Ocieplenie domu może znacznie obniżyć koszty ogrzewania.</p>
+            <div class="image-item">
+                <img src="images/oszczędzanie-energii/ocieplenie-domu.jpg" alt="Ocieplenie domu">
+                <p data-key="home_insulation">Ocieplenie domu może znacznie obniżyć koszty ogrzewania.</p>
             </div>
         </section>
     </div>
@@ -60,6 +60,5 @@
             changeLanguage(getSavedLanguage());
         });
     </script>
-</body>
 </body>
 </html>
