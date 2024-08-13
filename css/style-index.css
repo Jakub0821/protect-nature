@@ -74,6 +74,23 @@ nav a:hover, .dropbtn:hover {
     color: white;
 }
 
+nav a {
+    line-height: 50px; /* Dopasuj wartość do wysokości swojego paska nawigacyjnego */
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav a:hover, nav a.active {
+    background-color: black;
+    color: white;
+}
+
+nav a.active {
+    background-color: black;
+    color: white;
+}
+
 .container {
     padding: 2rem;
     max-width: 1200px;
@@ -225,7 +242,7 @@ button:hover {
 }
 
 .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
     background-color: #333;
     min-width: 200px;
@@ -259,6 +276,21 @@ button:hover {
 
 .dropdown-content.hidden {
     display: block; /* Pokaż submenu, gdy klasa 'hidden' zostanie usunięta */
+}
+
+/* Ustawienia stylu dla aktywnego elementu menu */
+nav a.active, 
+nav a:hover, 
+.dropdown-content a.active, 
+.dropdown-content a:hover {
+    background-color: #3b5998; /* Kolor tła aktywnego elementu (dopasuj do reszty menu) */
+    color: white; /* Kolor tekstu aktywnego elementu */
+}
+
+/* Ustawienia stylu dla rozwijanego menu */
+.dropdown-content {
+    background-color: #333; /* Kolor tła rozwijanego menu (dopasuj do reszty menu) */
+    color: white; /* Kolor tekstu */
 }
 
 /* Hide mobile menu on larger screens */
