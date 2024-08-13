@@ -40,16 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funkcja do dynamicznego ładowania dodatkowych informacji
     function loadMoreInfo() {
         const moreInfo = [
-            {
-                imgSrc: 'images/energooszczedne-urzadzenia.jpg',
-                alt: 'Energooszczędne urządzenia',
-                text: 'Energooszczędne urządzenia pomagają zmniejszyć zużycie energii.'
-            },
-            {
-                imgSrc: 'images/ocieplenie-domu.jpg',
-                alt: 'Ocieplenie domu',
-                text: 'Ocieplenie domu może znacznie obniżyć koszty ogrzewania.'
-            }
+            
         ];
 
         const gallery = document.querySelector('.gallery');
