@@ -8,55 +8,55 @@
     <script src="js/recykling.js" defer></script>
     <script src="js/translation.js" defer></script>
 </head>
-<body data-page="recycling" class="bg-gray-100 text-gray-900">
-    <header class="bg-green-500 text-white p-4 text-center">
-        <h1 class="text-2xl font-bold uppercase" data-key="recycling_title">Recykling i Redukcja Odpadów</h1>
-        <div id="language-select" class="flex justify-center mt-4">
-            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="pl">
-            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="en">
-            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="de">
-            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon mx-2 w-10 h-10 cursor-pointer" data-lang="es">
+<body data-page="recycling">
+    <header class="header">
+        <h1 class="title" data-key="recycling_title">Recykling i Redukcja Odpadów</h1>
+        <div id="language-select" class="language-selection">
+            <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
+            <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
+            <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
+            <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div>
     </header>
-    <nav class="bg-white shadow-md">
-        <ul class="flex justify-center space-x-4 p-4">
-            <li><a href="index.html" class="text-gray-900 hover:text-green-500" data-key="home">Strona Główna</a></li>
-            <li><a href="oszczedzanie-energii.html" class="text-gray-900 hover:text-green-500" data-key="energy_saving">Oszczędzanie Energii</a></li>
-            <li><a href="ochrona-wody.html" class="text-gray-900 hover:text-green-500" data-key="water_conservation">Ochrona Wody</a></li>
-            <li><a href="eko-transport.html" class="text-gray-900 hover:text-green-500" data-key="eco_transport">Eko-Transport</a></li>
-            <li><a href="zielone-zakupy.html" class="text-gray-900 hover:text-green-500" data-key="green_shopping">Zielone Zakupy</a></li>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="index.html" data-key="home">Strona Główna</a></li>
+            <li><a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a></li>
+            <li><a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a></li>
+            <li><a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a></li>
+            <li><a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a></li>
         </ul>
     </nav>
-    <div class="container mx-auto p-6">
-        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="images/recykling/recycling-glass.jpg" alt="Kontener na recykling szkła" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-gray-700" data-key="recycling_glass">Oddzielanie szkła to kluczowy element skutecznego recyklingu.</p>
+    <div class="content">
+        <section class="recycling-section">
+            <div class="recycling-item">
+                <img src="images/recykling/recycling-glass.jpg" alt="Kontener na recykling szkła" class="recycling-image">
+                <p class="recycling-text" data-key="recycling_glass">Oddzielanie szkła to kluczowy element skutecznego recyklingu.</p>
             </div>
-            <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="images/recykling/home-recycling.jpg" alt="Segregacja odpadów w domu" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-gray-700" data-key="home_recycling">Prosty system segregacji odpadów, który można wdrożyć w każdym domu.</p>
+            <div class="recycling-item">
+                <img src="images/recykling/home-recycling.jpg" alt="Segregacja odpadów w domu" class="recycling-image">
+                <p class="recycling-text" data-key="home_recycling">Prosty system segregacji odpadów, który można wdrożyć w każdym domu.</p>
             </div>
-            <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="images/recykling/materials-for-recycling.jpg" alt="Materiały do recyklingu" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-gray-700" data-key="materials_for_recycling">Różne rodzaje materiałów gotowych do recyklingu.</p>
+            <div class="recycling-item">
+                <img src="images/recykling/materials-for-recycling.jpg" alt="Materiały do recyklingu" class="recycling-image">
+                <p class="recycling-text" data-key="materials_for_recycling">Różne rodzaje materiałów gotowych do recyklingu.</p>
             </div>
-            <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="images/recykling/recycling-facility.jpg" alt="Zakład recyklingu" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-gray-700" data-key="recycling_facility">Zakład recyklingu przetwarzający odpady na surowce wtórne.</p>
+            <div class="recycling-item">
+                <img src="images/recykling/recycling-facility.jpg" alt="Zakład recyklingu" class="recycling-image">
+                <p class="recycling-text" data-key="recycling_facility">Zakład recyklingu przetwarzający odpady na surowce wtórne.</p>
             </div>
-            <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="images/recykling/recycling-paper.jpg" alt="Recykling papieru" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-gray-700" data-key="recycling-paper">Recykling papieru pomaga zmniejszyć wycinkę lasów.</p>
+            <div class="recycling-item">
+                <img src="images/recykling/recycling-paper.jpg" alt="Recykling papieru" class="recycling-image">
+                <p class="recycling-text" data-key="recycling-paper">Recykling papieru pomaga zmniejszyć wycinkę lasów.</p>
             </div>
-            <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="images/recykling/recycling-plastic.jpg" alt="Recykling plastiku" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-gray-700" data-key="recycling-plastic">Recykling plastiku zmniejsza zanieczyszczenie oceanów.</p>
+            <div class="recycling-item">
+                <img src="images/recykling/recycling-plastic.jpg" alt="Recykling plastiku" class="recycling-image">
+                <p class="recycling-text" data-key="recycling-plastic">Recykling plastiku zmniejsza zanieczyszczenie oceanów.</p>
             </div>
         </section>
     </div>
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p data-key="rights">&copy; © 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
+    <footer class="footer">
+        <p data-key="rights">&copy; 2024 Ochrona Środowiska. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
