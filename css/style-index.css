@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #111;
+    background-color:#333;
 }
 
 nav a, .dropbtn {
@@ -283,7 +283,7 @@ nav a.active,
 nav a:hover, 
 .dropdown-content a.active, 
 .dropdown-content a:hover {
-    background-color: #3b5998; /* Kolor tła aktywnego elementu (dopasuj do reszty menu) */
+    background-color: #333; /* Kolor tła aktywnego elementu (dopasuj do reszty menu) */
     color: white; /* Kolor tekstu aktywnego elementu */
 }
 
