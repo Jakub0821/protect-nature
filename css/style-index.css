@@ -206,44 +206,47 @@ button:hover {
     display: none;
 }
 
-#ecology-dropdown {
+/* Stylizacja dla sekcji porad ekologicznych */
+.relative.group {
     position: relative;
+    display: inline-block;
 }
 
-#ecology-submenu {
-    position: absolute;
-    left: 0;
-    top: 100%; /* Ustawienie podmenu bezpośrednio pod elementem nadrzędnym */
-    background-color: #333;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    display: none; /* Ukryj domyślnie */
-    z-index: 1000; /* Zwiększ z-index, aby menu było na wierzchu */
-}
-
-#ecology-dropdown:hover #ecology-submenu {
-    display: block; /* Pokaż podmenu na najechanie */
-}
-
-#ecology-submenu li {
-    padding: 10px;
-}
-
-#ecology-submenu li a {
+.relative.group a {
+    padding: 10px 15px;
+    text-decoration: none;
     color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.relative.group a:hover {
+    background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
-#ecology-submenu li a:hover {
-    background-color: #444;
+.dropdown-content a:hover {
+    background-color: #555;
 }
 
-/* Pokaż submenu, gdy użytkownik najeżdża lub klika */
-#ecology-dropdown:hover #ecology-submenu {
+.relative.group:hover .dropdown-content {
     display: block;
 }
 
