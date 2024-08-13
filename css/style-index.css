@@ -206,15 +206,26 @@ button:hover {
     display: none;
 }
 
+#ecology-dropdown {
+    position: relative;
+}
+
 #ecology-submenu {
-    display: none; /* Ukrywanie podmenu domyślnie */
     position: absolute;
+    left: 0;
+    top: 100%; /* Ustawienie podmenu bezpośrednio pod elementem nadrzędnym */
     background-color: #333;
     list-style: none;
     padding: 10px;
     margin: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    display: none; /* Ukryj domyślnie */
+    z-index: 1000; /* Zwiększ z-index, aby menu było na wierzchu */
+}
+
+#ecology-dropdown:hover #ecology-submenu {
+    display: block; /* Pokaż podmenu na najechanie */
 }
 
 #ecology-submenu li {
