@@ -27,6 +27,28 @@ nav a {
     text-decoration: none;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ustawia elementy w jednej linii */
+    justify-content: center; /* Centruje elementy nawigacyjne */
+}
+
+nav ul li {
+    margin: 0 15px; /* Dodaje odstęp między elementami */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Kolor tekstu po najechaniu myszą */
+}
+
 .container {
     width: 80%;
     margin: auto;
