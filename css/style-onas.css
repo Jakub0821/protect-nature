@@ -1,3 +1,4 @@
+/* Podstawowy styl dla całego dokumentu */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Stylizacja nagłówka */
 header {
     background-color: #4CAF50;
     color: white;
@@ -38,14 +40,15 @@ header h1 {
     cursor: pointer;
 }
 
-/* Stylizacja kontenera i kolumn */
+/* Stylizacja kontenera */
 .container {
-    min-height: 80vh; /* Spowoduje, że kontener będzie miał co najmniej 80% wysokości okna przeglądarki */
+    min-height: 80vh;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Stylizacja sekcji */
 section {
     background-color: white;
     padding: 2rem;
@@ -54,8 +57,8 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Wyśrodkowuje tekst w pionie */
-    text-align: center; /* Wyśrodkowuje tekst w poziomie */
+    align-items: center;
+    text-align: center;
 }
 
 section h2 {
@@ -66,6 +69,7 @@ section h2 {
     padding-bottom: 0.5rem;
 }
 
+/* Stylizacja zespołu i projektów */
 .team, .projects {
     display: flex;
     flex-wrap: wrap;
@@ -84,81 +88,79 @@ section h2 {
     margin-bottom: 10px;
 }
 
+/* Stylizacja stopki */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative; /* Upewnij się, że stopka jest w normalnym przepływie dokumentu */
-    width: 100%; /* Upewnij się, że wypełnia całą szerokość strony */
-    margin: 0; /* Usuń wszelkie marginesy */
+    position: relative;
+    width: 100%;
+    margin: 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
-    margin: 0; /* Upewnij się, że tekst wewnątrz stopki nie ma dodatkowych marginesów */
+    margin: 0;
 }
 
-.more-content {
-    margin-top: 1rem;
+/* Stylizacja dla sekcji porad ekologicznych */
+.relative.group {
+    position: relative;
+    display: inline-block;
+}
+
+.relative.group a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.relative.group a:hover {
+    background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.relative.group:hover .dropdown-content {
+    display: block;
+}
+
+.hidden {
     display: none;
 }
 
-#language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.dropdown-content {
+    display: none; /* Domyślnie ukryj submenu */
 }
 
-.language-select {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
+.dropdown-content.hidden {
+    display: block; /* Pokaż submenu, gdy klasa 'hidden' zostanie usunięta */
 }
 
-.language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.language-icon {
-    width: 30px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-/* Dodatkowe style dla nawigacji */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    color: white;
-    padding: 1rem 2rem;
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* Mobile menu toggle and submenu */
+/* Mobile menu and submenu */
 #desktop-dropdown {
     display: none;
 }
@@ -179,40 +181,6 @@ nav ul li a:hover {
 
     #desktop-nav {
         display: block;
-    }
-
-    /* Initially hide the submenu */
-    #ecology-submenu {
-        display: none;
-    }
-
-    /* Show submenu when hovering over or clicking the main menu item */
-    #tips:hover + #ecology-submenu,
-    #tips:focus + #ecology-submenu {
-        display: block;
-    }
-
-    /* Make sure the submenu is styled correctly */
-    #ecology-submenu {
-        background-color: #333;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-    }
-
-    #ecology-submenu li {
-        padding: 10px 15px;
-    }
-
-    #ecology-submenu li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-    }
-
-    #ecology-submenu li a:hover {
-        background-color: #444;
     }
 }
 
@@ -242,15 +210,15 @@ nav ul li a:hover {
     }
 
     nav ul {
-        display: none; /* Ukryj standardowe menu na mniejszych ekranach */
+        display: none;
     }
 
     .mobile-nav {
-        display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
+        display: flex;
     }
 
     .menu-toggle {
-        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
+        display: block;
     }
 
     nav ul li {
