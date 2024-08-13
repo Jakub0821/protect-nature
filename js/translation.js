@@ -131,7 +131,8 @@ const translations = {
         "transport_title": "Eko-Transport",
         "transport_text": "Rozważ alternatywne środki transportu, które są przyjazne dla środowiska, takie jak jazda na rowerze, carpooling czy komunikacja publiczna.",
         "shopping_title": "Zielone Zakupy",
-        "shopping_text": "Wybieraj produkty, które są ekologiczne i mają mniejszy wpływ na środowisko. Dowiedz się, na co zwracać uwagę przy zakupach."
+        "shopping_text": "Wybieraj produkty, które są ekologiczne i mają mniejszy wpływ na środowisko. Dowiedz się, na co zwracać uwagę przy zakupach.",
+        "rights": "&copy; 2024 Porady Ekologiczne. Wszelkie prawa zastrzeżone."
     },
     "en": {
         "title": "Environmental Protection",
@@ -233,10 +234,18 @@ const translations = {
         "home_insulation": "Home insulation can significantly lower heating costs.",
         "water_title": "Water Conservation",
         "water_text": "Water is a precious resource. Read our tips on how to save water and reduce its wastage.",
+        "water_protection_title": "Water Conservation",
+        "water_saving_taps": "Using aerators in taps helps reduce water consumption.",
+        "rainwater_collection": "Collecting rainwater for garden irrigation.",
+        "protect_water_resource": "Water is a valuable resource that needs protection.",
+        "sewage_treatment": "Modern sewage treatment technologies.",
+        "modern_technologies": "Modern technologies help save water.",
+        "water_saving_tips": "Simple ways to save water at home.",
         "transport_title": "Eco-Transport",
         "transport_text": "Consider alternative means of transport that are environmentally friendly, such as cycling, carpooling, or public transport.",
         "shopping_title": "Green Shopping",
-        "shopping_text": "Choose products that are eco-friendly and have a lower environmental impact. Learn what to look for when shopping."
+        "shopping_text": "Choose products that are eco-friendly and have a lower environmental impact. Learn what to look for when shopping.",
+        "rights": "&copy; 2024 Eco Tips. All rights reserved."
     },
     "de": {
         "title": "Umweltschutz",
@@ -338,10 +347,18 @@ const translations = {
         "home_insulation": "Die Isolierung des Hauses kann die Heizkosten erheblich senken.",
         "water_title": "Wasserschutz",
         "water_text": "Wasser ist eine kostbare Ressource. Lesen Sie unsere Tipps, wie Sie Wasser sparen und seinen Verbrauch reduzieren können.",
+        "water_protection_title": "Wasserschutz",
+        "water_saving_taps": "Die Verwendung von Perlatoren in Wasserhähnen hilft, den Wasserverbrauch zu reduzieren.",
+        "rainwater_collection": "Regenwassersammlung zur Gartenbewässerung.",
+        "protect_water_resource": "Wasser ist eine wertvolle Ressource, die geschützt werden muss.",
+        "sewage_treatment": "Moderne Abwasserbehandlungstechnologien.",
+        "modern_technologies": "Moderne Technologien helfen, Wasser zu sparen.",
+        "water_saving_tips": "Einfache Möglichkeiten, Wasser zu Hause zu sparen.",
         "transport_title": "Öko-Transport",
         "transport_text": "Überlegen Sie alternative Transportmittel, die umweltfreundlich sind, wie Fahrradfahren, Fahrgemeinschaften oder öffentliche Verkehrsmittel.",
         "shopping_title": "Grünes Einkaufen",
-        "shopping_text": "Wählen Sie Produkte, die umweltfreundlich sind und eine geringere Umweltbelastung haben. Erfahren Sie, worauf Sie beim Einkaufen achten sollten."
+        "shopping_text": "Wählen Sie Produkte, die umweltfreundlich sind und eine geringere Umweltbelastung haben. Erfahren Sie, worauf Sie beim Einkaufen achten sollten.",
+        "rights": "&copy; 2024 Umwelttipps. Alle Rechte vorbehalten."
     },
     "es": {
         "title": "Protección del Medio Ambiente",
@@ -448,10 +465,18 @@ const translations = {
         "home_insulation": "El aislamiento del hogar puede reducir significativamente los costos de calefacción.",
         "water_title": "Conservación del Agua",
         "water_text": "El agua es un recurso valioso. Lee nuestros consejos sobre cómo ahorrar agua y reducir su desperdicio.",
+        "water_protection_title": "Conservación del Agua",
+        "water_saving_taps": "El uso de aireadores en los grifos ayuda a reducir el consumo de agua.",
+        "rainwater_collection": "Recolección de agua de lluvia para el riego del jardín.",
+        "protect_water_resource": "El agua es un recurso valioso que necesita protección.",
+        "sewage_treatment": "Tecnologías modernas de tratamiento de aguas residuales.",
+        "modern_technologies": "Las tecnologías modernas ayudan a ahorrar agua.",
+        "water_saving_tips": "Formas sencillas de ahorrar agua en casa.",
         "transport_title": "Transporte Ecológico",
         "transport_text": "Considera medios de transporte alternativos que sean ecológicos, como el ciclismo, el carpooling o el transporte público.",
         "shopping_title": "Compras Verdes",
-        "shopping_text": "Elige productos que sean ecológicos y tengan un menor impacto ambiental. Aprende qué buscar al hacer tus compras."
+        "shopping_text": "Elige productos que sean ecológicos y tengan un menor impacto ambiental. Aprende qué buscar al hacer tus compras.",
+        "rights": "&copy; 2024 Consejos Ecológicos. Todos los derechos reservados."
     }
 };
 
