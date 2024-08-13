@@ -250,6 +250,18 @@ button:hover {
     display: block;
 }
 
+.hidden {
+    display: none;
+}
+
+.dropdown-content {
+    display: none; /* Domyślnie ukryj submenu */
+}
+
+.dropdown-content.hidden {
+    display: block; /* Pokaż submenu, gdy klasa 'hidden' zostanie usunięta */
+}
+
 /* Hide mobile menu on larger screens */
 @media (min-width: 769px) {
     #mobile-nav {

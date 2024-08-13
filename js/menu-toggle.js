@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('tips').addEventListener('click', function(e) {
-        document.getElementById('relative group').classList.toggle('hidden');
-    });
+    var tipsElement = document.querySelector('a[data-key="tips"]');
+    if (tipsElement) {
+        tipsElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            var dropdownContent = tipsElement.nextElementSibling;
+            if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
+                dropdownContent.classList.toggle('hidden');
+            }
+        });
+    }
 });
