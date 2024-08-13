@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             var dropdownContent = tipsElement.nextElementSibling;
             if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
-                dropdownContent.classList.toggle('hidden');
+                if (dropdownContent.style.display === 'block') {
+                    dropdownContent.style.display = 'none';
+                } else {
+                    dropdownContent.style.display = 'block';
+                }
             }
         });
     }
