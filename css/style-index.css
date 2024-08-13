@@ -54,34 +54,8 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    background-color: #333;
-}
-
-nav a, .dropbtn {
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-nav a:hover, .dropbtn:hover {
-    background-color: #333;
-    color: white;
-}
-
-nav a {
-    line-height: 50px;
-    color: white;
-    text-decoration: none;
-    padding: 0 20px;
-}
-
-nav a:hover, nav a.active {
+nav ul li a:hover,
+nav ul li a.active {
     background-color: black;
     color: white;
 }
@@ -272,12 +246,6 @@ nav a:hover,
     color: white; /* Kolor tekstu aktywnego elementu */
 }
 
-/* Ustawienia stylu dla rozwijanego menu */
-.dropdown-content {
-    background-color: #333; /* Kolor tła rozwijanego menu (dopasuj do reszty menu) */
-    color: white; /* Kolor tekstu */
-}
-
 /* Hide mobile menu on larger screens */
 @media (min-width: 769px) {
     #mobile-nav {
@@ -289,54 +257,6 @@ nav a:hover,
     }
 
     #desktop-nav {
-        display: block;
-    }
-
-    /* Initially hide the submenu */
-    #ecology-submenu {
-        display: none;
-    }
-
-    /* Show submenu when hovering over or clicking the main menu item */
-    #tips:hover + #ecology-submenu,
-    #tips:focus + #ecology-submenu {
-        display: block;
-    }
-
-    /* Make sure the submenu is styled correctly */
-    #ecology-submenu {
-        background-color: #333;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-    }
-
-    #ecology-submenu li {
-        padding: 10px 15px;
-    }
-
-    #ecology-submenu li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-    }
-
-    #ecology-submenu li a:hover {
-        background-color: #444;
-    }
-
-    #ecology-submenu {
-        position: relative;
-        background-color: #333;
-        margin-top: 10px;
-    }
-
-    #ecology-dropdown:hover #ecology-submenu {
-        display: none; /* Wyłącz hover na urządzeniach dotykowych */
-    }
-
-    #ecology-dropdown.active #ecology-submenu {
         display: block;
     }
 }
