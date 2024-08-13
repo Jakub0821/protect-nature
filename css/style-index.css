@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color:#333;
+    background-color: #333;
 }
 
 nav a, .dropbtn {
@@ -70,23 +70,18 @@ nav a, .dropbtn {
 }
 
 nav a:hover, .dropbtn:hover {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
 }
 
 nav a {
-    line-height: 50px; /* Dopasuj wartość do wysokości swojego paska nawigacyjnego */
+    line-height: 50px;
     color: white;
     text-decoration: none;
     padding: 0 20px;
 }
 
 nav a:hover, nav a.active {
-    background-color: black;
-    color: white;
-}
-
-nav a.active {
     background-color: black;
     color: white;
 }
@@ -210,20 +205,7 @@ button:hover {
     background-color: #4CAF50;
 }
 
-/* Mobile menu toggle and submenu */
-#desktop-dropdown {
-    display: none;
-}
-
-#desktop-dropdown.visible {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Stylizacja dla sekcji porad ekologicznych */
+/* Styl dla rozwijanego menu */
 .relative.group {
     position: relative;
     display: inline-block;
@@ -237,12 +219,15 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
-.relative.group a:hover {
-    background-color: #45a049;
+.relative.group a:hover,
+.relative.group a.active {
+    background-color: #333; /* Taki sam kolor jak reszta menu */
+    color: white;
 }
 
+/* Ukrywanie podmenu */
 .dropdown-content {
-    display: block;
+    display: none; /* Domyślnie ukryte */
     position: absolute;
     background-color: #333;
     min-width: 200px;
@@ -250,6 +235,7 @@ button:hover {
     z-index: 1;
 }
 
+/* Styl dla elementów w podmenu */
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
@@ -259,21 +245,20 @@ button:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #555;
+    background-color: #555; /* Lekko jaśniejszy kolor przy najechaniu */
 }
 
+/* Pokazywanie podmenu po najechaniu kursorem */
 .relative.group:hover .dropdown-content {
     display: block;
 }
 
-.hidden {
-    display: none;
+/* Pokazywanie podmenu po kliknięciu */
+.relative.group a.active + .dropdown-content {
+    display: block;
 }
 
-.dropdown-content {
-    display: inline-block;
-}
-
+/* Spójność stylów w rozwijanym menu */
 .dropdown-content.hidden {
     display: block; /* Pokaż submenu, gdy klasa 'hidden' zostanie usunięta */
 }
@@ -382,34 +367,10 @@ nav a:hover,
     }
 
     nav ul {
-        display: none; /* Ukryj standardowe menu na mniejszych ekranach */
+        display: none; /* Ukryj na telefonach, pokaż mobilne menu */
     }
 
     .mobile-nav {
-        display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
-    }
-
-    .menu-toggle {
-        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    section {
-        padding: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    .responsive-img {
-        margin: 10px 0;
+        display: flex;
     }
 }
