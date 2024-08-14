@@ -179,7 +179,7 @@ button:hover {
     background-color: #4CAF50;
 }
 
-/* Styl dla rozwijanego menu */
+
 .relative.group {
     position: relative;
     display: inline-block;
@@ -195,13 +195,13 @@ button:hover {
 
 .relative.group a:hover,
 .relative.group a.active {
-    background-color: #333; /* Taki sam kolor jak reszta menu */
+    background-color: #333; 
     color: white;
 }
 
-/* Ukrywanie podmenu */
+
 .dropdown-content {
-    display: none; /* Domyślnie ukryte */
+    display: block;
     position: absolute;
     background-color: #333;
     min-width: 200px;
@@ -209,7 +209,6 @@ button:hover {
     z-index: 1;
 }
 
-/* Styl dla elementów w podmenu */
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
@@ -219,31 +218,27 @@ button:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #555; /* Lekko jaśniejszy kolor przy najechaniu */
+    background-color: #555; 
 }
 
-/* Pokazywanie podmenu po najechaniu kursorem */
 .relative.group:hover .dropdown-content {
     display: block;
 }
 
-/* Pokazywanie podmenu po kliknięciu */
 .relative.group a.active + .dropdown-content {
     display: block;
 }
 
-/* Spójność stylów w rozwijanym menu */
 .dropdown-content.hidden {
-    display: block; /* Pokaż submenu, gdy klasa 'hidden' zostanie usunięta */
+    display: block; 
 }
 
-/* Ustawienia stylu dla aktywnego elementu menu */
 nav a.active, 
 nav a:hover, 
 .dropdown-content a.active, 
 .dropdown-content a:hover {
-    background-color: #333; /* Kolor tła aktywnego elementu (dopasuj do reszty menu) */
-    color: white; /* Kolor tekstu aktywnego elementu */
+    background-color: #333; 
+    color: white; 
 }
 
 /* Hide mobile menu on larger screens */
