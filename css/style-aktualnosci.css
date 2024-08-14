@@ -1,19 +1,13 @@
-body, html {
+/* Podstawowy styl dla całego dokumentu */
+body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Stylizacja nagłówka */
 header {
     background-color: #4CAF50;
     color: white;
@@ -39,6 +33,33 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color:#333;
+}
+
 nav a, .dropbtn {
     color: white;
     padding: 1rem 2rem;
@@ -55,51 +76,56 @@ nav a:hover, .dropbtn:hover {
     color: white;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    top: 100%;
-}
-
-.dropdown-content a {
+nav a {
+    line-height: 50px; /* Dopasuj wartość do wysokości swojego paska nawigacyjnego */
     color: white;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0 20px;
 }
 
-.dropdown-content a:hover {
-    background-color: #4CAF50;
+nav a:hover, nav a.active {
+    background-color: black;
+    color: white;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+nav a.active {
+    background-color: black;
+    color: white;
 }
 
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.language-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Stylizacja kontenera */
 .container {
+    min-height: 80vh;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    flex: 1 0 auto;
 }
 
+/* Stylizacja sekcji */
 section {
     background-color: white;
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 section h2 {
@@ -110,10 +136,15 @@ section h2 {
     padding-bottom: 0.5rem;
 }
 
-section p {
-    line-height: 1.6;
+/* Stylizacja zespołu i projektów */
+.team, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
+/* Stylizacja stopki */
 footer {
     background-color: #333;
     color: white;
@@ -121,7 +152,7 @@ footer {
     padding: 1rem;
     position: relative;
     width: 100%;
-    bottom: 0;
+    margin: 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -129,117 +160,121 @@ footer p {
     margin: 0;
 }
 
-button {
-    background-color: #4CAF50;
+/* Stylizacja dla sekcji porad ekologicznych */
+.relative.group {
+    position: relative;
+    display: inline-block;
+}
+
+.relative.group a {
+    padding: 10px 15px;
+    text-decoration: none;
     color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #4CAF50;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.relative.group a:hover {
     background-color: #45a049;
 }
 
-.more-content {
-    margin-top: 1rem;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.relative.group:hover .dropdown-content {
+    display: block;
+}
+
+.hidden {
     display: none;
 }
 
-#language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.dropdown-content {
+    display: none; /* Domyślnie ukryj submenu */
 }
 
-.language-select {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
+.dropdown-content.hidden {
+    display: block; /* Pokaż submenu, gdy klasa 'hidden' zostanie usunięta */
 }
 
-.language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+/* Mobile menu and submenu */
+#desktop-dropdown {
+    display: none;
 }
 
-.language-icon {
-    width: 30px;
-    margin: 0 5px;
-    cursor: pointer;
+#desktop-dropdown.visible {
+    display: block;
 }
 
-/* Stylizacja dla tabletów */
+/* Hide mobile menu on larger screens */
+@media (min-width: 769px) {
+    #mobile-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: block;
+    }
+}
+
+/* Show mobile menu on smaller screens */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+    #mobile-nav {
+        display: block;
     }
 
-    .container {
-        padding: 1.5rem;
+    #desktop-nav {
+        display: none;
     }
 
-    section {
-        padding: 1.5rem;
-    }
-
-    section h2 {
-        font-size: 1.75rem;
-    }
-
-    .filters button {
-        margin: 0 5px;
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+    .menu-toggle {
+        display: block;
     }
 }
 
 /* Stylizacja dla telefonów */
 @media (max-width: 480px) {
+    header {
+        padding: 1.5rem;
+    }
+
     header h1 {
         font-size: 1.5rem;
     }
 
-    .container {
-        padding: 1rem;
-    }
-
-    section {
-        padding: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    .filters button {
-        margin: 5px 0;
-        width: 100%;
-        padding: 0.75rem;
-        font-size: 1rem;
-    }
-
-    .language-icon {
-        width: 25px; /* Dostosowanie rozmiaru flagi na mniejszych ekranach */
-    }
-
     nav ul {
-        display: none; /* Ukryj standardowe menu na mniejszych ekranach */
+        display: none;
     }
 
     .mobile-nav {
-        display: flex; /* Pokaż mobilne menu na mniejszych ekranach */
+        display: flex;
     }
 
     .menu-toggle {
-        display: block; /* Pokaż przycisk do rozwijania mobilnego menu */
+        display: block;
     }
 
     nav ul li {
@@ -257,4 +292,5 @@ button:hover {
     section h2 {
         font-size: 1.5rem;
     }
+
 }
