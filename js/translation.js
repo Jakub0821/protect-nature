@@ -593,10 +593,39 @@ const translations = {
         "rights": "@ 2024 Consejos Ecológicos. Todos los derechos reservados."
     }
 };
-// Update the page title if it exists in the translation object
-const page = document.body.getAttribute('data-page');
-if (data[`title_${page}`]) {
-    document.title = data[`title_${page}`];
+// Function to get the saved language from local storage
+function getSavedLanguage() {
+    return localStorage.getItem('selectedLanguage') || 'pl';
+}
+
+// Function to set the language and save it to local storage
+function setLanguage(language) {
+    localStorage.setItem('selectedLanguage', language);
+    changeLanguage(language);  // Correct usage here
+}
+
+// Function to change the language and update the page content
+function changeLanguage(language) {
+    const data = translations[language];
+    if (!data) {
+        console.error(`No translations found for language: ${language}`);
+        return;
+    }
+
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (data[key]) {
+            element.textContent = data[key];
+        } else {
+            console.warn(`Translation for key "${key}" not found in language "${language}"`);
+        }
+    });
+
+    // Update the page title if it exists in the translation object
+    const page = document.body.getAttribute('data-page');
+    if (data[`title_${page}`]) {
+        document.title = data[`title_${page}`];
+    }
 }
 
 // Apply the saved language when the page loads
