@@ -597,7 +597,6 @@ const translations = {
         document.title = data[`title_${page}`];
     }
 
-
 // Apply the saved language when the page loads
 document.addEventListener('DOMContentLoaded', function () {
     const savedLanguage = getSavedLanguage();
