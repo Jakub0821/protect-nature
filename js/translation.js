@@ -6,25 +6,27 @@ function getSavedLanguage() {
 // Function to set the language and save it to local storage
 function setLanguage(language) {
     localStorage.setItem('selectedLanguage', language);
-    translatePage(language);
+    changeLanguage(language); // Use changeLanguage instead of translatePage
 }
 
-// Function to translate the page content
-function translatePage(language) {
-    const data = translations[language]; // Define the data variable here
+// Function to change the language and update the page content
+function changeLanguage(language) {
+    const data = translations[language];
     if (!data) {
         console.error(`No translations found for language: ${language}`);
         return;
     }
 
-document.querySelectorAll('[data-key]').forEach(function (element) {
-    const key = element.getAttribute('data-key');
-    if (data[key]) {
-        element.textContent = data[key];
-    } else {
-        console.warn(`Translation for key "${key}" not found in language "${language}"`);
-    }
-});
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (data[key]) {
+            element.textContent = data[key];
+        } else {
+            
+   
+console.warn(`Translation for key "${key}" not found in language "${language}"`);
+        }
+    });
 }
 
 const translations = {
@@ -591,43 +593,11 @@ const translations = {
         "rights": "@ 2024 Consejos Ecológicos. Todos los derechos reservados."
     }
 };
-// Function to get the saved language from local storage
-function getSavedLanguage() {
-    return localStorage.getItem('selectedLanguage') || 'pl';
+// Update the page title if it exists in the translation object
+const page = document.body.getAttribute('data-page');
+if (data[`title_${page}`]) {
+    document.title = data[`title_${page}`];
 }
-
-// Function to set the language and save it to local storage
-function setLanguage(language) {
-    localStorage.setItem('selectedLanguage', language);
-    translatePage(language);
-}
-
-// Function to translate the page content
-function translatePage(language) {
-    const data = translations[language]; // Use the translations object directly
-    document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (data && data[key]) {
-            element.textContent = data[key];
-        } else {
-            console.warn(`Translation for key "${key}" not found in language "${language}"`);
-        }
-    });
-
-    // Update the page title if it exists in the translation object
-    const page = document.body.getAttribute('data-page');
-    if (data && data[`title_${page}`]) {
-        document.title = data[`title_${page}`];
-    }
-}
-
-// Event listener for language icons
-document.querySelectorAll('.language-icon').forEach(icon => {
-    icon.addEventListener('click', () => {
-        const language = icon.getAttribute('data-lang');
-        setLanguage(language);
-    });
-});
 
 // Apply the saved language when the page loads
 document.addEventListener('DOMContentLoaded', function () {
