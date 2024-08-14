@@ -47,18 +47,14 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
+    display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: black;
-    color: white;
-}
+
 
 .container {
     padding: 2rem;

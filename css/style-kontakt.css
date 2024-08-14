@@ -22,6 +22,16 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
 nav a, .dropbtn {
     color: white;
     padding: 1rem 2rem;

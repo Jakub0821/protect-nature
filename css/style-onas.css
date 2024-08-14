@@ -31,6 +31,16 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
 nav a, .dropbtn {
     color: white;
     padding: 1rem 2rem;
@@ -125,8 +135,9 @@ nav a:hover, .dropbtn:hover {
 nav a {
     line-height: 50px; /* Dopasuj wartość do wysokości swojego paska nawigacyjnego */
     color: white;
-    text-decoration: none;
+    text-align: center;
     padding: 0 20px;
+    text-decoration: none;
 }
 
 nav a:hover, nav a.active {

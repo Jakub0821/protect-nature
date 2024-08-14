@@ -31,6 +31,16 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
 nav a, .dropbtn {
     color: white;
     padding: 1rem 2rem;
@@ -167,6 +177,22 @@ button:hover {
     cursor: pointer;
 }
 
+/* Ukryj nawigację mobilną na początku */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 /* Stylizacja dla tabletów */
 @media (max-width: 768px) {
     header h1 {
@@ -187,6 +213,10 @@ button:hover {
 
     .language-icon {
         width: 25px; /* Dostosowanie rozmiaru flagi na tabletach */
+    }
+
+    #mobile-nav {
+        display: block;
     }
 }
 
@@ -210,5 +240,13 @@ button:hover {
 
     .language-icon {
         width: 20px; /* Dostosowanie rozmiaru flagi na mniejszych ekranach */
+    }
+
+    nav ul {
+        display: none; /* Ukryj na telefonach, pokaż mobilne menu */
+    }
+
+    .mobile-nav {
+        display: flex;
     }
 }
