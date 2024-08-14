@@ -11,16 +11,20 @@ function setLanguage(language) {
 
 // Function to translate the page content
 function translatePage(language) {
-//    console.log(`Translating page to ${language}`);
-    document.querySelectorAll('[data-key]').forEach(function (element) {
-        const key = element.getAttribute('data-key');
-        if (translations[language] && translations[language][key]) {
-            element.innerText = translations[language][key];
-            console.log(`Translated ${key} to ${translations[language][key]}`);
-        } else {
-//            console.log(`Translation for ${key} not found in ${language}`);
-        }
-    });
+    const data = translations[language]; // Define the data variable here
+    if (!data) {
+        console.error(`No translations found for language: ${language}`);
+        return;
+    }
+
+document.querySelectorAll('[data-key]').forEach(function (element) {
+    const key = element.getAttribute('data-key');
+    if (data[key]) {
+        element.textContent = data[key];
+    } else {
+        console.warn(`Translation for key "${key}" not found in language "${language}"`);
+    }
+});
 }
 
 const translations = {
@@ -587,100 +591,20 @@ const translations = {
         "rights": "@ 2024 Consejos Ecológicos. Todos los derechos reservados."
     }
 };
-
-// Funkcja do zmiany języka
-function changeLanguage(language) {
-    localStorage.setItem('selectedLanguage', language); // Przechowuj wybrany język
-    const data = translations[language]; // Użyj obiektu translations bezpośrednio
-    document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (data[key]) {
-            element.textContent = data[key];
-        }
-    });
-    // Zmiana tytułu strony
-    const page = document.body.getAttribute('data-page');
-    if (data[`title_${page}`]) {
-        document.title = data[`title_${page}`];
-    }
+// Function to get the saved language from local storage
+function getSavedLanguage() {
+    return localStorage.getItem('selectedLanguage') || 'pl';
 }
 
-// Nasłuchiwacze zdarzeń dla ikon języków
-document.querySelectorAll('.language-icon').forEach(icon => {
-    icon.addEventListener('click', () => {
-        const language = icon.getAttribute('data-lang');
-        changeLanguage(language);
-    });
-});
-
-// Aplikuj zapisany język przy załadowaniu strony(
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = getSavedLanguage();
-    changeLanguage(savedLanguage);
-});
-
-
-// Set the initial language based on saved preference
-document.addEventListener('DOMContentLoaded', function () {
-    const savedLanguage = getSavedLanguage();
-    setLanguage(savedLanguage);
-//    console.log(`Loaded language: ${savedLanguage}`);
-
-    // Funkcja pomocnicza do dodawania nasłuchiwaczy, jeśli element istnieje
-    function addLangListener(id, lang) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.addEventListener('click', function () {
-                setLanguage(lang);
-            });
-        }
-    }
-
-    // Dodaj nasłuchiwacze dla wszystkich języków
-    addLangListener('lang-pl', 'pl');
-    addLangListener('lang-en', 'en');
-    addLangListener('lang-de', 'de');
-    addLangListener('lang-es', 'es');
-});
-
-function changeLanguage(language) {
-    const data = translations[language];
-    document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (data && data[key]) {  // Add an additional check for data[key]
-            element.textContent = data[key];
-        } else {
-            console.warn(`Translation for key "${key}" not found in language "${language}"`);
-        }
-    });
-
-    // Update the page title if it exists in the translation object
-    const page = document.body.getAttribute('data-page');
-    if (data && data[`title_${page}`]) {
-        document.title = data[`title_${page}`];
-    }
-}
-
-// Kod JavaScript dla menu mobilnego
-const menuToggle = document.querySelector('.menu-toggle');
-if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-        document.querySelector('.mobile-nav').classList.toggle('active');
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const savedLanguage = getSavedLanguage();
-    setLanguage(savedLanguage);
-});
-
+// Function to set the language and save it to local storage
 function setLanguage(language) {
     localStorage.setItem('selectedLanguage', language);
     translatePage(language);
 }
 
+// Function to translate the page content
 function translatePage(language) {
-    const data = translations[language];
+    const data = translations[language]; // Use the translations object directly
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         if (data && data[key]) {
@@ -697,16 +621,42 @@ function translatePage(language) {
     }
 }
 
-    // Update the page title
-    const page = document.body.getAttribute('data-page');
-    if (data && data[`title_${page}`]) {
-        document.title = data[`title_${page}`];
-    }
-    
-
+// Event listener for language icons
 document.querySelectorAll('.language-icon').forEach(icon => {
     icon.addEventListener('click', () => {
         const language = icon.getAttribute('data-lang');
         setLanguage(language);
     });
 });
+
+// Apply the saved language when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    const savedLanguage = getSavedLanguage();
+    setLanguage(savedLanguage);
+
+    // Add event listeners for specific language icons
+    function addLangListener(id, lang) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('click', function () {
+                setLanguage(lang);
+            });
+        } else {
+            console.warn(`Element with ID "${id}" not found.`);
+        }
+    }
+
+    // Add listeners for language switching
+    addLangListener('lang-pl', 'pl');
+    addLangListener('lang-en', 'en');
+    addLangListener('lang-de', 'de');
+    addLangListener('lang-es', 'es');
+});
+
+// JavaScript code for mobile menu
+const menuToggle = document.querySelector('.menu-toggle');
+if (menuToggle) {
+    menuToggle.addEventListener('click', function () {
+        document.querySelector('.mobile-nav').classList.toggle('active');
+    });
+}
