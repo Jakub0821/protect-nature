@@ -89,6 +89,7 @@ const translations = {
         "run_for_the_planet_marathon": "Maraton 'Biegnij dla Planety'",
         "new_recycling_technologies": "Nowe technologie w recyklingu",
         "new_recycling_technologies_description": "Odkryj innowacyjne metody, które przekształcają przemysł recyklingu.",
+        "technology": "Technologie",
         "optical_sorting_technology": "Technologia sortowania optycznego",
         "chemical_recycling_technology": "Technologia recyklingu chemicznego plastiku",
         "waste_to_energy_technology": "Technologia przetwarzania odpadów organicznych na energię",
@@ -225,6 +226,7 @@ const translations = {
         "run_for_the_planet_marathon": "Run for the Planet Marathon",
         "new_recycling_technologies": "New Recycling Technologies",
         "new_recycling_technologies_description": "Discover innovative methods that are transforming the recycling industry.",
+        "technology": "Technology",
         "optical_sorting_technology": "Optical Sorting Technology",
         "chemical_recycling_technology": "Chemical Recycling Technology",
         "waste_to_energy_technology": "Waste-to-Energy Technology",
@@ -364,6 +366,7 @@ const translations = {
         "run_for_the_planet_marathon": "Marathon 'Run for the Planet'",
         "new_recycling_technologies": "Neue Recycling-Technologien",
         "new_recycling_technologies_description": "Entdecken Sie innovative Methoden, die die Recyclingindustrie verändern.",
+        "technology": "Technologien",
         "optical_sorting_technology": "Optische Sortiertechnologie",
         "chemical_recycling_technology": "Chemische Recycling-Technologie",
         "waste_to_energy_technology": "Abfall-zu-Energie-Technologie",
@@ -508,6 +511,7 @@ const translations = {
         "run_for_the_planet_marathon": "Maratón Corre por el Planeta",
         "new_recycling_technologies": "Nuevas tecnologías de reciclaje",
         "new_recycling_technologies_description": "Descubre métodos innovadores que están transformando la industria del reciclaje.",
+        "technology": "Tecnologías",
         "optical_sorting_technology": "Tecnología de clasificación óptica",
         "chemical_recycling_technology": "Tecnología de reciclaje químico",
         "waste_to_energy_technology": "Tecnología de conversión de residuos en energía",
@@ -686,12 +690,19 @@ function translatePage(language) {
         }
     });
 
-    // Update the page title
+    // Update the page title if it exists in the translation object
     const page = document.body.getAttribute('data-page');
     if (data && data[`title_${page}`]) {
         document.title = data[`title_${page}`];
     }
 }
+
+    // Update the page title
+    const page = document.body.getAttribute('data-page');
+    if (data && data[`title_${page}`]) {
+        document.title = data[`title_${page}`];
+    }
+    
 
 document.querySelectorAll('.language-icon').forEach(icon => {
     icon.addEventListener('click', () => {
