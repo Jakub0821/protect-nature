@@ -623,7 +623,7 @@ function changeLanguage(language) {
 
     // Update the page title if it exists in the translation object
     const page = document.body.getAttribute('data-page');
-    if (data[`title_${page}`]) {
+    if (data && data[`title_${page}`]) {
         document.title = data[`title_${page}`];
     }
 }
