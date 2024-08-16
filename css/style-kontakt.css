@@ -119,9 +119,20 @@ form input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+/* Styl dla menu mobilnego */
 .mobile-nav {
     display: none;
     flex-direction: column;
+    background-color: #4CAF50;
+    padding: 10px;
+    position: absolute;
+    top: 60px; /* Ustaw menu poniżej nagłówka */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.active {
+    display: flex;
 }
 
 .menu-toggle {
@@ -132,6 +143,7 @@ form input[type="submit"]:hover {
     border: none;
     font-size: 18px;
     cursor: pointer;
+    margin: 10px;
 }
 
 /* Stylizacja dla tabletów */
@@ -154,6 +166,10 @@ form input[type="submit"]:hover {
     }
 
     .menu-toggle {
+        display: block;
+    }
+
+    #desktop-nav {
         display: none;
     }
     
@@ -172,8 +188,15 @@ form input[type="submit"]:hover {
         display: block;
     }
 
-    .mobile-nav.active {
-        display: flex;
+    .mobile-nav a {
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .mobile-nav a:hover {
+        background-color: #45a049;
     }
 
     nav {
