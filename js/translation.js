@@ -595,18 +595,21 @@ const translations = {
     // Update the page title if it exists in the translation object
     document.addEventListener('DOMContentLoaded', function () {
         const page = document.body.getAttribute('data-page');
-        const savedLanguage = getSavedLanguage();
-        const data = translations[savedLanguage];
+        const savedLanguage = getSavedLanguage();  // Pobierz zapisany język
+        const data = translations[savedLanguage];  // Pobierz tłumaczenia dla danego języka
+    
+        console.log('Page:', page);  // Zobaczmy, czy page jest prawidłowy
+        console.log('Saved Language:', savedLanguage);  // Czy zapisany język jest prawidłowy?
+        console.log('Translations Data:', data);  // Czy mamy odpowiednie tłumaczenia?
     
         if (data && data[`title_${page}`]) {
             document.title = data[`title_${page}`];
-            console.log("Tytuł zmieniony na:", data[`title_${page}`]);  // Dodaj ten log do sprawdzenia, czy tytuł jest poprawnie ustawiany
+            console.log("Tytuł zmieniony na:", data[`title_${page}`]);
         } else {
             console.error("Nie znaleziono tytułu dla wybranego języka.");
         }
     });
-    
-    
+       
 
 // Apply the saved language when the page loads
 document.addEventListener('DOMContentLoaded', function () {
