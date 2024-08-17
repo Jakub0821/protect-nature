@@ -51,12 +51,7 @@
             document.getElementById('menu-toggle').addEventListener('click', function() {
                 document.getElementById('mobile-nav').classList.toggle('hidden');
             });
-
-            // Ukrywanie desktopowego menu dropdown na większych ekranach
-            document.querySelectorAll('#desktop-nav .dropdown-content').forEach(function(dropdown) {
-                dropdown.classList.add('hidden');
-            });
-
+            
             changeLanguage(getSavedLanguage());
         });
     </script>
