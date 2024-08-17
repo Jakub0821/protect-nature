@@ -32,7 +32,7 @@ const translations = {
     "pl": {
         "title": "Ochrona Środowiska",
         "title_home": "Ochrona Środowiska",
-        "title_about": "O Nas",
+        "title_about": "Nasza Historia i Misja",
         "title_news": "Aktualności",
         "title_tips": "Porady Ekologiczne",
         "title_contact": "Formularz Kontaktowy",
@@ -169,7 +169,7 @@ const translations = {
     "en": {
         "title": "Environmental Protection",
         "title_home": "Environmental Protection",
-        "title_about": "About Us",
+        "title_about": "Our History and Mission",
         "title_news": "News",
         "title_tips": "Eco Tips",
         "title_contact": "Contact Form",
@@ -309,7 +309,7 @@ const translations = {
     "de": {
         "title": "Umweltschutz",
         "title_home": "Umweltschutz",
-        "title_about": "Über uns",
+        "title_about": "Unsere Geschichte und Mission",
         "title_news": "Nachrichten",
         "title_tips": "Umwelttipps",
         "title_contact": "Kontaktformular",
@@ -449,7 +449,7 @@ const translations = {
     "es": {
         "title": "Protección del Medio Ambiente",
         "title_home": "Protección del Medio Ambiente",
-        "title_about": "Sobre nosotros",
+        "title_about": "Nuestra Historia y Misión",
         "title_news": "Noticias",
         "title_tips": "Consejos ecológicos",
         "title_contact": "Formulario de contacto",
