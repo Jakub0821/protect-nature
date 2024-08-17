@@ -603,11 +603,11 @@ const translations = {
         console.log('Tytuł strony:', data[`title_${page}`]);
     
         if (data && data[`title_${page}`]) {
-            document.title = data[`title_${page}`];
-            document.querySelector('title').textContent = data[`title_${page}`];  // Aktualizacja zawartości tagu <title>
+            document.title = data[`title_${page}`];  // Ustawia tytuł strony
+            document.querySelector('title').textContent = data[`title_${page}`];  // Aktualizuje zawartość tagu <title>
         }
     });
-
+    
 
 // Apply the saved language when the page loads
 document.addEventListener('DOMContentLoaded', function () {
