@@ -225,34 +225,20 @@ nav a:hover,
     color: white; 
 }
 
-/* Hide mobile menu on larger screens */
-@media (min-width: 769px) {
-    #mobile-nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    #desktop-nav {
-        display: block;
-    }
-}
 
 /* Show mobile menu on smaller screens */
 @media (max-width: 768px) {
-    #mobile-nav {
-        display: block;
+    nav ul {
+        flex-direction: column;
     }
 
-    #desktop-nav {
-        display: none;
+    nav ul li {
+        margin: 0;
     }
 
-    .menu-toggle {
-        display: block;
-    }
+    header h1 {
+        font-size: 1.8rem;
+    }  
 }
 
 /* Stylizacja dla telefonów */
@@ -266,10 +252,48 @@ nav a:hover,
     }
 
     nav ul {
-        display: none; /* Ukryj na telefonach, pokaż mobilne menu */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        background-color: #333;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        background-color: black;
     }
 
-    .mobile-nav {
-        display: flex;
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
     }
 }

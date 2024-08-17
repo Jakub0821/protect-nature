@@ -635,10 +635,3 @@ document.addEventListener('DOMContentLoaded', function () {
     addLangListener('lang-es', 'es');
 });
 
-// JavaScript code for mobile menu
-const menuToggle = document.querySelector('.menu-toggle');
-if (menuToggle) {
-    menuToggle.addEventListener('click', function () {
-        document.querySelector('.mobile-nav').classList.toggle('active');
-    });
-}

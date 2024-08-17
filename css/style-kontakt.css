@@ -165,10 +165,6 @@ form input[type="submit"]:hover {
         font-size: 14px;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
     #desktop-nav {
         display: none;
     }
@@ -177,37 +173,50 @@ form input[type="submit"]:hover {
         display: flex;
     }
 
-    .mobile-nav.active {
-        display: none;
-    }
 }
 
 /* Stylizacja dla telefonów */
 @media (max-width: 480px) {
-    .menu-toggle {
-        display: block;
+    header {
+        padding: 1.5rem;
     }
 
-    .mobile-nav a {
-        padding: 10px;
-        font-size: 14px;
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        background-color: #333;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
         color: white;
         text-decoration: none;
     }
-
-    .mobile-nav a:hover {
-        background-color: #45a049;
-    }
-
-    nav {
-        display: none;
-    }
-
-    nav a {
-        display: none;
-        margin: 5px 0;
-        padding: 10px;
-        font-size: 14px;
+    
+    nav ul li a:hover {
+        background-color: black;
     }
 
     .container {
