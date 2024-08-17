@@ -603,6 +603,7 @@ const translations = {
     
         if (data && data[`title_${page}`]) {
             document.title = data[`title_${page}`];
+            document.querySelector('title').textContent = data[`title_${page}`];
         }
     });
 
