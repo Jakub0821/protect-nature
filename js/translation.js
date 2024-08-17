@@ -1,3 +1,4 @@
+console.log("Plik translation.js został załadowany.");
 // Function to get the saved language from local storage
 function getSavedLanguage() {
     return localStorage.getItem('selectedLanguage') || 'pl';
@@ -603,7 +604,7 @@ const translations = {
     
         if (data && data[`title_${page}`]) {
             document.title = data[`title_${page}`];
-            document.querySelector('title').textContent = data[`title_${page}`];
+            document.querySelector('title').textContent = data[`title_${page}`];  // Aktualizacja zawartości tagu <title>
         }
     });
 
