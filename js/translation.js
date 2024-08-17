@@ -601,15 +601,15 @@ const translations = {
         console.log('Wybrany język:', savedLanguage);
         console.log('Tłumaczenia:', data);
         console.log('Tytuł strony:', data[`title_${page}`]);
-        console.log('Sprawdzenie zmiennej data:', data);
     
         if (data && data[`title_${page}`]) {
             document.title = data[`title_${page}`];  // Ustawia tytuł strony
             document.querySelector('title').textContent = data[`title_${page}`];  // Aktualizuje zawartość tagu <title>
-        } else {
-            console.error('Nie znaleziono tytułu strony dla wybranego języka.');
         }
+    
+        changeLanguage(savedLanguage);  // Zastosuj zmiany językowe do treści strony
     });
+    
     
     
 
