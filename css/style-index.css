@@ -296,4 +296,8 @@ nav a:hover,
     section h2 {
         font-size: 1.5rem;
     }
+
+    .language-icon {
+        width: 25px; /* Zmniejszenie rozmiaru flagi na telefonach */
+    }
 }
