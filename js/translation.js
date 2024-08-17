@@ -597,20 +597,15 @@ const translations = {
         const page = document.body.getAttribute('data-page');
         const savedLanguage = getSavedLanguage();
         const data = translations[savedLanguage];
-        
-        console.log('Wybrany język:', savedLanguage);
-        console.log('Tłumaczenia:', data);
-        console.log('Tytuł strony:', data ? data[`title_${page}`] : 'Brak danych');
     
         if (data && data[`title_${page}`]) {
             document.title = data[`title_${page}`];
-            document.querySelector('title').textContent = data[`title_${page}`];
+            console.log("Tytuł zmieniony na:", data[`title_${page}`]);  // Dodaj ten log do sprawdzenia, czy tytuł jest poprawnie ustawiany
         } else {
-            console.error('Nie znaleziono tytułu strony dla wybranego języka.');
+            console.error("Nie znaleziono tytułu dla wybranego języka.");
         }
-    
-        changeLanguage(savedLanguage);
     });
+    
     
 
 // Apply the saved language when the page loads
