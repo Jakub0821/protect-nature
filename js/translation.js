@@ -597,11 +597,11 @@ const translations = {
         const page = document.body.getAttribute('data-page');
         const savedLanguage = getSavedLanguage();  // Pobierz zapisany język
         const data = translations[savedLanguage];  // Pobierz tłumaczenia dla danego języka
-    
+        
         console.log('Page:', page);  // Zobaczmy, czy page jest prawidłowy
         console.log('Saved Language:', savedLanguage);  // Czy zapisany język jest prawidłowy?
         console.log('Translations Data:', data);  // Czy mamy odpowiednie tłumaczenia?
-    
+        
         if (data && data[`title_${page}`]) {
             document.title = data[`title_${page}`];
             console.log("Tytuł zmieniony na:", data[`title_${page}`]);
@@ -609,12 +609,18 @@ const translations = {
             console.error("Nie znaleziono tytułu dla wybranego języka.");
         }
     });
-       
 
 // Apply the saved language when the page loads
-document.addEventListener('DOMContentLoaded', function () {
-    const savedLanguage = getSavedLanguage();
-    setLanguage(savedLanguage);
+document.addEventListener("DOMContentLoaded", function () {
+    const page = document.body.getAttribute('data-page');
+    const savedLanguage = getSavedLanguage();  // Pobierz zapisany język
+    const data = translations[savedLanguage];  // Pobierz tłumaczenia dla danego języka
+
+    if (data && data[`title_${page}`]) {
+        document.title = data[`title_${page}`];  // Ustawia tytuł strony
+        document.querySelector('title').textContent = data[`title_${page}`];  // Aktualizuje zawartość tagu <title>
+    }
+    changeLanguage(savedLanguage);
 
     // Add event listeners for specific language icons
     function addLangListener(id, lang) {
@@ -633,5 +639,4 @@ document.addEventListener('DOMContentLoaded', function () {
     addLangListener('lang-en', 'en');
     addLangListener('lang-de', 'de');
     addLangListener('lang-es', 'es');
-});
-
+});  // Tutaj zamknięcie wywołania addEventListener
