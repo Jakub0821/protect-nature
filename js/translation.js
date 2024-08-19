@@ -611,7 +611,7 @@ const translations = {
     });
 
 // Apply the saved language when the page loads
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const page = document.body.getAttribute('data-page');
     const savedLanguage = getSavedLanguage();  // Pobierz zapisany język
     const data = translations[savedLanguage];  // Pobierz tłumaczenia dla danego języka
@@ -620,9 +620,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.title = data[`title_${page}`];  // Ustawia tytuł strony
         document.querySelector('title').textContent = data[`title_${page}`];  // Aktualizuje zawartość tagu <title>
     }
+
     changeLanguage(savedLanguage);
 
-    // Add event listeners for specific language icons
+    // Dodaj event listenery dla specyficznych ikon językowych
     function addLangListener(id, lang) {
         const element = document.getElementById(id);
         if (element) {
@@ -630,13 +631,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 setLanguage(lang);
             });
         } else {
-            console.warn(`Element with ID "${id}" not found.`);
+            console.warn(`Element z ID "${id}" nie został znaleziony.`);
         }
     }
 
-    // Add listeners for language switching
+    // Dodaj listenery dla przełączania języków
     addLangListener('lang-pl', 'pl');
     addLangListener('lang-en', 'en');
     addLangListener('lang-de', 'de');
     addLangListener('lang-es', 'es');
-});  // Tutaj zamknięcie wywołania addEventListener
+});
+
