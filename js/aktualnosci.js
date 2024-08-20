@@ -21,92 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    let articlesLoaded = false; // Flaga, aby zapobiec wielokrotnemu ładowaniu artykułów
-
-    // Funkcja do dynamicznego ładowania dodatkowych artykułów
-    function loadMoreArticles() {
-        if (articlesLoaded) return; // Sprawdzanie, czy artykuły zostały już załadowane
-        articlesLoaded = true; // Ustawienie flagi na true po załadowaniu artykułów
-
-        const moreArticles = [
-            {
-                title: "Kampania na rzecz zalesiania miast",
-                content: "Dowiedz się więcej o naszych inicjatywach zalesiania miast.",
-                category: "Inicjatywy",
-                moreContent: "Tutaj znajdziesz dodatkowe informacje na temat kampanii na rzecz zalesiania miast."
-            },
-            {
-                title: "Nowe technologie w recyklingu",
-                content: "Poznaj nowe technologie, które pomagają w recyklingu odpadów.",
-                category: "Technologie",
-                moreContent: "Dodatkowe informacje o nowych technologiach w recyklingu."
-            }
-        ];
-
-        const container = document.querySelector('.news');
-        moreArticles.forEach(article => {
-            const articleElement = document.createElement('article');
-            articleElement.classList.add('news-item');
-            articleElement.dataset.category = article.category;
-
-            const title = document.createElement('h2');
-            title.textContent = article.title;
-
-            const content = document.createElement('p');
-            content.textContent = article.content;
-
-            const button = document.createElement('button');
-            button.textContent = 'Czytaj więcej';
-            button.addEventListener('click', function() {
-                showMore(this);
-            });
-
-            const moreContent = document.createElement('div');
-            moreContent.classList.add('more-content');
-            moreContent.style.display = 'none';
-            moreContent.innerHTML = `<p>${article.moreContent}</p>`;
-
-            articleElement.appendChild(title);
-            articleElement.appendChild(content);
-            articleElement.appendChild(button);
-            articleElement.appendChild(moreContent);
-
-            container.appendChild(articleElement);
-        });
-    }
-
-    // Funkcja filtrowania artykułów
-    function filterArticles(category) {
-        const articles = document.querySelectorAll('.news-item');
-        articles.forEach(article => {
-            if (category === 'Wszystkie' || article.dataset.category === category) {
-                article.style.display = 'block';
-            } else {
-                article.style.display = 'none';
-            }
-        });
-    }
-
-    // Dodanie event listenerów do przycisków filtrujących
-    const filterButtons = document.querySelectorAll('.filter-button');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const category = this.dataset.category;
-            filterArticles(category);
-        });
-    });
-
-    // Dodanie funkcji "Wczytaj więcej"
-    const loadMoreBtn = document.getElementById('load-more');
-if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', loadMoreArticles);
-} else {
-    console.error('Przycisk "Wczytaj więcej" nie został znaleziony.');
-}
-
     // Funkcja do ładowania artykułów z zewnętrznego pliku JSON
     function loadArticlesFromJson() {
-        fetch('articles.json')
+        fetch('articles.json')  // Upewnij się, że plik JSON jest w odpowiednim katalogu
             .then(response => response.json())
             .then(data => {
                 const container = document.querySelector('.news');
@@ -143,6 +60,14 @@ if (loadMoreBtn) {
             .catch(error => console.error('Error loading articles:', error));
     }
 
-    // Możemy zdecydować się na ładowanie artykułów z pliku JSON na starcie
+    // Dodanie funkcji "Wczytaj więcej"
+    const loadMoreBtn = document.getElementById('load-more');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', loadArticlesFromJson);
+    } else {
+        console.error('Przycisk "Wczytaj więcej" nie został znaleziony.');
+    }
+
+    // Opcjonalnie: Automatyczne ładowanie artykułów z pliku JSON na starcie
     loadArticlesFromJson();
 });
