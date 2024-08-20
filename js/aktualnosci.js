@@ -98,7 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Dodanie funkcji "Wczytaj więcej"
     const loadMoreBtn = document.getElementById('load-more');
+if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', loadMoreArticles);
+} else {
+    console.error('Przycisk "Wczytaj więcej" nie został znaleziony.');
+}
 
     // Funkcja do ładowania artykułów z zewnętrznego pliku JSON
     function loadArticlesFromJson() {
