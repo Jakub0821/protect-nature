@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Funkcja do ładowania artykułów z zewnętrznego pliku JSON
     function loadArticlesFromJson() {
-        fetch('articles.json')  // Upewnij się, że plik JSON jest w odpowiednim katalogu
+        fetch('translations/articles.json')  // Upewnij się, że plik JSON jest w odpowiednim katalogu
             .then(response => response.json())
             .then(data => {
                 const container = document.querySelector('.news');
