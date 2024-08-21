@@ -143,14 +143,14 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
 }
 
@@ -330,7 +330,7 @@ footer p {
     nav ul li a {
         display: block;
         width: 100%;
-        padding: 10px 0;
+        padding: 8px 0;
         color: white;
         text-decoration: none;
     }
