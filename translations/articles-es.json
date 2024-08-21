@@ -1,0 +1,52 @@
+{
+    "articles": [
+        {
+            "title": "Campaña de Forestación Urbana",
+            "content": "Conozca más sobre nuestras iniciativas de forestación urbana.",
+            "category": "Iniciativas",
+            "moreContent": "Aquí encontrará información adicional sobre la campaña de forestación urbana."
+        },
+        {
+            "title": "Nuevas Tecnologías de Reciclaje",
+            "content": "Descubra nuevas tecnologías que ayudan en el reciclaje de residuos.",
+            "category": "Tecnologías",
+            "moreContent": "Información adicional sobre nuevas tecnologías de reciclaje."
+        },
+        {
+            "title": "Protección de la Biodiversidad",
+            "content": "Descubra acciones dirigidas a proteger especies en peligro de extinción.",
+            "category": "Protección de la Naturaleza",
+            "moreContent": "Las iniciativas para proteger la biodiversidad incluyen programas de protección de especies en peligro y educación sobre su importancia."
+        },
+        {
+            "title": "Energía Renovable en Tu Hogar",
+            "content": "Aprenda cómo utilizar energía solar y eólica en su hogar.",
+            "category": "Tecnologías",
+            "moreContent": "La instalación de paneles solares y turbinas eólicas es una forma de reducir las facturas de energía y la huella de carbono."
+        },
+        {
+            "title": "Educación Ecológica para Niños",
+            "content": "Talleres y programas educativos que enseñan a los niños a cuidar el medio ambiente.",
+            "category": "Educación",
+            "moreContent": "La educación ecológica incluye actividades prácticas que involucran a los niños en la protección del medio ambiente."
+        },
+        {
+            "title": "Ciudad Verde - Urbanización y Desarrollo Sostenible",
+            "content": "Cómo las ciudades pueden ser más amigables con el medio ambiente.",
+            "category": "Urbanización",
+            "moreContent": "Los planes de urbanización sostenible incluyen el desarrollo de infraestructura ecológica, como techos verdes, parques y ciclovías."
+        },
+        {
+            "title": "Zero Waste - Cómo Reducir los Residuos",
+            "content": "Conozca los principios de Zero Waste y cómo implementarlos en la vida diaria.",
+            "category": "Estilo de Vida",
+            "moreContent": "Zero Waste es una filosofía que fomenta la minimización de residuos mediante la reducción, reutilización y reciclaje de materiales."
+        },
+        {
+            "title": "Protección de las Aguas y Recursos Hídricos",
+            "content": "Cómo podemos proteger nuestros recursos hídricos de la contaminación.",
+            "category": "Protección de la Naturaleza",
+            "moreContent": "Las actividades de protección del agua incluyen la limpieza de ríos y lagos, así como la educación sobre la conservación del agua."
+        }
+    ]
+}

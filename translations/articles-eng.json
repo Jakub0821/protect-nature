@@ -1,0 +1,53 @@
+{
+    "articles" : [
+        {
+            "title": "Urban Forestation Campaign",
+            "content": "Learn more about our urban forestation initiatives.",
+            "category": "Initiatives",
+            "moreContent": "Here you will find additional information about the urban forestation campaign."
+        },
+        {
+            "title": "New Recycling Technologies",
+            "content": "Discover new technologies that help in recycling waste.",
+            "category": "Technologies",
+            "moreContent": "Additional information about new recycling technologies."
+        },
+        {
+            "title": "Biodiversity Protection",
+            "content": "Discover actions aimed at protecting endangered species.",
+            "category": "Nature Protection",
+            "moreContent": "Initiatives to protect biodiversity include endangered species protection programs and education on their importance."
+        },
+        {
+            "title": "Renewable Energy in Your Home",
+            "content": "Learn how to utilize solar and wind energy at home.",
+            "category": "Technologies",
+            "moreContent": "Installing solar panels and wind turbines is a way to reduce energy bills and your carbon footprint."
+        },
+        {
+            "title": "Ecological Education for Children",
+            "content": "Workshops and educational programs that teach children how to care for the environment.",
+            "category": "Education",
+            "moreContent": "Ecological education includes practical activities that engage children in environmental protection."
+        },
+        {
+            "title": "Green City - Urbanization and Sustainable Development",
+            "content": "How cities can become more environmentally friendly.",
+            "category": "Urbanization",
+            "moreContent": "Sustainable urbanization plans include developing ecological infrastructure such as green roofs, parks, and bike paths."
+        },
+        {
+            "title": "Zero Waste - How to Reduce Waste",
+            "content": "Learn about Zero Waste principles and how to implement them in daily life.",
+            "category": "Lifestyle",
+            "moreContent": "Zero Waste is a philosophy that encourages minimizing waste through reduction, reuse, and recycling of materials."
+        },
+        {
+            "title": "Water and Water Resources Protection",
+            "content": "How we can protect our water resources from pollution.",
+            "category": "Nature Protection",
+            "moreContent": "Water protection activities include cleaning rivers and lakes, as well as educating about water conservation."
+        }
+    ]
+}
+

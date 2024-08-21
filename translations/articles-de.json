@@ -1,0 +1,52 @@
+{
+    "articles": [
+        {
+            "title": "Kampagne zur Stadtaufforstung",
+            "content": "Erfahren Sie mehr über unsere Initiativen zur Stadtaufforstung.",
+            "category": "Initiativen",
+            "moreContent": "Hier finden Sie zusätzliche Informationen zur Kampagne zur Stadtaufforstung."
+        },
+        {
+            "title": "Neue Recyclingtechnologien",
+            "content": "Entdecken Sie neue Technologien, die beim Recycling von Abfällen helfen.",
+            "category": "Technologien",
+            "moreContent": "Zusätzliche Informationen über neue Recyclingtechnologien."
+        },
+        {
+            "title": "Schutz der Biodiversität",
+            "content": "Entdecken Sie Maßnahmen zum Schutz gefährdeter Arten.",
+            "category": "Naturschutz",
+            "moreContent": "Initiativen zum Schutz der Biodiversität umfassen Programme zum Schutz gefährdeter Arten und Bildung über ihre Bedeutung."
+        },
+        {
+            "title": "Erneuerbare Energien für Ihr Zuhause",
+            "content": "Erfahren Sie, wie Sie Solar- und Windenergie zu Hause nutzen können.",
+            "category": "Technologien",
+            "moreContent": "Die Installation von Solarmodulen und Windturbinen ist ein Weg, um Energiekosten zu senken und Ihren CO2-Fußabdruck zu verringern."
+        },
+        {
+            "title": "Ökologische Bildung für Kinder",
+            "content": "Workshops und Bildungsprogramme, die Kindern beibringen, wie man die Umwelt schützt.",
+            "category": "Bildung",
+            "moreContent": "Ökologische Bildung umfasst praktische Aktivitäten, die Kinder in den Umweltschutz einbeziehen."
+        },
+        {
+            "title": "Grüne Stadt - Urbanisierung und nachhaltige Entwicklung",
+            "content": "Wie Städte umweltfreundlicher werden können.",
+            "category": "Urbanisierung",
+            "moreContent": "Nachhaltige Urbanisierungspläne umfassen die Entwicklung ökologischer Infrastrukturen wie Gründächer, Parks und Radwege."
+        },
+        {
+            "title": "Zero Waste - Wie man Abfall reduziert",
+            "content": "Erfahren Sie mehr über die Prinzipien von Zero Waste und wie man sie im Alltag umsetzt.",
+            "category": "Lebensstil",
+            "moreContent": "Zero Waste ist eine Philosophie, die dazu ermutigt, Abfall durch Reduzierung, Wiederverwendung und Recycling von Materialien zu minimieren."
+        },
+        {
+            "title": "Schutz der Gewässer und Wasserressourcen",
+            "content": "Wie wir unsere Wasserressourcen vor Verschmutzung schützen können.",
+            "category": "Naturschutz",
+            "moreContent": "Wasserschutzaktivitäten umfassen die Reinigung von Flüssen und Seen sowie die Aufklärung über Wassereinsparung."
+        }
+    ]
+}

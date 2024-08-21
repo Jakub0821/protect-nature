@@ -124,6 +124,56 @@ const translations = {
         "chemical_recycling_technology": "Technologia recyklingu chemicznego",
         "biodegradable_plastics": "Biodegradowalne plastiki",
         "automated_recycling": "Automatyzowany recykling",
+        "articles": [
+        {
+            "title": "Kampania na rzecz zalesiania miast",
+            "content": "Dowiedz się więcej o naszych inicjatywach zalesiania miast.",
+            "category": "Inicjatywy",
+            "moreContent": "Tutaj znajdziesz dodatkowe informacje na temat kampanii na rzecz zalesiania miast."
+        },
+        {
+            "title": "Nowe technologie w recyklingu",
+            "content": "Poznaj nowe technologie, które pomagają w recyklingu odpadów.",
+            "category": "Technologie",
+            "moreContent": "Dodatkowe informacje o nowych technologiach w recyklingu."
+        },
+        {
+            "title": "Ochrona bioróżnorodności",
+            "content": "Odkryj działania mające na celu ochronę zagrożonych gatunków.",
+            "category": "Ochrona Przyrody",
+            "moreContent": "Inicjatywy dotyczące ochrony bioróżnorodności obejmują programy ochrony zagrożonych gatunków oraz edukację na temat ich znaczenia."
+        },
+        {
+            "title": "Energia odnawialna w Twoim domu",
+            "content": "Dowiedz się, jak wykorzystać energię słoneczną i wiatrową w domu.",
+            "category": "Technologie",
+            "moreContent": "Instalacja paneli słonecznych i turbin wiatrowych to sposób na zmniejszenie rachunków za energię oraz redukcję śladu węglowego."
+        },
+        {
+            "title": "Edukacja ekologiczna dla dzieci",
+            "content": "Warsztaty i programy edukacyjne, które uczą najmłodszych, jak dbać o środowisko.",
+            "category": "Edukacja",
+            "moreContent": "Edukacja ekologiczna obejmuje praktyczne zajęcia, które angażują dzieci w działania na rzecz ochrony przyrody."
+        },
+        {
+            "title": "Zielone miasto - urbanizacja i zrównoważony rozwój",
+            "content": "Jak miasta mogą stać się bardziej przyjazne dla środowiska.",
+            "category": "Urbanizacja",
+            "moreContent": "Plany zrównoważonej urbanizacji obejmują rozwój infrastruktury ekologicznej, takiej jak zielone dachy, parki i ścieżki rowerowe."
+        },
+        {
+            "title": "Zero Waste - jak ograniczyć ilość odpadów",
+            "content": "Poznaj zasady Zero Waste i dowiedz się, jak je wdrożyć w codziennym życiu.",
+            "category": "Lifestyle",
+            "moreContent": "Zero Waste to filozofia, która zachęca do minimalizacji odpadów poprzez redukcję, ponowne wykorzystanie i recykling materiałów."
+        },
+        {
+            "title": "Ochrona wód i zasobów wodnych",
+            "content": "Jak możemy chronić nasze zasoby wodne przed zanieczyszczeniami.",
+            "category": "Ochrona Przyrody",
+            "moreContent": "Działania na rzecz ochrony wód obejmują oczyszczanie rzek i jezior, a także edukację na temat oszczędzania wody."
+        }
+    ],
         "form_title": "Formularz kontaktowy",
         "form_name": "Imię",
         "form_email": "Email",
@@ -261,6 +311,56 @@ const translations = {
         "chemical_recycling_technology": "Chemical Recycling Technology",
         "biodegradable_plastics": "Biodegradable Plastics",
         "automated_recycling": "Automated Recycling",
+        "articles" : [
+        {
+            "title": "Urban Forestation Campaign",
+            "content": "Learn more about our urban forestation initiatives.",
+            "category": "Initiatives",
+            "moreContent": "Here you will find additional information about the urban forestation campaign."
+        },
+        {
+            "title": "New Recycling Technologies",
+            "content": "Discover new technologies that help in recycling waste.",
+            "category": "Technologies",
+            "moreContent": "Additional information about new recycling technologies."
+        },
+        {
+            "title": "Biodiversity Protection",
+            "content": "Discover actions aimed at protecting endangered species.",
+            "category": "Nature Protection",
+            "moreContent": "Initiatives to protect biodiversity include endangered species protection programs and education on their importance."
+        },
+        {
+            "title": "Renewable Energy in Your Home",
+            "content": "Learn how to utilize solar and wind energy at home.",
+            "category": "Technologies",
+            "moreContent": "Installing solar panels and wind turbines is a way to reduce energy bills and your carbon footprint."
+        },
+        {
+            "title": "Ecological Education for Children",
+            "content": "Workshops and educational programs that teach children how to care for the environment.",
+            "category": "Education",
+            "moreContent": "Ecological education includes practical activities that engage children in environmental protection."
+        },
+        {
+            "title": "Green City - Urbanization and Sustainable Development",
+            "content": "How cities can become more environmentally friendly.",
+            "category": "Urbanization",
+            "moreContent": "Sustainable urbanization plans include developing ecological infrastructure such as green roofs, parks, and bike paths."
+        },
+        {
+            "title": "Zero Waste - How to Reduce Waste",
+            "content": "Learn about Zero Waste principles and how to implement them in daily life.",
+            "category": "Lifestyle",
+            "moreContent": "Zero Waste is a philosophy that encourages minimizing waste through reduction, reuse, and recycling of materials."
+        },
+        {
+            "title": "Water and Water Resources Protection",
+            "content": "How we can protect our water resources from pollution.",
+            "category": "Nature Protection",
+            "moreContent": "Water protection activities include cleaning rivers and lakes, as well as educating about water conservation."
+        }
+    ],
         "form_title": "Contact Form",
         "form_name": "Name",
         "form_email": "Email",
@@ -401,6 +501,56 @@ const translations = {
         "chemical_recycling_technology": "Chemische Recyclingtechnologie",
         "biodegradable_plastics": "Biologisch abbaubare Kunststoffe",
         "automated_recycling": "Automatisiertes Recycling",
+        "articles": [
+        {
+            "title": "Kampagne zur Stadtaufforstung",
+            "content": "Erfahren Sie mehr über unsere Initiativen zur Stadtaufforstung.",
+            "category": "Initiativen",
+            "moreContent": "Hier finden Sie zusätzliche Informationen zur Kampagne zur Stadtaufforstung."
+        },
+        {
+            "title": "Neue Recyclingtechnologien",
+            "content": "Entdecken Sie neue Technologien, die beim Recycling von Abfällen helfen.",
+            "category": "Technologien",
+            "moreContent": "Zusätzliche Informationen über neue Recyclingtechnologien."
+        },
+        {
+            "title": "Schutz der Biodiversität",
+            "content": "Entdecken Sie Maßnahmen zum Schutz gefährdeter Arten.",
+            "category": "Naturschutz",
+            "moreContent": "Initiativen zum Schutz der Biodiversität umfassen Programme zum Schutz gefährdeter Arten und Bildung über ihre Bedeutung."
+        },
+        {
+            "title": "Erneuerbare Energien für Ihr Zuhause",
+            "content": "Erfahren Sie, wie Sie Solar- und Windenergie zu Hause nutzen können.",
+            "category": "Technologien",
+            "moreContent": "Die Installation von Solarmodulen und Windturbinen ist ein Weg, um Energiekosten zu senken und Ihren CO2-Fußabdruck zu verringern."
+        },
+        {
+            "title": "Ökologische Bildung für Kinder",
+            "content": "Workshops und Bildungsprogramme, die Kindern beibringen, wie man die Umwelt schützt.",
+            "category": "Bildung",
+            "moreContent": "Ökologische Bildung umfasst praktische Aktivitäten, die Kinder in den Umweltschutz einbeziehen."
+        },
+        {
+            "title": "Grüne Stadt - Urbanisierung und nachhaltige Entwicklung",
+            "content": "Wie Städte umweltfreundlicher werden können.",
+            "category": "Urbanisierung",
+            "moreContent": "Nachhaltige Urbanisierungspläne umfassen die Entwicklung ökologischer Infrastrukturen wie Gründächer, Parks und Radwege."
+        },
+        {
+            "title": "Zero Waste - Wie man Abfall reduziert",
+            "content": "Erfahren Sie mehr über die Prinzipien von Zero Waste und wie man sie im Alltag umsetzt.",
+            "category": "Lebensstil",
+            "moreContent": "Zero Waste ist eine Philosophie, die dazu ermutigt, Abfall durch Reduzierung, Wiederverwendung und Recycling von Materialien zu minimieren."
+        },
+        {
+            "title": "Schutz der Gewässer und Wasserressourcen",
+            "content": "Wie wir unsere Wasserressourcen vor Verschmutzung schützen können.",
+            "category": "Naturschutz",
+            "moreContent": "Wasserschutzaktivitäten umfassen die Reinigung von Flüssen und Seen sowie die Aufklärung über Wassereinsparung."
+        }
+    ],
         "form_title": "Kontaktformular",
         "form_name": "Name",
         "form_email": "Email",
@@ -546,6 +696,56 @@ const translations = {
         "chemical_recycling_technology": "Tecnología de reciclaje químico",
         "biodegradable_plastics": "Plásticos biodegradables",
         "automated_recycling": "Reciclaje automatizado",
+        "articles": [
+        {
+            "title": "Campaña de Forestación Urbana",
+            "content": "Conozca más sobre nuestras iniciativas de forestación urbana.",
+            "category": "Iniciativas",
+            "moreContent": "Aquí encontrará información adicional sobre la campaña de forestación urbana."
+        },
+        {
+            "title": "Nuevas Tecnologías de Reciclaje",
+            "content": "Descubra nuevas tecnologías que ayudan en el reciclaje de residuos.",
+            "category": "Tecnologías",
+            "moreContent": "Información adicional sobre nuevas tecnologías de reciclaje."
+        },
+        {
+            "title": "Protección de la Biodiversidad",
+            "content": "Descubra acciones dirigidas a proteger especies en peligro de extinción.",
+            "category": "Protección de la Naturaleza",
+            "moreContent": "Las iniciativas para proteger la biodiversidad incluyen programas de protección de especies en peligro y educación sobre su importancia."
+        },
+        {
+            "title": "Energía Renovable en Tu Hogar",
+            "content": "Aprenda cómo utilizar energía solar y eólica en su hogar.",
+            "category": "Tecnologías",
+            "moreContent": "La instalación de paneles solares y turbinas eólicas es una forma de reducir las facturas de energía y la huella de carbono."
+        },
+        {
+            "title": "Educación Ecológica para Niños",
+            "content": "Talleres y programas educativos que enseñan a los niños a cuidar el medio ambiente.",
+            "category": "Educación",
+            "moreContent": "La educación ecológica incluye actividades prácticas que involucran a los niños en la protección del medio ambiente."
+        },
+        {
+            "title": "Ciudad Verde - Urbanización y Desarrollo Sostenible",
+            "content": "Cómo las ciudades pueden ser más amigables con el medio ambiente.",
+            "category": "Urbanización",
+            "moreContent": "Los planes de urbanización sostenible incluyen el desarrollo de infraestructura ecológica, como techos verdes, parques y ciclovías."
+        },
+        {
+            "title": "Zero Waste - Cómo Reducir los Residuos",
+            "content": "Conozca los principios de Zero Waste y cómo implementarlos en la vida diaria.",
+            "category": "Estilo de Vida",
+            "moreContent": "Zero Waste es una filosofía que fomenta la minimización de residuos mediante la reducción, reutilización y reciclaje de materiales."
+        },
+        {
+            "title": "Protección de las Aguas y Recursos Hídricos",
+            "content": "Cómo podemos proteger nuestros recursos hídricos de la contaminación.",
+            "category": "Protección de la Naturaleza",
+            "moreContent": "Las actividades de protección del agua incluyen la limpieza de ríos y lagos, así como la educación sobre la conservación del agua."
+        }
+    ],
         "form_title": "Formulario de contacto",
         "form_name": "Nombre",
         "form_email": "Correo electrónico",
@@ -592,6 +792,58 @@ const translations = {
         "rights": "@ 2024 Consejos Ecológicos. Todos los derechos reservados."
     }
 };
+
+
+// Function to load articles from the corresponding JSON file based on the selected language
+function loadArticles(language) {
+    let filePath;
+
+    // Assign the correct path based on the selected language
+    switch(language) {
+        case 'pl':
+            filePath = 'translations/articles.json';
+            break;
+        case 'en':
+            filePath = 'translations/articles-eng.json';
+            break;
+        case 'de':
+            filePath = 'translations/articles-de.json';
+            break;
+        case 'es':
+            filePath = 'translations/articles-es.json';
+            break;
+        default:
+            filePath = 'translations/articles-eng.json'; // Default to English
+    }
+
+    // Load the JSON file
+    fetch(filePath)
+        .then(response => response.json())
+        .then(data => {
+            displayArticles(data.articles);
+        })
+        .catch(error => console.error('Error loading articles:', error));
+}
+
+// Function to display articles on the page
+function displayArticles(articles) {
+    const container = document.getElementById('articles-container');
+    container.innerHTML = ''; // Clear existing content
+
+    articles.forEach(article => {
+        const articleElement = document.createElement('div');
+        articleElement.className = 'article';
+
+        articleElement.innerHTML = `
+            <h2>${article.title}</h2>
+            <p>${article.content}</p>
+            <a href="#">${article.moreContent}</a>
+        `;
+
+        container.appendChild(articleElement);
+    });
+}
+
     // Update the page title if it exists in the translation object
     document.addEventListener('DOMContentLoaded', function () {
         const page = document.body.getAttribute('data-page');
