@@ -95,7 +95,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 5px;
+    margin: 0 2px; /* Zmniejszenie marginesu między elementami */
 }
 
 nav ul li a {
@@ -179,7 +179,7 @@ nav a {
     line-height: 50px; /* Dopasuj wartość do wysokości swojego paska nawigacyjnego */
     color: white;
     text-decoration: none;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 nav a:hover, nav a.active {

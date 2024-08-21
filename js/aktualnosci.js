@@ -67,7 +67,4 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Przycisk "Wczytaj więcej" nie został znaleziony.');
     }
-
-    // Opcjonalnie: Automatyczne ładowanie artykułów z pliku JSON na starcie
-    loadArticlesFromJson();
 });
