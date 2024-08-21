@@ -83,6 +83,33 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color:#333;
+}
+
 nav a, .dropbtn {
     color: white;
     padding: 1rem 2rem;
@@ -131,32 +158,6 @@ nav a:hover, .dropbtn:hover {
     display: block;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color:#333;
-}
 
 nav a, .dropbtn {
     color: white;
