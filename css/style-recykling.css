@@ -94,22 +94,21 @@ img {
 }
 
 .image-item {
-    min-height: 350px;
-    margin-bottom: 20px;
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .image-item img {
-    max-height: 250px;
-    object-fit: cover;
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
 .image-item p {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     color: #4CAF50;
-    font-size: 1rem;
 }
 
 #language-switcher {
