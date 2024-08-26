@@ -10,3 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function toggleMenu() {
+    var nav = document.getElementById("desktop-nav");
+    nav.classList.toggle("show");
+}
