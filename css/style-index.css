@@ -209,10 +209,29 @@ nav a:hover,
     color: white; 
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
 
 /* Show mobile menu on smaller screens */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     nav ul {
+        
         flex-direction: column;
     }
 
