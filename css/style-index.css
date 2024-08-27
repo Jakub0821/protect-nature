@@ -210,6 +210,8 @@ nav a:hover,
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
 }
 
 .hamburger .bar {
@@ -221,20 +223,33 @@ nav a:hover,
 }
 
 #desktop-nav {
-    display: none; /* Ukrycie nawigacji na mobilnych */
-}
-
-#desktop-nav.show {
-    display: block; /* Pokaż nawigację po kliknięciu hamburgera */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
+    display: flex;
+    justify-content: center;
     background-color: #333;
-    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
 }
 
-/* Show mobile menu on smaller screens */
+#desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#desktop-nav ul li {
+    margin: 0 15px;
+}
+
+#desktop-nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -242,31 +257,31 @@ nav a:hover,
 
     #desktop-nav {
         display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
     }
 
     #desktop-nav.show {
-        display: block;
+        display: flex;
         position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
-        background-color: #333;
-        text-align: center;
     }
 
     #desktop-nav ul {
         flex-direction: column;
+        width: 100%;
     }
 
     #desktop-nav ul li {
-        width: 100%;
+        text-align: center;
         border-bottom: 1px solid #444;
     }
 
     #desktop-nav ul li a {
-        display: block;
-        padding: 10px 0;
-        width: 100%;
+        padding: 10px;
+        color: white;
     }
 
     header h1 {
