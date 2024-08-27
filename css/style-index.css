@@ -12,9 +12,10 @@ header {
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed; /* Ustawiono jako fixed */
+    width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Nagłówek jest nad nawigacją */
 }
 
 header h1 {
@@ -250,6 +251,7 @@ nav a:hover,
     text-decoration: none;
 }
 
+/* Stylizacja dla mobilnych */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -265,8 +267,12 @@ nav a:hover,
     #desktop-nav.show {
         display: flex;
         position: absolute;
-        top: 60px;
+        top: 100px; /* Zwiększony odstęp od góry */
         left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        z-index: 999; /* Pod nagłówkiem */
     }
 
     #desktop-nav ul {
