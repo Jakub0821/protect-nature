@@ -255,6 +255,10 @@ nav a:hover,
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1001;
     }
 
     #desktop-nav {
@@ -262,17 +266,14 @@ nav a:hover,
         flex-direction: column;
         background-color: #333;
         width: 100%;
+        position: fixed; /* Ustawiono jako fixed */
+        top: 60px; /* Zwiększony odstęp od nagłówka */
+        left: 0;
+        z-index: 999; /* Pod nagłówkiem */
     }
 
     #desktop-nav.show {
         display: flex;
-        position: absolute;
-        top: 100px; /* Zwiększony odstęp od góry */
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        text-align: center;
-        z-index: 999; /* Pod nagłówkiem */
     }
 
     #desktop-nav ul {
@@ -294,7 +295,6 @@ nav a:hover,
         font-size: 1.8rem;
     }
 }
-
 /* Stylizacja dla telefonów */
 @media (max-width: 480px) {
     header {
