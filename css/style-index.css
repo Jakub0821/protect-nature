@@ -12,7 +12,7 @@ header {
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Ustawiono jako fixed */
+    position: fixed; /* Nagłówek ustawiony jako fixed */
     width: 100%;
     top: 0;
     z-index: 1000; /* Nagłówek jest nad nawigacją */
@@ -30,6 +30,8 @@ nav {
     justify-content: center;
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ustawienie relative dla nawigacji */
+    z-index: 999; /* Nawigacja jest pod nagłówkiem */
 }
 
 nav ul {
@@ -211,8 +213,10 @@ nav a:hover,
     display: none;
     flex-direction: column;
     cursor: pointer;
-    position: relative;
-    z-index: 1001;
+    position: fixed; /* Ustawiono jako fixed */
+    top: 10px;
+    left: 10px;
+    z-index: 1001; /* Hamburger nad nawigacją */
 }
 
 .hamburger .bar {
@@ -223,13 +227,21 @@ nav a:hover,
     transition: 0.4s;
 }
 
+/* Nawigacja mobilna */
 #desktop-nav {
-    display: flex;
+    display: none;
+    flex-direction: column;
     justify-content: center;
     background-color: #333;
     width: 100%;
-    position: relative;
-    z-index: 1000;
+    position: fixed; /* Ustawiono jako fixed */
+    top: 60px; /* Zwiększony odstęp od nagłówka */
+    left: 0;
+    z-index: 999; /* Pod nagłówkiem */
+}
+
+#desktop-nav.show {
+    display: flex;
 }
 
 #desktop-nav ul {
@@ -237,11 +249,13 @@ nav a:hover,
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 #desktop-nav ul li {
     margin: 0 15px;
+    border-bottom: 1px solid #444;
 }
 
 #desktop-nav ul li a {
@@ -251,50 +265,6 @@ nav a:hover,
     text-decoration: none;
 }
 
-/* Stylizacja dla mobilnych */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1001;
-    }
-
-    #desktop-nav {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        width: 100%;
-        position: fixed; /* Ustawiono jako fixed */
-        top: 60px; /* Zwiększony odstęp od nagłówka */
-        left: 0;
-        z-index: 999; /* Pod nagłówkiem */
-    }
-
-    #desktop-nav.show {
-        display: flex;
-    }
-
-    #desktop-nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #desktop-nav ul li {
-        text-align: center;
-        border-bottom: 1px solid #444;
-    }
-
-    #desktop-nav ul li a {
-        padding: 10px;
-        color: white;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-}
 /* Stylizacja dla telefonów */
 @media (max-width: 480px) {
     header {
@@ -353,5 +323,19 @@ nav a:hover,
 
     .language-icon {
         width: 25px; /* Zmniejszenie rozmiaru flagi na telefonach */
+    }
+}
+
+/* Stylizacja dla większych ekranów */
+@media (min-width: 769px) {
+    #desktop-nav {
+        display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
+        position: relative; /* Przywracamy normalne pozycjonowanie */
+        top: 0;
+        z-index: 998; /* Pod nagłówkiem */
+    }
+
+    .hamburger {
+        display: none; /* Ukrywamy hamburger na dużych ekranach */
     }
 }
