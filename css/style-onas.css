@@ -234,6 +234,77 @@ footer p {
     margin: 0;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed; /* Ustawiono jako fixed */
+    top: 10px;
+    left: 10px;
+    z-index: 1001; /* Hamburger nad nawigacją */
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Nawigacja mobilna */
+#desktop-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #333;
+    width: 100%;
+    position: fixed; /* Ustawiono jako fixed */
+    top: 140px; /* Zwiększony odstęp od nagłówka */
+    left: 0;
+    z-index: 999; /* Pod nagłówkiem */
+}
+
+#desktop-nav.show {
+    display: flex;
+}
+
+#desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#desktop-nav ul li {
+    margin: 0 15px;
+    border-bottom: 1px solid #444;
+}
+
+#desktop-nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Stylizacja dla większych ekranów */
+@media (min-width: 769px) {
+    #desktop-nav {
+        display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
+        position: relative; /* Przywracamy normalne pozycjonowanie */
+        top: 0;
+        z-index: 998; /* Pod nagłówkiem */
+    }
+
+    .hamburger {
+        display: none; /* Ukrywamy hamburger na dużych ekranach */
+    }
+}
+
 /* Show mobile menu on smaller screens */
 @media (max-width: 768px) {
     nav ul {
@@ -247,6 +318,14 @@ footer p {
     header h1 {
         font-size: 1.8rem;
     }  
+
+    .hamburger {
+        display: flex; /* Upewniamy się, że hamburger jest widoczny w wersji mobilnej */
+    }
+
+    #desktop-nav {
+        display: none; /* Ukrycie nawigacji na mobilnych */
+    }
 }
 
 /* Stylizacja dla telefonów */
