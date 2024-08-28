@@ -294,10 +294,12 @@ footer p {
 /* Stylizacja dla większych ekranów */
 @media (min-width: 769px) {
     #desktop-nav {
-        display: flex;
-        justify-content: center;
-        background-color: #333;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
+        position: relative; /* Ustawienie relative, aby menu było umieszczone w normalnym przepływie dokumentu */
+        top: 100px;
+        z-index: 1000; /* Upewniamy się, że menu jest nad innymi elementami */
+        width: 100%; /* Ustawiamy szerokość na 100%, aby menu zajmowało całą szerokość ekranu */
+        background-color: #333; /* Upewniamy się, że tło jest odpowiednio ustawione */
     }
 
     .hamburger {
