@@ -251,8 +251,9 @@ nav a:hover,
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    top: 20px;
 }
 
 #desktop-nav ul li {
@@ -272,7 +273,7 @@ nav a:hover,
     #desktop-nav {
         display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
         position: relative; /* Ustawienie relative, aby menu było umieszczone w normalnym przepływie dokumentu */
-        top: 0;
+        top: 0px;
         z-index: 998; /* Pod nagłówkiem */
         width: 100%;
         background-color: #333; /* Upewniamy się, że tło jest odpowiednio ustawione */
