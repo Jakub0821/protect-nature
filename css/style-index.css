@@ -272,7 +272,7 @@ nav a:hover,
     #desktop-nav {
         display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
         position: relative; /* Ustawienie relative, aby menu było umieszczone w normalnym przepływie dokumentu */
-        top: 0;
+        top: 140px;
         z-index: 1000; /* Upewniamy się, że menu jest nad innymi elementami */
         width: 100%; /* Ustawiamy szerokość na 100%, aby menu zajmowało całą szerokość ekranu */
         background-color: #333; /* Upewniamy się, że tło jest odpowiednio ustawione */
