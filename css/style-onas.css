@@ -294,10 +294,10 @@ footer p {
 /* Stylizacja dla większych ekranów */
 @media (min-width: 769px) {
     #desktop-nav {
-        display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
-        position: relative; /* Przywracamy normalne pozycjonowanie */
-        top: 0;
-        z-index: 998; /* Pod nagłówkiem */
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .hamburger {
