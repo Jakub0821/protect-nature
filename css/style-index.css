@@ -30,9 +30,6 @@ nav {
     justify-content: center;
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Relative dla nawigacji w wersji desktop */
-    z-index: 999; /* Nawigacja jest pod nagłówkiem */
-    margin-top: 80px; /* Przesunięcie nawigacji poniżej nagłówka */
 }
 
 nav ul {
@@ -237,7 +234,7 @@ nav a:hover,
     background-color: #333;
     width: 100%;
     position: fixed; /* Ustawiono jako fixed */
-    top: 140px; /* Zwiększony odstęp od nagłówka */
+    top: 60px; /* Zwiększony odstęp od nagłówka */
     left: 0;
     z-index: 999; /* Pod nagłówkiem */
 }
