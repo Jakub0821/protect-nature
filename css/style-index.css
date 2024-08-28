@@ -212,7 +212,7 @@ nav a:hover,
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     position: fixed; /* Ustawiono jako fixed */
