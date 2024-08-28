@@ -15,7 +15,7 @@ header {
     position: fixed; /* Nagłówek ustawiony jako fixed */
     width: 100%;
     top: 0;
-    z-index: 1000; /* Nagłówek jest nad nawigacją */
+    z-index: 1000; /* Najwyższy z-index dla nagłówka */
 }
 
 header h1 {
@@ -30,7 +30,7 @@ nav {
     justify-content: center;
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ustawienie relative dla nawigacji */
+    position: relative; /* Relative dla nawigacji w wersji desktop */
     z-index: 999; /* Nawigacja jest pod nagłówkiem */
 }
 
