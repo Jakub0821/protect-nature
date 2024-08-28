@@ -296,10 +296,29 @@ footer p {
     #desktop-nav {
         display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
         position: relative; /* Ustawienie relative, aby menu było umieszczone w normalnym przepływie dokumentu */
-        top: 100px;
-        z-index: 1000; /* Upewniamy się, że menu jest nad innymi elementami */
-        width: 100%; /* Ustawiamy szerokość na 100%, aby menu zajmowało całą szerokość ekranu */
+        top: 0;
+        z-index: 998; /* Pod nagłówkiem */
+        width: 100%;
         background-color: #333; /* Upewniamy się, że tło jest odpowiednio ustawione */
+    }
+
+    #desktop-nav ul {
+        display: flex; /* Ustawienie elastycznego kontenera, aby elementy `li` były obok siebie */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #desktop-nav ul li {
+        margin: 0 15px; /* Dodanie marginesów między elementami `li` */
+    }
+
+    #desktop-nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
     }
 
     .hamburger {
