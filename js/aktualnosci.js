@@ -68,3 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Przycisk "Wczytaj więcej" nie został znaleziony.');
     }
 });
+
+function toggleMenu() {
+    console.log("Hamburger clicked"); // Sprawdź, czy funkcja jest wywoływana
+    var nav = document.getElementById("desktop-nav");
+    console.log("Nav element found:", nav); // Sprawdź, czy element nawigacji jest znaleziony
+    nav.classList.toggle("show");
+}
