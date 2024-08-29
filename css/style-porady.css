@@ -377,11 +377,18 @@ button:hover {
         width: 20px; /* Dostosowanie rozmiaru flagi na mniejszych ekranach */
     }
 
-    nav ul {
-        display: none; /* Ukryj na telefonach, pokaż mobilne menu */
+    #desktop-nav {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .mobile-nav {
-        display: flex;
+    #desktop-nav ul {
+        flex-direction: column;
+        align-items: center;
     }
+
+    #desktop-nav ul li {
+        margin: 10px 0;
+    }
+
 }

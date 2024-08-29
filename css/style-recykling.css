@@ -233,6 +233,98 @@ img {
     background: #45a049;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed; /* Ustawiono jako fixed */
+    top: 10px;
+    left: 10px;
+    z-index: 1001; /* Hamburger nad nawigacją */
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Nawigacja mobilna */
+#desktop-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #333;
+    width: 100%;
+    position: fixed; /* Ustawiono jako fixed */
+    top: 130px; /* Zwiększony odstęp od nagłówka */
+    left: 0;
+    z-index: 999; /* Pod nagłówkiem */
+}
+
+#desktop-nav.show {
+    display: flex;
+}
+
+#desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 20px;
+}
+
+#desktop-nav ul li {
+    margin: 0 15px;
+    border-bottom: 1px solid #444;
+}
+
+#desktop-nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Stylizacja dla większych ekranów */
+@media (min-width: 769px) {
+    #desktop-nav {
+        display: flex; /* Upewniamy się, że menu jest widoczne na dużych ekranach */
+        position: relative; /* Ustawienie relative, aby menu było umieszczone w normalnym przepływie dokumentu */
+        top: 0px;
+        z-index: 998; /* Pod nagłówkiem */
+        width: 100%;
+        background-color: #333; /* Upewniamy się, że tło jest odpowiednio ustawione */
+    }
+
+    #desktop-nav ul {
+        display: flex; /* Ustawienie elastycznego kontenera, aby elementy `li` były obok siebie */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #desktop-nav ul li {
+        margin: 0 15px; /* Dodanie marginesów między elementami `li` */
+    }
+
+    #desktop-nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    .hamburger {
+        display: none; /* Ukrywamy hamburger na dużych ekranach */
+    }
+}
 
 /* Stylizacja dla tabletów */
 @media (max-width: 768px) {
@@ -256,17 +348,12 @@ img {
         font-size: 1rem;
     }
 
-    nav a {
-        padding: 10px;
-        font-size: 1rem;
-    }
-    
-    nav ul {
-        flex-direction: column;
+    .hamburger {
+        display: flex; /* Upewniamy się, że hamburger jest widoczny w wersji mobilnej */
     }
 
-    nav ul li {
-        margin: 0;
+    #desktop-nav {
+        display: none; /* Ukrycie nawigacji na mobilnych */
     }
 
 }
@@ -294,43 +381,18 @@ img {
         font-size: 0.9rem;
     }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    nav ul {
-        display: flex;
+    #desktop-nav {
         flex-direction: column;
         align-items: center;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        background-color: #333;
     }
-    
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 10px 0;
-        border-bottom: 1px solid #444;
+
+    #desktop-nav ul {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    nav ul li:last-child {
-        border-bottom: none;
-    }
-    
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 8px 0;
-        color: white;
-        text-decoration: none;
-    }
-    
-    nav ul li a:hover {
-        background-color: black;
+
+    #desktop-nav ul li {
+        margin: 10px 0;
     }
 
     .language-icon {
