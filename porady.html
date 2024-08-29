@@ -6,6 +6,7 @@
     <title data-key="title_tips">Porady Ekologiczne</title>
     <link rel="stylesheet" href="css/style-porady.css">
     <script src="js/translation.js" defer></script>
+    <script src="js/menu-toggle.js" defer></script>
 </head>
 <body data-page="tips">
     <header class="header">
@@ -16,7 +17,11 @@
             <img id="lang-de" src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
             <img id="lang-es" src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div> 
-        <button id="menu-toggle" class="menu-toggle">Menu</button>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
     <nav id="desktop-nav">
         <ul>
@@ -26,13 +31,6 @@
             <li><a href="porady.html" data-key="tips">Porady Ekologiczne</a></li>
             <li><a href="kontakt.html" data-key="contact">Kontakt</a></li>
         </ul>
-    </nav>
-    <nav id="mobile-nav" class="mobile-nav hidden">
-        <a href="index.html" data-key="home">Strona Główna</a>
-        <a href="onas.html" data-key="about">O Nas</a>
-        <a href="aktualności.html" data-key="news">Aktualności</a>
-        <a href="porady.html" data-key="tips">Porady Ekologiczne</a>
-        <a href="kontakt.html" data-key="contact">Kontakt</a>
     </nav>
     <div class="container">
         <section id="recycling" class="content-section">
