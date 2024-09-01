@@ -6,49 +6,57 @@
     <title>Zielone Zakupy</title>
     <link rel="stylesheet" href="css/style-zielone-zakupy.css">
     <script src="js/zielone-zakupy.js" defer></script>
+    <script src="js/translation.js" defer></script>
 </head>
 <body data-page="tips">
-    <header>
-        <h1 data-key="title_tips">Zielone Zakupy</h1>
+    <header class="header">
+        <h1 class="title" data-key="title_tips">Zielone Zakupy</h1>
         <div id="language-select">
             <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
             <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
             <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
             <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html" data-key="home">Strona Główna</a>
-        <a href="recykling.html" data-key="recycling">Recykling</a>
-        <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-        <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-        <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
+    <nav id="desktop-nav" class="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" data-key="home">Strona Główna</a></li>
+          <li><a href="recykling.html" data-key="recycling">Recykling</a></li>
+          <li><a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a></li>
+          <li><a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a></li>
+          <li><a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a></li>
+        </ul>
     </nav>
     <div class="container">
         <section class="gallery">
             <div class="image-item">
                 <img src="images/Zielone Zakupy/ekologiczne-produkty.jpg" alt="Ekologiczne produkty na półce">
-                <p>Wybieraj produkty z certyfikatem ekologicznym.</p>
+                <p data-key="eco_products">Wybieraj produkty z certyfikatem ekologicznym.</p>
             </div>
             <div class="image-item">
                 <img src="images/Zielone Zakupy/torby-wielokrotnego-uzytku.jpg" alt="Torby wielokrotnego użytku">
-                <p>Torby wielokrotnego użytku pomagają zmniejszyć ilość odpadów plastikowych.</p>
+                <p data-key="reusable_bags">Torby wielokrotnego użytku pomagają zmniejszyć ilość odpadów plastikowych.</p>
             </div>
             <div class="image-item">
                 <img src="images/Zielone Zakupy/etykiety-produktow.jpg" alt="Etykiety produktów ekologicznych">
-                <p>Naucz się rozpoznawać certyfikaty ekologiczne na produktach.</p>
+                <p data-key="eco_labels">Ucz się rozpoznawać certyfikaty ekologiczne na produktach.</p>
             </div>
             <div class="image-item">
                 <img src="images/Zielone Zakupy/zakupy-na-targu.jpg" alt="Zakupy na lokalnym targu">
-                <p>Wspieraj lokalnych producentów kupując na targach.</p>
+                <p data-key="local_market_shopping">Wspieraj lokalnych producentów kupując na targach.</p>
             </div>
             <div class="image-item">
                 <img src="images/Zielone Zakupy/organic-farming.jpg" alt="Ekologiczne rolnictwo">
-                <p>Ekologiczne rolnictwo wspiera zrównoważony rozwój.</p>
+                <p data-key="organic_farming">Ekologiczne rolnictwo wspiera zrównoważony rozwój.</p>
             </div>
             <div class="image-item">
                 <img src="images/Zielone Zakupy/local-market.jpg" alt="Lokalny rynek">
-                <p>Zakupy na lokalnym rynku wspierają lokalnych producentów.</p>
+                <p data-key="local_market_support">Zakupy na lokalnym rynku wspierają lokalnych producentów.</p>
             </div>
         </section>
     </div>

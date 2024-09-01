@@ -6,49 +6,57 @@
     <title>Eko-Transport</title>
     <link rel="stylesheet" href="css/style-ekotransport.css">
     <script src="js/ekotransport.js" defer></script>
+    <script src="js/translation.js" defer></script>
 </head>
 <body data-page="tips">
-    <header>
-        <h1 data-key="title_tips">Eko-Transport</h1>
+    <header class="header">
+        <h1 class="title" data-key="title_tips">Eko-Transport</h1>
         <div id="language-select">
             <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
             <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
             <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
             <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html" data-key="home">Strona Główna</a>
-        <a href="recykling.html" data-key="recycling">Recykling</a>
-        <a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a>
-        <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-        <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
+    <nav id="desktop-nav" class="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" data-key="home">Strona Główna</a></li>
+          <li><a href="recykling.html" data-key="recycling">Recykling</a></li>
+          <li><a href="oszczedzanie-energii.html" data-key="energy_saving">Oszczędzanie Energii</a></li>
+          <li><a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a></li>
+          <li><a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a></li>
+        </ul>
     </nav>
     <div class="container">
         <section class="gallery">
             <div class="image-item">
                 <img src="images/Eko-Transport/rowerzysci.jpg" alt="Rowerzyści w mieście">
-                <p>Jazda na rowerze to ekologiczny sposób poruszania się po mieście.</p>
+                <p data-key="cyclists_in_city">Jazda na rowerze to ekologiczny sposób poruszania się po mieście.</p>
             </div>
             <div class="image-item">
                 <img src="images/Eko-Transport/ladowanie-samochodu-elektrycznego.jpg" alt="Stacja ładowania samochodów elektrycznych">
-                <p>Samochody elektryczne to przyszłość ekologicznego transportu.</p>
+                <p data-key="electric_vehicle_charging">Samochody elektryczne to przyszłość ekologicznego transportu.</p>
             </div>
             <div class="image-item">
                 <img src="images/Eko-Transport/autobus-hybrydowy.jpg" alt="Autobus hybrydowy">
-                <p>Transport publiczny z niską emisją CO2.</p>
+                <p data-key="hybrid_bus">Transport publiczny z niską emisją CO2.</p>
             </div>
             <div class="image-item">
                 <img src="images/Eko-Transport/carpooling.jpg" alt="Carpooling">
-                <p>Wspólne przejazdy samochodem zmniejszają ilość emisji.</p>
+                <p data-key="carpooling">Wspólne przejazdy samochodem zmniejszają ilość emisji.</p>
             </div>
             <div class="image-item">
                 <img src="images/Eko-Transport/samochod-hybrydowy.jpg" alt="Samochód hybrydowy">
-                <p>Samochody hybrydowe łączą zalety silników spalinowych i elektrycznych.</p>
+                <p data-key="hybrid_car">Samochody hybrydowe łączą zalety silników spalinowych i elektrycznych.</p>
             </div>
             <div class="image-item">
                 <img src="images/Eko-Transport/transport-publiczny.jpg" alt="Transport publiczny">
-                <p>Rozwijanie sieci transportu publicznego zmniejsza zanieczyszczenie powietrza.</p>
+                <p data-key="public_transport">Rozwijanie sieci transportu publicznego zmniejsza zanieczyszczenie powietrza.</p>
             </div>
         </section>
     </div>
