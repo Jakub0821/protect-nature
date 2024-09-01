@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Strona Recykling załadowana');
 
+    // Funkcja do wyświetlania popupu dla obrazka
     function showPopup(image) {
         console.log('Pokazano popup dla obrazka:', image.src);
         const popup = document.createElement('div');
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(popup);
     }
 
+    // Przypisanie zdarzeń kliknięcia dla obrazków, które wywołują funkcję showPopup
     const images = document.querySelectorAll('.image-item img');
     images.forEach(image => {
         image.addEventListener('click', function() {
@@ -37,54 +39,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize language
-    const savedLanguage = localStorage.getItem('language') || 'pl';
-    changeLanguage(savedLanguage);
+    // Inicjalizacja menu nawigacyjnego (hamburger menu)
+    function toggleMenu() {
+        console.log("Hamburger clicked");
+        var nav = document.getElementById("desktop-nav");
+        if (nav) {
+            nav.classList.toggle("show");
+            console.log("Nav element toggled:", nav);
+        } else {
+            console.log("Nav element not found");
+        }
+    }
 
-    // Language selection event
-    document.querySelectorAll('.language-icon').forEach(icon => {
-        icon.addEventListener('click', () => {
-            const language = icon.getAttribute('data-lang');
-            changeLanguage(language);
-            localStorage.setItem('language', language);
-        });
-    });
+    // Przypisanie funkcji toggleMenu do kliknięcia na hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    } else {
+        console.log("Hamburger element not found");
+    }
 });
-
-function changeLanguage(language) {
-    fetch(`translations/${language}.json`)
-        .then(response => response.json())
-        .then(translations => {
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[key]) {
-                    element.textContent = translations[key];
-                }
-            });
-        });
-}
-// Nowe funkcje do obsługi zmiany języka
-function getSavedLanguage() {
-    // Pobieranie zapisanej wersji językowej (domyślnie 'pl')
-    return localStorage.getItem('preferredLanguage') || 'pl';
-}
-
-function changeLanguage(language) {
-    // Logika zmiany języka na stronie
-    document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        element.textContent = translations[language][key];
-    });
-}
-
-
-// Uruchomienie funkcji zmiany języka po załadowaniu strony
-changeLanguage(getSavedLanguage()
-);
-
-function toggleMenu() {
-    console.log("Hamburger clicked"); // Sprawdź, czy funkcja jest wywoływana
-    var nav = document.getElementById("desktop-nav");
-    console.log("Nav element found:", nav); // Sprawdź, czy element nawigacji jest znaleziony
-    nav.classList.toggle("show");
-}
