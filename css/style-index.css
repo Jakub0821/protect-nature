@@ -237,7 +237,7 @@ nav a:hover,
     background-color: #333;
     width: 100%;
     position: fixed; /* Ustawiono jako fixed */
-    top: 20px; /* Zwiększony odstęp od nagłówka */
+    top: -20px; /* Zwiększony odstęp od nagłówka */
     left: 0;
     z-index: 999; /* Pod nagłówkiem */
 }
