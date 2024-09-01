@@ -9,22 +9,29 @@
     <script src="js/translation.js" defer></script>
 </head>
 <body data-page="tips">
-    <header>
-        <h1 data-key="energy_title">Oszczędzanie Energii</h1>
+    <header class="header">
+        <h1 class="title" data-key="energy_title">Oszczędzanie Energii</h1>
         <div id="language-select">
             <img src="images/Hopstarter-Flag-Borderless-Poland.256.png" alt="Polski" class="language-icon" data-lang="pl">
             <img src="images/Custom-Icon-Design-Flag-3-United-States-Flag.256.png" alt="English" class="language-icon" data-lang="en">
             <img src="images/Hopstarter-Flag-Borderless-Germany.256.png" alt="Deutsch" class="language-icon" data-lang="de">
             <img src="images/Hopstarter-Flag-Borderless-Spain.256.png" alt="Español" class="language-icon" data-lang="es">
         </div>
-    </header>
-    <nav>
-        <a href="index.html" data-key="home">Strona Główna</a>
-        <a href="recykling.html" data-key="recycling">Recykling</a>
-        <a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a>
-        <a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a>
-        <a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a>
-    </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </header>
+        <nav id="desktop-nav" class="navigation">
+            <ul class="nav-list">
+             <li><a href="index.html" data-key="home">Strona Główna</a></li>
+             <li><a href="recykling.html" data-key="recycling">Recykling</a></li>
+             <li><a href="ochrona-wody.html" data-key="water_conservation">Ochrona Wody</a></li>
+             <li><a href="eko-transport.html" data-key="eco_transport">Eko-Transport</a></li>
+             <li><a href="zielone-zakupy.html" data-key="green_shopping">Zielone Zakupy</a></li>
+            </ul>
+        </nav>
     <div class="container">
         <section class="gallery">
             <div class="image-item">
