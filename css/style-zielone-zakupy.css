@@ -136,7 +136,7 @@ footer {
     background-color: #333;
     width: 100%;
     position: fixed; /* Ustawiono jako fixed */
-    top: 130px; /* Zwiększony odstęp od nagłówka */
+    top: 110px; /* Zwiększony odstęp od nagłówka */
     left: 0;
     z-index: 999; /* Pod nagłówkiem */
 }
