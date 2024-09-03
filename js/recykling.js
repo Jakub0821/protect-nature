@@ -1,6 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Strona Recykling załadowana');
 
+    // Function to toggle the navigation menu (hamburger menu)
+    function toggleMenu() {
+        console.log("Hamburger clicked");
+        var nav = document.getElementById("desktop-nav");
+        if (nav) {
+            nav.classList.toggle("show");
+            console.log("Nav element toggled:", nav);
+        } else {
+            console.log("Nav element not found");
+        }
+    }
+
+    // Assigning the toggleMenu function to the hamburger menu click event
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    } else {
+        console.log("Hamburger element not found");
+    }
+
     // Funkcja do wyświetlania popupu dla obrazka
     function showPopup(image) {
         console.log('Pokazano popup dla obrazka:', image.src);
@@ -39,23 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Inicjalizacja menu nawigacyjnego (hamburger menu)
-    function toggleMenu() {
-        console.log("Hamburger clicked");
-        var nav = document.getElementById("desktop-nav");
-        if (nav) {
-            nav.classList.toggle("show");
-            console.log("Nav element toggled:", nav);
-        } else {
-            console.log("Nav element not found");
-        }
-    }
+    
 
-    // Przypisanie funkcji toggleMenu do kliknięcia na hamburger menu
-    const hamburger = document.querySelector('.hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
-    } else {
-        console.log("Hamburger element not found");
-    }
 });
