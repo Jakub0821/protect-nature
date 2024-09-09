@@ -236,11 +236,13 @@ button:hover {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: fixed; /* Ustawiono jako fixed */
+    position: fixed;
     top: 10px;
-    left: 10px;
-    z-index: 1001; /* Hamburger nad nawigacją */
+    left: 50%; /* Umieszcza hamburger w połowie szerokości ekranu */
+    transform: translateX(-50%); /* Wyrównuje hamburger na środku */
+    z-index: 1001; /* Nad nawigacją */
 }
+
 
 .hamburger .bar {
     width: 25px;
